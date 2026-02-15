@@ -1,8 +1,7 @@
 """India Tour - Flask app with MySQL, bookings and email."""
 import os
-import psycopg2
-import psycopg2.extras
-from psycopg2 import errors
+import psycopg
+from psycopg.rows import dict_row
 import json
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -96,9 +95,9 @@ def get_db():
     if database_url.startswith("postgres://"):
         database_url = database_url.replace("postgres://", "postgresql://", 1)
 
-    return psycopg2.connect(
+    return psycopg.connect(
         database_url,
-        cursor_factory=psycopg2.extras.RealDictCursor
+        row_factory=dict_row
     )
 
 
@@ -192,7 +191,7 @@ def user_register(email, password, role='user', full_name=None, phone=None):
             )
         conn.commit()
         return True, None
-    except psycopg2.errors.UniqueViolation:
+    except psycopg.errors.UniqueViolation:
         return False, "Email already registered."
     except Exception as e:
         return False, str(e)
@@ -234,7 +233,7 @@ def newsletter_subscribe():
         conn.commit()
         return jsonify({'success': True, 'message': 'Thank you! You are subscribed.'}), 200
 
-    except psycopg2.errors.UniqueViolation:
+    except psycopg.errors.UniqueViolation:
         conn.rollback()
         return jsonify({'success': False, 'message': 'This email is already subscribed.'}), 409
 
