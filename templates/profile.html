@@ -234,21 +234,6 @@
       };
     });
 
-    // Logout
-   // Logout
-document.getElementById('logoutBtn').onclick = () => {
-    showLogoutConfirm(function() {
-        window.location.href = '/logout';
-    });
-};
-
-document.getElementById('logoutBtnMobile')?.addEventListener('click', function() {
-    showLogoutConfirm(function() {
-        window.location.href = '/logout';
-    });
-});
-
-
   </script>
 
   <script src="{{ url_for('static', filename='js/success-bar.js') }}" defer></script>

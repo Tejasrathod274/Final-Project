@@ -80,3 +80,26 @@ if (document.readyState === 'loading') {
 } else {
   updateActiveNavLink();
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  function attachLogoutHandler(id) {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      showLogoutConfirm(function (confirmed) {
+        if (confirmed) {
+          window.location.href = '/logout';
+        }
+      });
+    });
+  }
+
+  // Attach everywhere
+  attachLogoutHandler('logoutBtn');
+  attachLogoutHandler('logoutBtnMobile');
+  attachLogoutHandler('navbarLogoutBtn');
+
+});
