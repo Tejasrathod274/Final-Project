@@ -94,11 +94,6 @@ function handleUserLogout() {
         }, 1500);
       }
     });
-  } else {
-    // Fallback to confirm dialog if showLogoutConfirm is not available
-    if (confirm('Logout from IndiaTour?')) {
-      window.location.href = '/logout';
-    }
   }
 }
 

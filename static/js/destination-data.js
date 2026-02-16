@@ -22,7 +22,7 @@ window.DESTINATION_DATA = {
       { name: 'Wayanad Green Lodge', description: 'Amidst nature.', price: '₹4,200/night', image: 'images/kerala/wayanad/hotel/wayanad-lodge.jpg' }
     ],
     tours: [
-      { name: 'Kerala Backwaters 3D', description: 'Houseboat and backwaters.', price: '₹12,000/person', image: 'images/kerala/tours/kerala-Backwaters.jpg' },
+      { name: 'Kerala Backwaters 3D', description: 'Houseboat and backwaters.', price: '₹12,000/person', image: 'images/kerala/tours/Kerala-Backwaters.jpg' },
       { name: 'Munnar-Thekkady 4D', description: 'Hills and wildlife.', price: '₹15,500/person', image: 'images/kerala/tours/munnar-thekkeday.jpg' },
       { name: 'Full Kerala 7D', description: 'Backwaters, hills and coast.', price: '₹28,000/person', image: 'images/kerala/tours/kerala-full.jpg' },
       { name: 'Kerala Hills 5D', description: 'Munnar, Wayanad and tea estates.', price: '₹18,000/person', image: 'images/kerala/tours/kerala-hills.jpg' },
@@ -212,7 +212,7 @@ window.PLACE_DETAILS = {
       spotsToVisit: [
         { name: 'Houseboat Cruise', description: 'Stay or day cruise on the backwaters.', image: 'images/kerala/allepey/to-visit/chakara.jpg' },
         { name: 'Alleppey Beach', description: 'Long beach and lighthouse.', image: 'images/kerala/allepey/to-visit/AlleppeyBeach.jpg' },
-        { name: 'Kuttanad', description: 'Paddy fields and village life below sea level.', image: 'images/kerala/allepey/to-visit/kuttanadpaddy.jpg' }
+        { name: 'Kuttanad', description: 'Paddy fields and village life below sea level.', image: 'images/kerala/allepey/to-visit/Kuttanadpaddy.jpg' }
       ],
        restaurants: [
         { name: 'Kayees Rahmathullah', description: 'Famous biryani in Mattancherry.', cuisine: 'Biryani', image: 'images/kerala/allepey/restaurant/kayees.jpg' },
@@ -270,7 +270,7 @@ window.PLACE_DETAILS = {
         { name: 'Sea view Restaurant', description: 'Multi-cuisine with sea view.', cuisine: 'Multi-cuisine', image: 'images/kerala/kovalam/restaurant/seaview.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Lighthouse Beach', description: 'Main beach and lighthouse.', image: 'images/kerala/kovalam/to-visit/lighthouse.jpg' },
+        { name: 'Lighthouse Beach', description: 'Main beach and lighthouse.', image: 'images/kerala/kovalam/to-visit/Lighthouse.jpg' },
         { name: 'Vizhinjam Harbour', description: 'Fishing harbour and temple.', image: 'images/kerala/kovalam/to-visit/vizhinjam.jpg' }
       ],
     },
