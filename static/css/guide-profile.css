@@ -340,6 +340,7 @@ body.guide-profile {
   display: flex;
   gap: 12px;
   align-items: center;
+  color: black;
 }
 
 .support-item i {
