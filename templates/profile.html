@@ -235,16 +235,19 @@
     });
 
     // Logout
-    document.getElementById('logoutBtn').onclick = () => {
-      if (confirm('Logout from IndiaTour?')) {
+   // Logout
+document.getElementById('logoutBtn').onclick = () => {
+    showLogoutConfirm(function() {
         window.location.href = '/logout';
-      }
-    };
-    document.getElementById('logoutBtnMobile')?.addEventListener('click', function() {
-  if (confirm('Logout from IndiaTour?')) {
-    window.location.href = '/logout';
-  }
+    });
+};
+
+document.getElementById('logoutBtnMobile')?.addEventListener('click', function() {
+    showLogoutConfirm(function() {
+        window.location.href = '/logout';
+    });
 });
+
 
   </script>
 
