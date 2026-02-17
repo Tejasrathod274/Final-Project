@@ -12,6 +12,17 @@
   
 <script src="{{ url_for('static', filename='js/common.js') }}" defer></script>
 <script src="{{ url_for('static', filename='js/guide-dashboard.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/success-bar.js') }}"></script>
+
+<script>
+document.getElementById("guideLogoutBtn").addEventListener("click", function() {
+    showLogoutConfirm(function(confirmed) {
+        if (confirmed) {
+            window.location.href = "/guide/logout";
+        }
+    });
+});
+</script>
 
 <style>
 
@@ -333,7 +344,7 @@ nav {
       <i class="fas fa-user-circle"></i>
       <div class="dropdown" id="profileDropdown">
         <a href="{{ url_for('guide_profile') }}">My Account</a>
-         <a href="#" id="navbarLogoutBtn">Logout</a>
+         <a href="#" id="guideLogoutBtn">Logout</a>
       </div>
     </div>
   </div>
