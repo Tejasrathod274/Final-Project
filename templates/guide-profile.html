@@ -17,12 +17,20 @@
   <script src="{{ url_for('static', filename='js/success-bar.js') }}"></script>
 
 <script>
-document.getElementById("guideLogoutBtn").addEventListener("click", function() {
-    showLogoutConfirm(function(confirmed) {
-        if (confirmed) {
-            window.location.href = "/guide/logout";
-        }
-    });
+document.addEventListener("DOMContentLoaded", function () {
+
+    const logoutBtn = document.getElementById("guideLogoutBtn");
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function() {
+            showLogoutConfirm(function(confirmed) {
+                if (confirmed) {
+                    window.location.href = "/guide/logout";
+                }
+            });
+        });
+    }
+
 });
 </script>
 
