@@ -14,6 +14,18 @@
   <script src="{{ url_for('static', filename='js/common.js') }}" defer></script>
   <script src="{{ url_for('static', filename='js/guide-profile.js') }}" defer></script>
   <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/success-bar.js') }}"></script>
+
+<script>
+document.getElementById("guideLogoutBtn").addEventListener("click", function() {
+    showLogoutConfirm(function(confirmed) {
+        if (confirmed) {
+            window.location.href = "/guide/logout";
+        }
+    });
+});
+</script>
+
 </head>
 
 <body>
@@ -30,7 +42,7 @@
         <i class="fa fa-life-ring"></i> Help & Support
       </button>
     </div>
-    <button class="menu-btn logout" id="logoutBtn">
+    <button class="menu-btn logout" id="guideLogoutBtn">
       <i class="fa fa-sign-out-alt"></i> Logout
     </button>
   </aside>
