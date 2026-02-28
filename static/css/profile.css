@@ -595,5 +595,41 @@
 
 }
 
+/* Fix long text overflow in booking cards */
+.booking-card,
+.booking-card * {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Make cards responsive */
+.booking-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+
+  .booking-card {
+    padding: 14px;
+  }
+
+  .booking-info {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .booking-info div {
+    width: 100%;
+  }
+
+  .itinerary {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+}
 
 
