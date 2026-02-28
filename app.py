@@ -481,6 +481,8 @@ def book_tour():
         tour_name = request.form.get('tour_name', '').strip()
         tour_price = request.form.get('tour_price', '').strip()
 
+        tour_description = TOUR_INFO.get(destination_name, {}).get(tour_name, "")
+        
         if not all([name, email, phone, tour_name, destination_name, persons,preferred_date]):
             flash('Please fill all required fields.', 'error')
             return render_template(
