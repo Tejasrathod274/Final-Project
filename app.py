@@ -469,6 +469,7 @@ def book_tour():
     destination_name = request.args.get('destination') or ''
     tour_name = request.args.get('tour') or ''
     tour_price = request.args.get('price') or ''
+    tour_description = TOUR_INFO.get(destination_name, {}).get(tour_name, "")
 
     if request.method == 'POST':
         name = request.form.get('name', '').strip()
@@ -487,6 +488,7 @@ def book_tour():
                 destination=destination_name,
                 tour_name=tour_name,
                 tour_price=tour_price,
+                tour_description=tour_description,
                 booking_success=False
             )
 
@@ -548,6 +550,7 @@ def book_tour():
                 destination=destination_name,
                 tour_name=tour_name,
                 tour_price=tour_price,
+                tour_description=tour_description,
                 booking_success=False
             )
 
@@ -561,6 +564,7 @@ def book_tour():
             destination=destination_name,
             tour_name=tour_name,
             tour_price=tour_price,
+            tour_description=tour_description,
             booking_success=True,
             booking_name=name,
             booking_email=email
@@ -572,6 +576,7 @@ def book_tour():
         destination=destination_name,
         tour_name=tour_name,
         tour_price=tour_price,
+        tour_description=tour_description,
         booking_success=False
     )
 

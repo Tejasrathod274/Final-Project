@@ -54,6 +54,15 @@
       <h2><i class="fas fa-route"></i> {{ tour_name }}</h2>
       <p class="tour-dest">Destination: <strong>{{ destination }}</strong></p>
       <p class="tour-price">Price: <strong>{{ tour_price }}</strong></p>
+      {% if tour_description %}
+      <div class="tour-description">
+
+        {% for line in tour_description.split('\n') %}
+        <p>{{ line }}</p>
+        {% endfor %}
+
+      </div>
+      {% endif %}
     </div>
 
     <p class="book-form-intro reveal">Fill in your details below to book this tour. After booking, please check your
@@ -90,7 +99,8 @@
       <label>Select Preferred Date</label>
       <input type="date" name="preferred_date" required>
       <label>Phone *</label>
-      <input type="tel" id="phoneInput" name="phone" required placeholder="10-digit mobile" maxlength="10" inputmode="numeric">
+      <input type="tel" id="phoneInput" name="phone" required placeholder="10-digit mobile" maxlength="10"
+        inputmode="numeric">
       <span class="phone-error" id="phoneError"></span>
       <label>Number of Persons *</label>
       <input type="number" name="persons" min="1" max="20" value="1" required>
