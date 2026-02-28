@@ -37,7 +37,7 @@
       <i class="fa fa-sign-out-alt"></i> Logout
     </button>
   </aside>
-
+  
 
   <!-- MAIN CONTENT -->
   <main class="main">
@@ -74,8 +74,7 @@
             </div>
             <div class="form-group">
               <label>Phone</label>
-              <input type="tel" id="phoneInput" name="phone" maxlength="10" inputmode="numeric"
-                placeholder="Enter your phone number" value="{{ user.phone or '' }}">
+              <input type="tel" id="phoneInput" name="phone" maxlength="10" inputmode="numeric" placeholder="Enter your phone number" value="{{ user.phone or '' }}">
               <span class="phone-error" id="phoneError"></span>
             </div>
             <div class="form-group">
@@ -153,52 +152,49 @@
               <label
                 style="display: block; color: #475569; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600;"><i
                   class="fas fa-envelope" style="margin-right: 5px;"></i>Email</label>
-              <p style="margin: 0; color: #1e293b; font-size: 15px; font-weight: 500 ;">{{ b.email }}</p>
+              <p style="margin: 0; color: #1e293b; font-size: 15px; font-weight: 500; word-break: break-word;">{{ b.email }}</p>
             </div>
             <div>
               <label
-                style="display: block; color: #475569; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600;">
-                <i class="fas fa-envelope" style="margin-right: 5px;"></i>Email
-              </label>
-              <p
-                style="margin: 0; color: #1e293b; font-size: 15px; font-weight: 500; word-break:break-word;">
-                {{ b.email }}
-              </p>
-            </div>
-            {% if b.tour_description %}
-            <div
-              style="background: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 15px; border-radius: 6px; margin-top: 12px;">
-              {% for line in b.tour_description.split('\n') %}
-              {% if line.strip() %}
-              <p style="margin: 0 0 10px 0; color: #0c4a6e; font-size: 14px; line-height: 1.6;">{{ line }}</p>
-              {% endif %}
-              {% endfor %}
-            </div>
-            {% endif %}
-            {% if b.message %}
-            <div
-              style="background: #fef3c7; border-left: 3px solid #f59e0b; padding: 12px; border-radius: 5px; margin-top: 12px;">
-              <label
-                style="display: block; color: #92400e; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600;"><i
-                  class="fas fa-sticky-note" style="margin-right: 5px;"></i>Your Message</label>
-              <p style="margin: 0; color: #78350f; font-size: 14px;">{{ b.message }}</p>
-            </div>
-            {% endif %}
-            <div style="border-top: 1px solid #e2e8f0; margin-top: 15px; padding-top: 15px; text-align: right;">
-              <p style="margin: 0; color: #94a3b8; font-size: 12px;">Booked on: {{ b.created_at.strftime('%B %d, %Y') if
-                b.created_at else 'N/A' }}</p>
+                style="display: block; color: #475569; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600;"><i
+                  class="fas fa-phone" style="margin-right: 5px;"></i>Phone</label>
+              <p style="margin: 0; color: #1e293b; font-size: 15px; font-weight: 500;">{{ b.phone }}</p>
             </div>
           </div>
-          {% endfor %}
-          {% else %}
-          <div style="text-align: center; padding: 40px; color: #94a3b8;">
-            <i class="fas fa-inbox" style="font-size: 48px; margin-bottom: 15px; display: block; color: #cbd5e1;"></i>
-            <p style="margin: 0; font-size: 16px;">No bookings yet.</p>
-            <p style="margin: 5px 0 0 0; font-size: 14px;"><a href="{{ url_for('index') }}"
-                style="color: #0ea5e9; text-decoration: none; font-weight: 600;">Explore destinations →</a></p>
+          {% if b.tour_description %}
+          <div
+            style="background: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 15px; border-radius: 6px; margin-top: 12px;">
+            {% for line in b.tour_description.split('\n') %}
+            {% if line.strip() %}
+            <p style="margin: 0 0 10px 0; color: #0c4a6e; font-size: 14px; line-height: 1.6;">{{ line }}</p>
+            {% endif %}
+            {% endfor %}
           </div>
           {% endif %}
+          {% if b.message %}
+          <div
+            style="background: #fef3c7; border-left: 3px solid #f59e0b; padding: 12px; border-radius: 5px; margin-top: 12px;">
+            <label
+              style="display: block; color: #92400e; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600;"><i
+                class="fas fa-sticky-note" style="margin-right: 5px;"></i>Your Message</label>
+            <p style="margin: 0; color: #78350f; font-size: 14px;">{{ b.message }}</p>
+          </div>
+          {% endif %}
+          <div style="border-top: 1px solid #e2e8f0; margin-top: 15px; padding-top: 15px; text-align: right;">
+            <p style="margin: 0; color: #94a3b8; font-size: 12px;">Booked on: {{ b.created_at.strftime('%B %d, %Y') if
+              b.created_at else 'N/A' }}</p>
+          </div>
         </div>
+        {% endfor %}
+        {% else %}
+        <div style="text-align: center; padding: 40px; color: #94a3b8;">
+          <i class="fas fa-inbox" style="font-size: 48px; margin-bottom: 15px; display: block; color: #cbd5e1;"></i>
+          <p style="margin: 0; font-size: 16px;">No bookings yet.</p>
+          <p style="margin: 5px 0 0 0; font-size: 14px;"><a href="{{ url_for('index') }}"
+              style="color: #0ea5e9; text-decoration: none; font-weight: 600;">Explore destinations →</a></p>
+        </div>
+        {% endif %}
+      </div>
     </section>
 
     <!-- SUPPORT -->
@@ -219,11 +215,11 @@
       </div>
     </section>
     <a href="{{ url_for('index') }}" class="back-home">
-      ⬅ Back
-    </a>
-    <button class="mobile-logout" id="logoutBtnMobile">
-      <i class="fa fa-sign-out-alt"></i> Logout
-    </button>
+  ⬅ Back
+</a>
+ <button class="mobile-logout" id="logoutBtnMobile">
+  <i class="fa fa-sign-out-alt"></i> Logout
+</button>
 
   </main>
 
