@@ -255,3 +255,65 @@
     font-size: 14px;
   }
 }
+/* Tour Info Card */
+.tour-info-box{
+background: linear-gradient(145deg,#1b2b45,#0f1c33);
+padding:24px;
+border-radius:14px;
+margin-bottom:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+/* Title */
+.tour-info-box h2{
+font-size:22px;
+margin-bottom:10px;
+color:#ffffff;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+/* Destination text */
+.tour-dest{
+color:#cbd5ff;
+font-size:15px;
+margin-bottom:4px;
+}
+
+/* Price highlight */
+.tour-price{
+color:#ffd34d;
+font-weight:600;
+margin-bottom:12px;
+}
+
+/* Description container */
+.tour-description{
+margin-top:12px;
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:12px;
+}
+
+/* Each Day block */
+.tour-description p{
+background:rgba(255,255,255,0.05);
+padding:10px 14px;
+border-radius:8px;
+margin-bottom:8px;
+font-size:14px;
+line-height:1.5;
+color:#dbe3ff;
+}
+
+/* Mobile responsiveness */
+@media (max-width:768px){
+.tour-info-box{
+padding:18px;
+}
+
+.tour-description p{
+font-size:13px;
+}
+}
