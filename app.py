@@ -591,61 +591,63 @@ def guide_dashboard():
     guide_id = session['guide_id']
 
     conn = get_db()
-    with conn.cursor() as cur:
+    try:
+        with conn.cursor() as cur:
 
-        # Get guide's info (name and destination)
-        cur.execute("""
-            SELECT full_name, assigned_destination 
-            FROM users 
-            WHERE id = %s
-        """, (guide_id,))
-        guide = cur.fetchone()
+            # Get guide info
+            cur.execute("""
+                SELECT full_name, assigned_destination 
+                FROM users 
+                WHERE id = %s
+            """, (guide_id,))
+            guide = cur.fetchone()
 
-        if not guide or not guide['assigned_destination']:
-            flash("No destination assigned to this guide.", "error")
-            return redirect(url_for('guide_login'))
+            if not guide or not guide['assigned_destination']:
+                flash("No destination assigned to this guide.", "error")
+                return redirect(url_for('guide_login'))
 
-        guide_name = guide['full_name']
-        destination = guide['assigned_destination']
+            guide_name = guide['full_name']
+            destination = guide['assigned_destination']
 
-        # Fetch bookings ONLY for this destination
-        cur.execute("""
-            SELECT * FROM bookings
-            WHERE destination = %s
-            ORDER BY created_at DESC
-        """, (destination,))
-        bookings = cur.fetchall()
+            # Get bookings
+            cur.execute("""
+                SELECT * FROM bookings
+                WHERE destination = %s
+                ORDER BY created_at DESC
+            """, (destination,))
+            bookings = cur.fetchall()
 
-        # Add tour descriptions to each booking
-for booking in bookings:
-    booking['tour_description'] = get_tour_description(
-        booking['destination'],
-        booking['tour_name']
-    )
+            # ✅ IMPORTANT: THIS MUST BE INSIDE THE CURSOR BLOCK
+            for booking in bookings:
+                booking['tour_description'] = get_tour_description(
+                    booking['destination'],
+                    booking['tour_name']
+                )
 
-        # Stats for only this destination
-        cur.execute("""
-            SELECT COUNT(*) AS total 
-            FROM bookings 
-            WHERE destination = %s
-        """, (destination,))
-        total_bookings = cur.fetchone()["total"]
+            # Stats
+            cur.execute("""
+                SELECT COUNT(*) AS total 
+                FROM bookings 
+                WHERE destination = %s
+            """, (destination,))
+            total_bookings = cur.fetchone()["total"]
 
-        cur.execute("""
-            SELECT COUNT(*) AS confirmed 
-            FROM bookings 
-            WHERE destination = %s AND status='Confirmed'
-        """, (destination,))
-        confirmed_bookings = cur.fetchone()["confirmed"]
+            cur.execute("""
+                SELECT COUNT(*) AS confirmed 
+                FROM bookings 
+                WHERE destination = %s AND status='Confirmed'
+            """, (destination,))
+            confirmed_bookings = cur.fetchone()["confirmed"]
 
-        cur.execute("""
-            SELECT COALESCE(SUM(total_amount),0) AS earnings 
-            FROM bookings 
-            WHERE destination = %s AND status='Confirmed'
-        """, (destination,))
-        earnings = cur.fetchone()["earnings"]
+            cur.execute("""
+                SELECT COALESCE(SUM(total_amount),0) AS earnings 
+                FROM bookings 
+                WHERE destination = %s AND status='Confirmed'
+            """, (destination,))
+            earnings = cur.fetchone()["earnings"]
 
-    conn.close()
+    finally:
+        conn.close()
 
     return render_template(
         "guide-dashboard.html",
