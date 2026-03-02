@@ -616,6 +616,13 @@ def guide_dashboard():
         """, (destination,))
         bookings = cur.fetchall()
 
+        # Add tour descriptions to each booking
+for booking in bookings:
+    booking['tour_description'] = get_tour_description(
+        booking['destination'],
+        booking['tour_name']
+    )
+
         # Stats for only this destination
         cur.execute("""
             SELECT COUNT(*) AS total 
