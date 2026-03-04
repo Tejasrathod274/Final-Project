@@ -508,6 +508,7 @@ def book_tour():
 
         try:
             with conn.cursor() as cur:
+
                 # Assign guide automatically by destination
                 dest_clean = destination_name.strip().lower()
 
@@ -521,20 +522,20 @@ def book_tour():
                 guide = cur.fetchone()
                 guide_id = guide['id'] if guide else None
 
-                # Store booking details in session temporarily
-session['temp_booking'] = {
-    'name': name,
-    'email': email,
-    'destination': destination_name,
-    'tour_name': tour_name,
-    'tour_price': tour_price,
-    'tour_description': tour_description,
-    'travel_date': travel_date,
-    'num_persons': num_persons,
-    'total_amount': total_amount
-}
-
-return redirect(url_for('payment_page'))
+            # ✅ Store booking details in session temporarily
+            session['temp_booking'] = {
+                'name': name,
+                'email': email,
+                'phone': phone,
+                'destination': destination_name,
+                'tour_name': tour_name,
+                'tour_price': tour_price,
+                'tour_description': tour_description,
+                'travel_date': preferred_date,
+                'num_persons': persons_int,
+                'total_amount': total_amount,
+                'guide_id': guide_id
+            }
 
             conn.commit()
 
@@ -554,7 +555,8 @@ return redirect(url_for('payment_page'))
         finally:
             conn.close()
 
-        send_booking_email(email, name, destination_name, tour_name, tour_price, persons_int)
+        # ✅ Redirect to payment page
+        return redirect(url_for('payment_page'))
 
         return render_template(
             'book-tour.html',
@@ -640,7 +642,7 @@ def confirm_payment():
     flash("Payment successful! Booking request sent to guide.", "success")
     return redirect(url_for('profile'))
 
-    
+
 @app.route("/guide/dashboard")
 def guide_dashboard():
 
