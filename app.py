@@ -597,6 +597,7 @@ def confirm_payment():
             cur.execute("""
                 INSERT INTO bookings (
                     user_id,
+                    guide_id,
                     name,
                     email,
                     destination,
@@ -610,6 +611,7 @@ def confirm_payment():
                 ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """, (
                 session['user_id'],
+                data['guide_id'],
                 data['name'],
                 data['email'],
                 data['destination'],
