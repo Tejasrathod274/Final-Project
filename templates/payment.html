@@ -206,20 +206,6 @@ body {
 
 </div>
 
-<!-- UPI SECTION -->
-<div id="upiSection" class="hidden">
-
-    <div class="input-group">
-        <label>UPI ID</label>
-        <input type="text" id="upi" placeholder="example@upi">
-    </div>
-
-    <div style="text-align:center; font-size:13px; color:gray;">
-        You will receive a payment request in your UPI app.
-    </div>
-
-</div>
-
 <button type="submit" class="pay-btn">
     🔒 Pay Securely
 </button>
@@ -229,26 +215,6 @@ body {
 </div>
 
 <script>
-
-function selectMethod(method) {
-    const cardSection = document.getElementById("cardSection");
-    const upiSection = document.getElementById("upiSection");
-    const cardBtn = document.getElementById("cardBtn");
-    const upiBtn = document.getElementById("upiBtn");
-
-    if (method === "card") {
-        cardSection.classList.remove("hidden");
-        upiSection.classList.add("hidden");
-        cardBtn.classList.add("active");
-        upiBtn.classList.remove("active");
-    } else {
-        cardSection.classList.add("hidden");
-        upiSection.classList.remove("hidden");
-        cardBtn.classList.remove("active");
-        upiBtn.classList.add("active");
-    }
-}
-
 /* Auto add slash in expiry */
 document.getElementById("expiry").addEventListener("input", function(e) {
     let value = e.target.value.replace(/\D/g, '');
@@ -269,20 +235,6 @@ document.getElementById("cardNumber").addEventListener("input", function(e) {
     value = value.match(/.{1,4}/g)?.join(" ") || value;
     e.target.value = value;
 });
-
-/* UPI validation */
-function validateForm() {
-    const upiSection = document.getElementById("upiSection");
-    const upiInput = document.getElementById("upi");
-
-    if (!upiSection.classList.contains("hidden")) {
-        if (!upiInput.value.includes("@")) {
-            alert("UPI ID must contain '@'");
-            return false;
-        }
-    }
-    return true;
-}
 
 </script>
 
