@@ -462,28 +462,27 @@ Persons: {persons}
 """)
     return True
 
-
 @app.route('/book-tour', methods=['GET', 'POST'])
 def book_tour():
-    """Show tour info and booking form; on POST save to DB and send email."""
+
     destination_name = request.args.get('destination') or ''
     tour_name = request.args.get('tour') or ''
     tour_price = request.args.get('price') or ''
     tour_description = TOUR_INFO.get(destination_name, {}).get(tour_name, "")
 
     if request.method == 'POST':
+
         name = request.form.get('name', '').strip()
         email = request.form.get('email', '').strip()
         phone = request.form.get('phone', '').strip()
         persons = request.form.get('persons', '1')
         preferred_date = request.form.get('preferred_date')
+
         destination_name = request.form.get('destination', '').strip()
         tour_name = request.form.get('tour_name', '').strip()
         tour_price = request.form.get('tour_price', '').strip()
 
-        tour_description = TOUR_INFO.get(destination_name, {}).get(tour_name, "")
-        
-        if not all([name, email, phone, tour_name, destination_name, persons,preferred_date]):
+        if not all([name, email, phone, tour_name, destination_name, persons, preferred_date]):
             flash('Please fill all required fields.', 'error')
             return render_template(
                 'book-tour.html',
@@ -509,7 +508,6 @@ def book_tour():
         try:
             with conn.cursor() as cur:
 
-                # Assign guide automatically by destination
                 dest_clean = destination_name.strip().lower()
 
                 cur.execute("""
@@ -522,7 +520,7 @@ def book_tour():
                 guide = cur.fetchone()
                 guide_id = guide['id'] if guide else None
 
-            # ✅ Store booking details in session temporarily
+            # ✅ Store everything in session
             session['temp_booking'] = {
                 'name': name,
                 'email': email,
@@ -530,35 +528,22 @@ def book_tour():
                 'destination': destination_name,
                 'tour_name': tour_name,
                 'tour_price': tour_price,
-                'tour_description': tour_description,
                 'travel_date': preferred_date,
                 'num_persons': persons_int,
                 'total_amount': total_amount,
                 'guide_id': guide_id
             }
 
-            conn.commit()
-
         except Exception as e:
-            conn.rollback()
             print("BOOKING ERROR:", e)
             flash("Something went wrong. Please try again.", "error")
-            return render_template(
-                'book-tour.html',
-                destination=destination_name,
-                tour_name=tour_name,
-                tour_price=tour_price,
-                tour_description=tour_description,
-                booking_success=False
-            )
+            return redirect(url_for('destinations'))
 
         finally:
             conn.close()
 
-        # ✅ Redirect to payment page
         return redirect(url_for('payment_page'))
 
-    # GET request
     return render_template(
         'book-tour.html',
         destination=destination_name,
@@ -579,6 +564,7 @@ def payment_page():
         return redirect(url_for('destinations'))
 
     return render_template("payment.html", booking=session['temp_booking'])
+
 @app.route('/confirm-payment', methods=['POST'])
 def confirm_payment():
 
@@ -586,7 +572,7 @@ def confirm_payment():
         return redirect(url_for('login'))
 
     if not session.get('temp_booking'):
-        return "Session expired"
+        return "Session expired. Please book again."
 
     data = session['temp_booking']
     conn = get_db()
@@ -596,15 +582,29 @@ def confirm_payment():
             cur.execute("""
                 INSERT INTO bookings (
                     user_id,
+                    guide_id,
+                    name,
+                    email,
+                    phone,
                     destination,
                     tour_name,
+                    tour_price,
+                    preferred_date,
+                    persons,
                     total_amount,
                     status
-                ) VALUES (%s, %s, %s, %s, %s)
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """, (
                 session['user_id'],
+                data.get('guide_id'),
+                data['name'],
+                data['email'],
+                data['phone'],
                 data['destination'],
                 data['tour_name'],
+                data['tour_price'],
+                data['travel_date'],
+                data['num_persons'],
                 data['total_amount'],
                 'Pending'
             ))
@@ -621,8 +621,9 @@ def confirm_payment():
 
     session.pop('temp_booking', None)
 
+    flash("Payment successful! Booking request sent to guide.", "success")
     return redirect(url_for('profile'))
-    
+
 @app.route("/guide/dashboard")
 def guide_dashboard():
 
