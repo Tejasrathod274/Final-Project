@@ -41,7 +41,7 @@ window.DESTINATION_DATA = {
     heroImage: 'images/jaipur/jaipur.jpg',
     places: [
       { name: 'Amber Fort', description: 'Majestic fort and palace.', image: 'images/jaipur/amber-fort/amber-fort.jpg' },
-      { name: 'City Palace', description: 'Royal residence and museums.', image: 'images/jaipur/city-palace/city-palace.jpg' },
+      { name: 'City Palace', description: 'Royal residence and museums.', image: 'images/jaipur/city-palace/city-Palace.jpg' },
       { name: 'Hawa Mahal', description: 'Palace of Winds.', image: 'images/jaipur/hawa-mahal/hawa-mahal.jpg' },
       { name: 'Jantar Mantar', description: 'Ancient observatory.', image: 'images/jaipur/jantar-mantar/jantar-mantar.jpg' },
       { name: 'Nahargarh Fort', description: 'Views over the city.', image: 'images/jaipur/nahargarh-fort/nahargah-fort.jpg' },
@@ -300,15 +300,18 @@ window.PLACE_DETAILS = {
       heroImage: 'images/jaipur/amber-fort/amber-fort.jpg',
       hotels: [
         { name: 'Fort View Resort', description: 'Views of Amber Fort from the rooms.', price: '₹5,500/night',image:'images/jaipur/amber-fort/hotel/fort-view.jpg' },
-        { name: 'Mandawa Haveli', description: 'Heritage stay near the fort.', price: '₹4,200/night', image:'images/jaipur/amber-fort/hotel/mandawa.jpg' }
+        { name: 'Mandawa Haveli', description: 'Heritage stay near the fort.', price: '₹4,200/night', image:'images/jaipur/amber-fort/hotel/mandawa.jpg' },
+        { name: 'Amber Valley Inn', description: 'Luxury resort at the fort base.', price: '₹8,500/night', image:'images/jaipur/amber-fort/hotel/amber-valley.jpg' }
       ],
       restaurants: [
         { name: 'Anokhi Café', description: 'Healthy food and café near the fort road.', cuisine: 'Café', image:'images/jaipur/amber-fort/restaurant/anokhi-cafe.jpg' },
-        { name: 'Laxmi Mishthan Bhandar', description: 'Sweets and Rajasthani snacks.', cuisine: 'Rajasthani', image:'images/jaipur/amber-fort/restaurant/laxmi.jpg' }
+        { name: 'Laxmi Mishthan Bhandar', description: 'Sweets and Rajasthani snacks.', cuisine: 'Rajasthani', image:'images/jaipur/amber-fort/restaurant/laxmi.jpg' },
+        { name: 'Fort Royal Dine', description: 'Mughlai and traditional Rajasthani meals.', cuisine: 'Rajasthani', image:'images/jaipur/amber-fort/restaurant/royal-dine.jpg' }
       ],
       spotsToVisit: [
         { name: 'Sheesh Mahal', description: 'Mirror palace inside the fort.', image: 'images/jaipur/amber-fort/to-visit/sheesh-mahal.jpg' },
-        { name: 'Maota Lake', description: 'Lake at the foot of the fort.', image: 'images/jaipur/amber-fort/to-visit/matao-lake.jpg' }
+        { name: 'Maota Lake', description: 'Lake at the foot of the fort for views.', image: 'images/jaipur/amber-fort/to-visit/matao-lake.jpg' },
+        { name: 'Jeep and Elephant Ride', description: 'Adventure ride up to the fort.', image: 'images/jaipur/amber-fort/to-visit/jeep-elephant.jpg' }
       ],
       tours: [
         { name: 'Jaipur Royal Tour', description: 'Forts, palaces and markets.', price: '₹9,000/person', image: 'images/jaipur-tour.jpg' },
@@ -320,54 +323,75 @@ window.PLACE_DETAILS = {
       heroImage: 'images/jaipur/city-palace/city-palace.jpg',
       hotels: [
         { name: 'Raj Palace Heritage', description: 'Palace hotel with royal suites.', price: '₹9,000/night',image:'images/jaipur/city-palace/hotel/raj-palace.jpg' },
-        { name: 'Pink City Inn', description: 'Central, near City Palace and markets.', price: '₹3,200/night', image:'images/jaipur/city-palace/hotel/pin-city.jpg' }
+        { name: 'Pink City Inn', description: 'Central, near City Palace and markets.', price: '₹3,200/night', image:'images/jaipur/city-palace/hotel/pin-city.jpg' },
+        { name: 'Royal Dynasty Hotel', description: 'Luxury hotel opposite the palace.', price: '₹7,500/night', image:'images/jaipur/city-palace/hotel/royal-dynasty.jpg' }
       ],
       restaurants: [
         { name: 'Handi Restaurant', description: 'Mughlai and North Indian near MI Road.', cuisine: 'North Indian', image:'images/jaipur/city-palace/restaurant/handi.jpg' },
-        { name: 'Tapri Central', description: 'Rooftop chai and snacks.', cuisine: 'Café', image:'images/jaipur/city-palace/restaurant/tapri.jpg' }
+        { name: 'Tapri Central', description: 'Rooftop chai and snacks with palace view.', cuisine: 'Café', image:'images/jaipur/city-palace/restaurant/tapri.jpg' },
+        { name: 'Palace View Dine', description: 'Royal restaurant with heritage ambiance.', cuisine: 'North Indian', image:'images/jaipur/city-palace/restaurant/palace-view.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Mubarak Mahal', description: 'Museum of royal textiles.', image: 'images/jaipur/city-palace/to-visit/mubarak.jpg' },
-        { name: 'Chandra Mahal', description: 'Royal residence (partial access).', image: 'images/jaipur/city-palace/to-visit/chandra-mahal.jpg' }
+        { name: 'Mubarak Mahal', description: 'Museum of royal textiles and royal attire.', image: 'images/jaipur/city-palace/to-visit/mubarak.jpg' },
+        { name: 'Chandra Mahal', description: 'Royal residence with partial access for tourists.', image: 'images/jaipur/city-palace/to-visit/chandra-mahal.jpg' },
+        { name: 'Peacock Gate', description: 'Famous ornate gate with royal insignia.', image: 'images/jaipur/city-palace/to-visit/peacock-gate.jpg' }
       ],
     },
     'hawa mahal': {
       aboutParagraph: 'Hawa Mahal, the Palace of Winds, is a five-storey facade with small windows so royal women could watch the street without being seen. It is a symbol of Jaipur and best viewed from the street in the morning light.',
       heroImage: 'images/jaipur/hawa-mahal/hawa-mahal.jpg',
       hotels: [
-        { name: 'Pink City Inn', description: 'Walking distance to Hawa Mahal.', price: '₹3,200/night' ,image:'images/jaipur/hawa-mahal/hotel/pin-city.jpg' }
+        { name: 'Pink City Inn', description: 'Walking distance to Hawa Mahal.', price: '₹3,200/night' ,image:'images/jaipur/hawa-mahal/hotel/pin-city.jpg' },
+        { name: 'Mahal Budget Hotel', description: 'Budget stay right below the palace.', price: '₹2,800/night', image:'images/jaipur/hawa-mahal/hotel/mahal-budget.jpg' },
+        { name: 'Window Palace Inn', description: 'Heritage hotel near main streets.', price: '₹4,200/night', image:'images/jaipur/hawa-mahal/hotel/window-palace.jpg' }
       ],
       restaurants: [
-        { name: 'LMB', description: 'Famous sweets and thali near Johari Bazaar.', cuisine: 'Rajasthani', image:'images/jaipur/johari-bazaar/restaurant/lxmb.jpg' }
+        { name: 'LMB', description: 'Famous sweets and thali near Johari Bazaar.', cuisine: 'Rajasthani', image:'images/jaipur/johari-bazaar/restaurant/lxmb.jpg' },
+        { name: 'Rajasthani Kitchen', description: 'Traditional Rajasthani meals.', cuisine: 'Rajasthani', image:'images/jaipur/hawa-mahal/restaurant/rajasthani-kitchen.jpg' },
+        { name: 'Street Food Court', description: 'Local street food and chaat.', cuisine: 'Street Food', image:'images/jaipur/hawa-mahal/restaurant/street-food.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Johari Bazaar', description: 'Traditional market behind Hawa Mahal.', image: 'images/jaipur/hawa-mahal/to-visit/johari-bazaar.jpg' }
+        { name: 'Johari Bazaar', description: 'Traditional market behind Hawa Mahal.', image: 'images/jaipur/hawa-mahal/to-visit/johari-bazaar.jpg' },
+        { name: 'Photography Spot', description: 'Best views from the main road.', image: 'images/jaipur/hawa-mahal/to-visit/photo-spot.jpg' },
+        { name: 'Museum Interior', description: 'Walk through small chambers and rooms.', image: 'images/jaipur/hawa-mahal/to-visit/interior.jpg' }
       ],
     },
     'jantar mantar': {
       aboutParagraph: 'Jantar Mantar in Jaipur is an ancient astronomical observatory with large stone instruments to measure time and position of stars. It is a UNESCO site and shows the scientific side of Rajasthan.',
       heroImage: 'images/jaipur/jantar-mantar/jantar-mantar.jpg',
       hotels: [
-        { name: 'Heritage Haveli Jaipur', description: 'Traditional stay near the old city.', price: '₹4,800/night', image:'images/jaipur/jantar-mantar/hotel/heritage-haveli.jpg' }
+        { name: 'Heritage Haveli Jaipur', description: 'Traditional stay near the old city.', price: '₹4,800/night', image:'images/jaipur/jantar-mantar/hotel/heritage-haveli.jpg' },
+        { name: 'Observatory View Inn', description: 'Near Jantar Mantar main entrance.', price: '₹4,200/night', image:'images/jaipur/jantar-mantar/hotel/observatory-view.jpg' },
+        { name: 'Historic City Hotel', description: 'Budget hotel in heritage area.', price: '₹3,500/night', image:'images/jaipur/jantar-mantar/hotel/historic-city.jpg' }
       ],
       restaurants: [
-        { name: 'Handi Restaurant', description: 'North Indian and Mughlai.', cuisine: 'North Indian', image:'images/jaipur/jantar-mantar/restaurant/handi.jpg' }
+        { name: 'Handi Restaurant', description: 'North Indian and Mughlai.', cuisine: 'North Indian', image:'images/jaipur/jantar-mantar/restaurant/handi.jpg' },
+        { name: 'Ancient Spice', description: 'Authentic Indian and Mughlai cuisine.', cuisine: 'North Indian', image:'images/jaipur/jantar-mantar/restaurant/ancient-spice.jpg' },
+        { name: 'Heritage Dining', description: 'Royal Rajasthani meals.', cuisine: 'Rajasthani', image:'images/jaipur/jantar-mantar/restaurant/heritage-dining.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Samrat Yantra', description: 'Largest sundial in the complex.', image: 'images/jaipur/jantar-mantar/to-visit/samrat.jpg' }
+        { name: 'Samrat Yantra', description: 'Largest sundial in the complex.', image: 'images/jaipur/jantar-mantar/to-visit/samrat.jpg' },
+        { name: 'Astronomical Instruments', description: 'Learn about ancient astronomy and calculations.', image: 'images/jaipur/jantar-mantar/to-visit/instruments.jpg' },
+        { name: 'UNESCO Heritage Tour', description: 'Guided tour of the entire observatory.', image: 'images/jaipur/jantar-mantar/to-visit/heritage-tour.jpg' }
       ],
     },
     'nahargarh fort': {
       aboutParagraph: 'Nahargarh Fort sits on the Aravalli hills overlooking Jaipur. It was built for defence and has great views of the city, especially at sunset. You can drive up and enjoy the view from the fort walls.',
       heroImage: 'images/jaipur/nahargarh-fort/nahargah-fort.jpg',
       hotels: [
-        { name: 'Fort View Resort', description: 'Near the fort area.', price: '₹5,500/night', image:'images/jaipur/nahargarh-fort/hotel/fort-view.jpg' }
+        { name: 'Fort View Resort', description: 'Near the fort area with valley views.', price: '₹5,500/night', image:'images/jaipur/nahargarh-fort/hotel/fort-view.jpg' },
+        { name: 'Hill Station Inn', description: 'Budget stay on the way to fort.', price: '₹4,000/night', image:'images/jaipur/nahargarh-fort/hotel/hill-station.jpg' },
+        { name: 'Summit Retreat', description: 'Near fort summit with sunset views.', price: '₹6,500/night', image:'images/jaipur/nahargarh-fort/hotel/summit-retreat.jpg' }
       ],
       restaurants: [
-        { name: 'Once Upon a Time', description: 'Rooftop restaurant at Nahargarh with city view.', cuisine: 'Rajasthani', image:'images/jaipur/nahargarh-fort/restaurant/once.jpg' }
+        { name: 'Once Upon a Time', description: 'Rooftop restaurant at Nahargarh with city view.', cuisine: 'Rajasthani', image:'images/jaipur/nahargarh-fort/restaurant/once.jpg' },
+        { name: 'Hilltop Café', description: 'Evening snacks and tea with views.', cuisine: 'Café', image:'images/jaipur/nahargarh-fort/restaurant/hilltop-cafe.jpg' },
+        { name: 'Fort Restaurant', description: 'North Indian food and drinks.', cuisine: 'North Indian', image:'images/jaipur/nahargarh-fort/restaurant/fort-restaurant.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Sunset Point', description: 'Best views of Jaipur at dusk.', image: 'images/jaipur/nahargarh-fort/to-visit/sunset.jpg' }
+        { name: 'Sunset Point', description: 'Best views of Jaipur city at dusk.', image: 'images/jaipur/nahargarh-fort/to-visit/sunset.jpg' },
+        { name: 'Fort Walls', description: 'Walk along the ancient fort structure.', image: 'images/jaipur/nahargarh-fort/to-visit/walls.jpg' },
+        { name: 'Jaipur City Lights', description: 'Night view of pink city lights from fort.', image: 'images/jaipur/nahargarh-fort/to-visit/night-lights.jpg' }
       ],
       tours: [
         { name: 'Jaipur Royal Tour', description: 'Forts, palaces and markets.', price: '₹9,000/person', image: 'images/jaipur-tour.jpg' }
@@ -377,13 +401,19 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Johari Bazaar is Jaipur\'s famous jewellery and handicraft market. You can buy traditional jewellery, gems, textiles, and souvenirs. The bazaar is colourful and full of local life.',
       heroImage: 'images/jaipur/johari-bazaar/johari-bazaar.jpg',
       hotels: [
-        { name: 'Pink City Inn', description: 'Central near the bazaars.', price: '₹3,200/night', image:'images/jaipur/johari-bazaar/hotel/pin-city.jpg' }
+        { name: 'Pink City Inn', description: 'Central near the bazaars.', price: '₹3,200/night', image:'images/jaipur/johari-bazaar/hotel/pin-city.jpg' },
+        { name: 'Bazaar View Hotel', description: 'Right in the heart of the market.', price: '₹3,800/night', image:'images/jaipur/johari-bazaar/hotel/bazaar-view.jpg' },
+        { name: 'Merchant\'s Inn', description: 'Budget hotel for shopping tourists.', price: '₹3,500/night', image:'images/jaipur/johari-bazaar/hotel/merchants-inn.jpg' }
       ],
       restaurants: [
-        { name: 'Laxmi Mishthan Bhandar (LMB)', description: 'Sweets and traditional meals.', cuisine: 'Rajasthani', image:'images/jaipur/johari-bazaar/restaurant/lxmb.jpg' }
+        { name: 'Laxmi Mishthan Bhandar (LMB)', description: 'Sweets and traditional meals.', cuisine: 'Rajasthani', image:'images/jaipur/johari-bazaar/restaurant/lxmb.jpg' },
+        { name: 'Bazaar Dhaba', description: 'Local North Indian and snacks.', cuisine: 'North Indian', image:'images/jaipur/johari-bazaar/restaurant/bazaar-dhaba.jpg' },
+        { name: 'Sweet Shop Café', description: 'Traditional sweets and chai.', cuisine: 'Café', image:'images/jaipur/johari-bazaar/restaurant/sweet-shop-cafe.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Bapu Bazaar', description: 'Textiles and handicrafts.', image: 'images/jaipur/johari-bazaar/to-visit/bapu.jpg' }
+        { name: 'Bapu Bazaar', description: 'Textiles and handicrafts.', image: 'images/jaipur/johari-bazaar/to-visit/bapu.jpg' },
+        { name: 'Jewellery Stores', description: 'Traditional and modern jewellery shops.', image: 'images/jaipur/johari-bazaar/to-visit/jewellery.jpg' },
+        { name: 'Market Walk', description: 'Experience the vibrant bazaar culture.', image: 'images/jaipur/johari-bazaar/to-visit/market-walk.jpg' }
       ],
       tours: [
         { name: 'Jaipur Royal Tour', description: 'Forts, palaces and markets.', price: '₹9,000/person', image: 'images/jaipur-tour.jpg' }
@@ -395,17 +425,19 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Shimla, the Queen of Hills, was the summer capital of British India. It has colonial buildings, the Mall Road, and scenic views. You can visit Jakhu Temple, take the toy train, and enjoy the cool weather and pine forests.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Mountain View Shimla', description: 'Valley views and comfortable rooms.', price: '₹5,500/night' },
-        { name: 'Oberoi Cecil', description: 'Heritage hotel on the Mall.', price: '₹12,000/night' }
+        { name: 'Mountain View Shimla', description: 'Valley views and comfortable rooms.', price: '₹5,500/night', image: 'images/Himachal/shimla/hotel/mountain-view.jpg' },
+        { name: 'Oberoi Cecil', description: 'Heritage hotel on the Mall.', price: '₹12,000/night', image: 'images/Himachal/shimla/hotel/oberoi-cecil.jpg' },
+        { name: 'The Willows', description: 'Luxury stay in colonial ambiance.', price: '₹8,500/night', image: 'images/Himachal/shimla/hotel/willows.jpg' }
       ],
       restaurants: [
-        { name: 'Wake and Bake', description: 'Café and bakery on Mall Road.', cuisine: 'Café' },
-        { name: 'Himachal Pradesh Tourism Restaurant', description: 'Local and North Indian.', cuisine: 'North Indian' }
+        { name: 'Wake and Bake', description: 'Café and bakery on Mall Road.', cuisine: 'Café', image: 'images/Himachal/shimla/restaurant/wake-bake.jpg' },
+        { name: 'Himachal Pradesh Tourism Restaurant', description: 'Local and North Indian.', cuisine: 'North Indian', image: 'images/Himachal/shimla/restaurant/hp-tourism.jpg' },
+        { name: 'Asha Restaurant', description: 'Authentic Himachali cuisine.', cuisine: 'Himachali', image: 'images/Himachal/shimla/restaurant/asha.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Mall Road', description: 'Shopping, cafés and walks.', image: 'images/Himachal.jpg' },
-        { name: 'Jakhu Temple', description: 'Hanuman temple with views.', image: 'images/Himachal.jpg' },
-        { name: 'Kufri', description: 'Snow point and activities.', image: 'images/Himachal.jpg' }
+        { name: 'Mall Road', description: 'Shopping, cafés and walks through heritage lane.', image: 'images/Himachal/shimla/to-visit/mall-road.jpg' },
+        { name: 'Jakhu Temple', description: 'Hanuman temple with panoramic city views.', image: 'images/Himachal/shimla/to-visit/jakhu-temple.jpg' },
+        { name: 'Kufri', description: 'Snow point and activities in Shimla hills.', image: 'images/Himachal/shimla/to-visit/kufri.jpg' }
       ],
       tours: [
         { name: 'Shimla-Manali 5D', description: 'Classic hill circuit.', price: '₹18,000/person', image: 'images/Himachal.jpg' }
@@ -415,17 +447,19 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Manali is a popular hill station with snow views, adventure sports, and apple orchards. You can visit Rohtang Pass (when open), Solang Valley, Hadimba Temple, and the old Manali village. It is a hub for trekking and paragliding.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Manali Snow Resort', description: 'Near Rohtang and Solang.', price: '₹6,800/night' },
-        { name: 'Johnson Lodge', description: 'Wood and stone lodge with mountain view.', price: '₹5,200/night' }
+        { name: 'Manali Snow Resort', description: 'Near Rohtang and Solang.', price: '₹6,800/night', image: 'images/Himachal/manali/hotel/manali-snow.jpg' },
+        { name: 'Johnson Lodge', description: 'Wood and stone lodge with mountain view.', price: '₹5,200/night', image: 'images/Himachal/manali/hotel/johnson-lodge.jpg' },
+        { name: 'Pinewood Hotel', description: 'Luxury stay amidst pine forests.', price: '₹7,500/night', image: 'images/Himachal/manali/hotel/pinewood.jpg' }
       ],
       restaurants: [
-        { name: 'Johnson Lodge Restaurant', description: 'Wood-fired pizzas and continental.', cuisine: 'Continental' },
-        { name: 'Casa Bella Vista', description: 'Italian and Indian with view.', cuisine: 'Italian' }
+        { name: 'Johnson Lodge Restaurant', description: 'Wood-fired pizzas and continental.', cuisine: 'Continental', image: 'images/Himachal/manali/restaurant/johnson-lodge.jpg' },
+        { name: 'Casa Bella Vista', description: 'Italian and Indian with mountain view.', cuisine: 'Italian', image: 'images/Himachal/manali/restaurant/casa-bella.jpg' },
+        { name: 'Local Dhaba', description: 'Himachali momos and North Indian food.', cuisine: 'North Indian', image: 'images/Himachal/manali/restaurant/local-dhaba.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Solang Valley', description: 'Adventure sports and snow.', image: 'images/Himachal.jpg' },
-        { name: 'Hadimba Temple', description: 'Wooden temple in the forest.', image: 'images/Himachal.jpg' },
-        { name: 'Old Manali', description: 'Cafés and hippie vibe.', image: 'images/Himachal.jpg' }
+        { name: 'Solang Valley', description: 'Adventure sports, paragliding and snow in winter.', image: 'images/Himachal/manali/to-visit/solang-valley.jpg' },
+        { name: 'Hadimba Temple', description: 'Wooden temple in the forest with spiritual significance.', image: 'images/Himachal/manali/to-visit/hadimba-temple.jpg' },
+        { name: 'Old Manali', description: 'Traditional cafés and hippie village atmosphere.', image: 'images/Himachal/manali/to-visit/old-manali.jpg' }
       ],
       tours: [
         { name: 'Shimla-Manali 5D', description: 'Classic hill circuit.', price: '₹18,000/person', image: 'images/Himachal.jpg' },
@@ -436,15 +470,19 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Dharamshala is home to the Dalai Lama and the Tibetan government-in-exile. McLeod Ganj is the main traveller area with monasteries, cafés, and trekking. You can visit Tsuglagkhang Temple, Norbulingka, and enjoy Tibetan food and culture.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Dharamshala Peace Inn', description: 'Near McLeod Ganj and main square.', price: '₹3,900/night' }
+        { name: 'Dharamshala Peace Inn', description: 'Near McLeod Ganj and main square.', price: '₹3,900/night', image: 'images/Himachal/dharamshala/hotel/peace-inn.jpg' },
+        { name: 'Tibetan Guesthouse', description: 'Traditional Tibetan-style stay.', price: '₹3,500/night', image: 'images/Himachal/dharamshala/hotel/tibetan-guest.jpg' },
+        { name: 'McLeod View Hotel', description: 'Hill view with modern comfort.', price: '₹5,000/night', image: 'images/Himachal/dharamshala/hotel/mcleod-view.jpg' }
       ],
       restaurants: [
-        { name: 'Illiterati', description: 'Books, coffee and Tibetan food.', cuisine: 'Tibetan' },
-        { name: 'Nick\'s Kitchen', description: 'Tibetan and Indian.', cuisine: 'Tibetan' }
+        { name: 'Illiterati', description: 'Books, coffee and Tibetan food.', cuisine: 'Tibetan', image: 'images/Himachal/dharamshala/restaurant/illiterati.jpg' },
+        { name: 'Nick\'s Kitchen', description: 'Tibetan and Indian fusion.', cuisine: 'Tibetan', image: 'images/Himachal/dharamshala/restaurant/nicks-kitchen.jpg' },
+        { name: 'Moon Peak Café', description: 'Café with spiritual vibe and momos.', cuisine: 'Tibetan', image: 'images/Himachal/dharamshala/restaurant/moon-peak.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Tsuglagkhang Temple', description: 'Main temple and Dalai Lama\'s residence.', image: 'images/Himachal.jpg' },
-        { name: 'Triund Trek', description: 'Popular one-day trek.', image: 'images/Himachal.jpg' }
+        { name: 'Tsuglagkhang Temple', description: 'Main temple and Dalai Lama\'s residence.', image: 'images/Himachal/dharamshala/to-visit/tsuglagkhang.jpg' },
+        { name: 'Triund Trek', description: 'Popular one-day trek with panoramic views.', image: 'images/Himachal/dharamshala/to-visit/triund-trek.jpg' },
+        { name: 'Norbulingka Institute', description: 'Tibetan art, culture and craft center.', image: 'images/Himachal/dharamshala/to-visit/norbulingka.jpg' }
       ],
       tours: [
         { name: 'Dharamshala & Bir 4D', description: 'Culture and paragliding.', price: '₹14,000/person', image: 'images/Himachal.jpg' }
@@ -454,14 +492,19 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Spiti Valley is a high-altitude desert with monasteries, stark landscapes, and clear skies. Key places include Key Monastery, Tabo, and Kaza. It is ideal for adventure and culture lovers. Best visited in summer.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Spiti Valley Lodge', description: 'Simple and cosy in Kaza.', price: '₹2,500/night' }
+        { name: 'Spiti Valley Lodge', description: 'Simple and cosy in Kaza.', price: '₹2,500/night', image: 'images/Himachal/spiti-valley/hotel/spiti-lodge.jpg' },
+        { name: 'Tabo Monastery Guest House', description: 'Stay near the ancient monastery.', price: '₹2,200/night', image: 'images/Himachal/spiti-valley/hotel/tabo-guest.jpg' },
+        { name: 'Key Monastery Inn', description: 'Budget stay with mountain views.', price: '₹2,800/night', image: 'images/Himachal/spiti-valley/hotel/key-inn.jpg' }
       ],
       restaurants: [
-        { name: 'Sol Café (Kaza)', description: 'Simple food and warmth.', cuisine: 'Multi-cuisine' }
+        { name: 'Sol Café (Kaza)', description: 'Simple food and warmth in high altitude.', cuisine: 'Multi-cuisine', image: 'images/Himachal/spiti-valley/restaurant/sol-cafe.jpg' },
+        { name: 'Monastery Tea House', description: 'Traditional Tibetan chai and food.', cuisine: 'Tibetan', image: 'images/Himachal/spiti-valley/restaurant/monastery-tea.jpg' },
+        { name: 'Trekker\'s Rest', description: 'North Indian and local cuisine.', cuisine: 'North Indian', image: 'images/Himachal/spiti-valley/restaurant/trekkers-rest.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Key Monastery', description: 'Famous Buddhist monastery.', image: 'images/Himachal.jpg' },
-        { name: 'Tabo Monastery', description: 'One of the oldest in the Himalayas.', image: 'images/Himachal.jpg' }
+        { name: 'Key Monastery', description: 'Famous Buddhist monastery on hilltop.', image: 'images/Himachal/spiti-valley/to-visit/key-monastery.jpg' },
+        { name: 'Tabo Monastery', description: 'One of the oldest in the Himalayas.', image: 'images/Himachal/spiti-valley/to-visit/tabo-monastery.jpg' },
+        { name: 'Chandratal Lake', description: 'High altitude lake and trekking destination.', image: 'images/Himachal/spiti-valley/to-visit/chandratal.jpg' }
       ],
       tours: [
         { name: 'Spiti Valley 7D', description: 'Adventure and monasteries.', price: '₹25,000/person', image: 'images/Himachal.jpg' }
@@ -471,14 +514,19 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Dalhousie is a quiet hill station with colonial charm, pine and oak forests. You can visit Panchpula, Kalatop, and enjoy peaceful walks. It is less crowded than Shimla and Manali.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Grand View Hotel', description: 'Heritage stay with valley view.', price: '₹4,500/night' }
+        { name: 'Grand View Hotel', description: 'Heritage stay with valley view.', price: '₹4,500/night', image: 'images/Himachal/dalhousie/hotel/grand-view.jpg' },
+        { name: 'Mount View Hotel', description: 'Panoramic mountain views and comfort.', price: '₹3,800/night', image: 'images/Himachal/dalhousie/hotel/mount-view.jpg' },
+        { name: 'Dalhousie Resort', description: 'Pine forest setting with garden.', price: '₹5,200/night', image: 'images/Himachal/dalhousie/hotel/dalhousie-resort.jpg' }
       ],
       restaurants: [
-        { name: 'Kwality Restaurant', description: 'North Indian and local.', cuisine: 'North Indian' }
+        { name: 'Kwality Restaurant', description: 'North Indian and local Himachali food.', cuisine: 'North Indian', image: 'images/Himachal/dalhousie/restaurant/kwality.jpg' },
+        { name: 'Café Dalhousie', description: 'Continental and veg options with view.', cuisine: 'Continental', image: 'images/Himachal/dalhousie/restaurant/cafe-dalhousie.jpg' },
+        { name: 'Local Dhaba', description: 'Authentic Himachali meals and tea.', cuisine: 'Himachali', image: 'images/Himachal/dalhousie/restaurant/local-dhaba.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Panchpula', description: 'Stream and picnic spot.', image: 'images/Himachal.jpg' },
-        { name: 'Kalatop Wildlife Sanctuary', description: 'Forest walk.', image: 'images/Himachal.jpg' }
+        { name: 'Panchpula', description: 'Stream and picnic spot with waterfalls.', image: 'images/Himachal/dalhousie/to-visit/panchpula.jpg' },
+        { name: 'Kalatop Wildlife Sanctuary', description: 'Forest walk and wildlife viewing.', image: 'images/Himachal/dalhousie/to-visit/kalatop.jpg' },
+        { name: 'Dainkund Peak', description: 'Highest peak in Dalhousie with trekking.', image: 'images/Himachal/dalhousie/to-visit/dainkund-peak.jpg' }
       ],
       tours: []
     },
@@ -486,14 +534,19 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Kasol is a small village on the Parvati River, popular with backpackers. It is a base for treks to Kheerganga and Malana. You can enjoy Israeli food, cafés, and the relaxed vibe.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Parvati Kuteer', description: 'Cottages by the river.', price: '₹2,800/night' }
+        { name: 'Parvati Kuteer', description: 'Cottages by the river with nature view.', price: '₹2,800/night', image: 'images/Himachal/kasol/hotel/parvati-kuteer.jpg' },
+        { name: 'riverside Retreat', description: 'Budget-friendly cabins by the river.', price: '₹2,200/night', image: 'images/Himachal/kasol/hotel/riverside-retreat.jpg' },
+        { name: 'Kasol Adventure Club', description: 'Backpacker lodge with trek facilities.', price: '₹2,600/night', image: 'images/Himachal/kasol/hotel/adventure-club.jpg' }
       ],
       restaurants: [
-        { name: 'Wake and Bake', description: 'Israeli and continental by the river.', cuisine: 'Continental' }
+        { name: 'Wake and Bake', description: 'Israeli and continental by the river.', cuisine: 'Continental', image: 'images/Himachal/kasol/restaurant/wake-bake.jpg' },
+        { name: 'Evergreen Café', description: 'Italian pasta and Israeli food.', cuisine: 'Italian', image: 'images/Himachal/kasol/restaurant/evergreen.jpg' },
+        { name: 'Parvati Restaurant', description: 'Local North Indian and momos.', cuisine: 'North Indian', image: 'images/Himachal/kasol/restaurant/parvati.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Kheerganga Trek', description: 'Hot springs and mountain views.', image: 'images/Himachal.jpg' },
-        { name: 'Malana', description: 'Village known for culture and trek.', image: 'images/Himachal.jpg' }
+        { name: 'Kheerganga Trek', description: 'Hot springs and mountain views.', image: 'images/Himachal/kasol/to-visit/kheerganga.jpg' },
+        { name: 'Malana', description: 'Village known for culture and trek.', image: 'images/Himachal/kasol/to-visit/malana.jpg' },
+        { name: 'Parvati River', description: 'River walks and nature trails.', image: 'images/Himachal/kasol/to-visit/parvati-river.jpg' }
       ],
       tours: []
     }
@@ -522,19 +575,86 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Gulmarg is a meadow resort in the Himalayas, famous for skiing in winter and flower meadows in summer. You can take the Gondola (one of the highest cable cars), trek, and enjoy the mountain views. It is a key destination for adventure and nature in Kashmir.',
       heroImage: 'images/kashmir.jpg',
       hotels: [
-        { name: 'Gulmarg Resort', description: 'Slopes and mountain views.', price: '₹9,200/night' }
+        { name: 'Gulmarg Resort', description: 'Slopes and mountain views.', price: '₹9,200/night', image: 'images/kashmir/gulmarg/hotel/gulmarg-resort.jpg' },
+        { name: 'Highlands Park Resort', description: 'Meadow setting with recreational activities.', price: '₹8,500/night', image: 'images/kashmir/gulmarg/hotel/highlands-park.jpg' },
+        { name: 'Gulmarg Biosphere Lodge', description: 'Eco-friendly stay near Gondola station.', price: '₹7,800/night', image: 'images/kashmir/gulmarg/hotel/biosphere-lodge.jpg' }
       ],
       restaurants: [
-        { name: 'Stream Restaurant', description: 'Local and Indian with view.', cuisine: 'Kashmiri' }
+        { name: 'Stream Restaurant', description: 'Local and Indian with mountain view.', cuisine: 'Kashmiri', image: 'images/kashmir/gulmarg/restaurant/stream.jpg' },
+        { name: 'Mountain Café', description: 'Hot soups and Continental for warmth.', cuisine: 'Continental', image: 'images/kashmir/gulmarg/restaurant/mountain-cafe.jpg' },
+        { name: 'Kashmiri Kitchen', description: 'Wazwan and authentic Kashmiri cuisine.', cuisine: 'Kashmiri', image: 'images/kashmir/gulmarg/restaurant/kashmiri-kitchen.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Gondola ride', description: 'Cable car to higher peaks.', image: 'images/kashmir.jpg' },
-        { name: 'Skiing (winter)', description: 'Ski slopes and snow.', image: 'images/kashmir.jpg' }
+        { name: 'Gondola ride', description: 'Cable car to higher peaks and views.', image: 'images/kashmir/gulmarg/to-visit/gondola.jpg' },
+        { name: 'Skiing (winter)', description: 'Ski slopes and snow activities.', image: 'images/kashmir/gulmarg/to-visit/skiing.jpg' },
+        { name: 'Flower Meadows', description: 'Alpine flowers blooming in summer.', image: 'images/kashmir/gulmarg/to-visit/meadows.jpg' }
       ],
       tours: [
         { name: 'Kashmir Paradise 5D', description: 'Srinagar, Gulmarg, Pahalgam.', price: '₹24,000/person', image: 'images/kashmir-tour.jpg' },
         { name: 'Houseboat & Gulmarg 4D', description: 'Houseboat plus Gulmarg.', price: '₹18,500/person', image: 'images/kashmir-tour.jpg' }
       ]
+    },
+    pahalgam: {
+      aboutParagraph: 'Pahalgam is a serene valley destination surrounded by pine forests and waterfalls. Famous for Kolahoi Peak trek, Aru Valley, and the Lidder River. It is a perfect base for trekking, fishing, and enjoying the pristine nature of Kashmir.',
+      heroImage: 'images/kashmir/pahalgam/to-visit/pahalgam.jpg',
+      hotels: [
+        { name: 'Pahalgam Valley Lodge', description: 'Riverside lodge with scenic views.', price: '₹5,500/night', image: 'images/kashmir/pahalgam/hotel/valley-lodge.jpg' },
+        { name: 'Forest Retreat Camp', description: 'Luxury camp with nature immersion.', price: '₹7,200/night', image: 'images/kashmir/pahalgam/hotel/forest-retreat.jpg' },
+        { name: 'Lidder Riverside Inn', description: 'Budget-friendly stay by the river.', price: '₹4,500/night', image: 'images/kashmir/pahalgam/hotel/lidder-inn.jpg' }
+      ],
+      restaurants: [
+        { name: 'Mahatta Tea House', description: 'Traditional Kashmiri tea and snacks.', cuisine: 'Kashmiri', image: 'images/kashmir/pahalgam/restaurant/mahatta.jpg' },
+        { name: 'Kolahoi Restaurant', description: 'Local trout and Kashmiri cuisine.', cuisine: 'Kashmiri', image: 'images/kashmir/pahalgam/restaurant/kolahoi.jpg' },
+        { name: 'Valley View Café', description: 'Continental and North Indian meals.', cuisine: 'Continental', image: 'images/kashmir/pahalgam/restaurant/valley-view.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Aru Valley', description: 'Meadow valley perfect for trekking.', image: 'images/kashmir/pahalgam/to-visit/aru-valley.jpg' },
+        { name: 'Kolahoi Peak Trek', description: 'High-altitude trek with mountain views.', image: 'images/kashmir/pahalgam/to-visit/kolahoi-peak.jpg' },
+        { name: 'Lidder River', description: 'River walks and trout fishing.', image: 'images/kashmir/pahalgam/to-visit/lidder-river.jpg' }
+      ],
+      tours: [
+        { name: 'Kashmir Paradise 5D', description: 'Srinagar, Gulmarg, Pahalgam.', price: '₹24,000/person', image: 'images/kashmir-tour.jpg' }
+      ]
+    },
+    sonamarg: {
+      aboutParagraph: 'Sonamarg, meaning Meadow of Gold, is a stunning alpine meadow in Kashmir. Known for its green meadows, glacier views, and access to Zeoji Forest. Perfect for nature lovers and trekkers visiting the Himalayan beauty.',
+      heroImage: 'images/kashmir/sonamarg/to-visit/sonamarg.jpg',
+      hotels: [
+        { name: 'Sonamarg Alpine Resort', description: 'Mountain views and garden stay.', price: '₹6,500/night', image: 'images/kashmir/sonamarg/hotel/alpine-resort.jpg' },
+        { name: 'Glacier View Inn', description: 'Near glacier with cosy rooms.', price: '₹5,800/night', image: 'images/kashmir/sonamarg/hotel/glacier-view.jpg' },
+        { name: 'Meadow Lodge', description: 'Simple and comfortable mountain lodge.', price: '₹4,500/night', image: 'images/kashmir/sonamarg/hotel/meadow-lodge.jpg' }
+      ],
+      restaurants: [
+        { name: 'Himalayan Grill', description: 'Grilled meat and local Kashmiri food.', cuisine: 'Kashmiri', image: 'images/kashmir/sonamarg/restaurant/himalayan-grill.jpg' },
+        { name: 'Mountain Dhabha', description: 'North Indian and warming soups.', cuisine: 'North Indian', image: 'images/kashmir/sonamarg/restaurant/mountain-dhaba.jpg' },
+        { name: 'Sonamarg Café', description: 'Tea, coffee and light snacks.', cuisine: 'Café', image: 'images/kashmir/sonamarg/restaurant/sonamarg-cafe.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Glacier Lake Trek', description: 'Trek to pristine glacier lake.', image: 'images/kashmir/sonamarg/to-visit/glacier-lake.jpg' },
+        { name: 'Zeoji Forest', description: 'Pine forest walks and nature trails.', image: 'images/kashmir/sonamarg/to-visit/zeoji-forest.jpg' },
+        { name: 'Meadow Trails', description: 'Easy walks through golden meadows.', image: 'images/kashmir/sonamarg/to-visit/meadow-trails.jpg' }
+      ],
+      tours: []
+    },
+    'betaab valley': {
+      aboutParagraph: 'Betaab Valley is a picturesque valley known for its emerald green streams and lush meadows. Famous from Bollywood movies, it offers pristine natural beauty with minimal crowd. Perfect for picnics, photography, and hiking.',
+      heroImage: 'images/kashmir/betaab-valley/to-visit/betaab-valley.jpg',
+      hotels: [
+        { name: 'Betaab Retreat', description: 'Valley setting with comfortable rooms.', price: '₹6,000/night', image: 'images/kashmir/betaab-valley/hotel/betaab-retreat.jpg' },
+        { name: 'Stream Valley Camp', description: 'Nature immersion with luxury camping.', price: '₹7,000/night', image: 'images/kashmir/betaab-valley/hotel/stream-valley.jpg' },
+        { name: 'Valley Green Inn', description: 'Budget stay amidst nature.', price: '₹5,000/night', image: 'images/kashmir/betaab-valley/hotel/valley-green.jpg' }
+      ],
+      restaurants: [
+        { name: 'Stream Side Restaurant', description: 'Kashmiri cuisine with stream views.', cuisine: 'Kashmiri', image: 'images/kashmir/betaab-valley/restaurant/streamside.jpg' },
+        { name: 'Meadow Café', description: 'Light meals and hot beverages.', cuisine: 'Café', image: 'images/kashmir/betaab-valley/restaurant/meadow-cafe.jpg' },
+        { name: 'River Trout House', description: 'Fresh trout and North Indian food.', cuisine: 'North Indian', image: 'images/kashmir/betaab-valley/restaurant/trout-house.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Emerald Stream', description: 'Crystal clear emerald water for photos.', image: 'images/kashmir/betaab-valley/to-visit/emerald-stream.jpg' },
+        { name: 'Valley Meadows', description: 'Green meadows for picnics and relaxation.', image: 'images/kashmir/betaab-valley/to-visit/meadows.jpg' },
+        { name: 'Hiking Trails', description: 'Easy hikes with beautiful views.', image: 'images/kashmir/betaab-valley/to-visit/hiking-trails.jpg' }
+      ],
+      tours: []
     }
   },
   mumbai: {
@@ -562,13 +682,84 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Marine Drive is a curved promenade along the Arabian Sea, often called the Queen\'s Necklace for its lights at night. It is perfect for an evening walk, watching the sunset, and feeling the city vibe. The area has hotels, cafés, and Chowpatty Beach at the northern end.',
       heroImage: 'images/mumbai.jpg',
       hotels: [
-        { name: 'Marine Drive Hotel', description: 'Sea-facing rooms.', price: '₹6,500/night' }
+        { name: 'Marine Drive Hotel', description: 'Sea-facing rooms with Arabian Sea view.', price: '₹6,500/night', image: 'images/mumbai/marine-drive/hotel/marine-drive-hotel.jpg' },
+        { name: 'Coastal Residency', description: 'Modern hotel on the promenade.', price: '₹7,200/night', image: 'images/mumbai/marine-drive/hotel/coastal-residency.jpg' },
+        { name: 'Bay View Inn', description: 'Budget-friendly with sea view.', price: '₹4,500/night', image: 'images/mumbai/marine-drive/hotel/bay-view.jpg' }
       ],
       restaurants: [
-        { name: 'Britannia & Co.', description: 'Parsi food and berry pulao.', cuisine: 'Parsi' }
+        { name: 'Britannia & Co.', description: 'Parsi food and berry pulao.', cuisine: 'Parsi', image: 'images/mumbai/marine-drive/restaurant/britannia.jpg' },
+        { name: 'Sea Breeze Restaurant', description: 'Seafood with sunset view.', cuisine: 'Seafood', image: 'images/mumbai/marine-drive/restaurant/sea-breeze.jpg' },
+        { name: 'Café Marine', description: 'Coffee, snacks and casual dining.', cuisine: 'Café', image: 'images/mumbai/marine-drive/restaurant/cafe-marine.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Chowpatty Beach', description: 'Beach, snacks and sunset.', image: 'images/mumbai.jpg' }
+        { name: 'Chowpatty Beach', description: 'Beach, snacks and sunset.', image: 'images/mumbai/marine-drive/to-visit/chowpatty.jpg' },
+        { name: 'Queen\'s Necklace Night View', description: 'Lights at night from Worli side.', image: 'images/mumbai/marine-drive/to-visit/queens-necklace.jpg' },
+        { name: 'Gazebo Walk', description: 'Evening promenade and joggers\' paradise.', image: 'images/mumbai/marine-drive/to-visit/gazebo.jpg' }
+      ],
+      tours: [
+        { name: 'Mumbai City Tour', description: 'Monuments, markets and chowpatty.', price: '₹3,500/person', image: 'images/mumbai.jpg' }
+      ]
+    },
+    'elephanta caves': {
+      aboutParagraph: 'Elephanta Caves are UNESCO-listed ancient rock-cut caves found on Elephanta Island in Mumbai Harbour. Famous for the Shiva sculpture and carvings dating to 5-6th century. A ferry ride from Gateway of India offers both history and sea views.',
+      heroImage: 'images/mumbai/elephanta-caves/to-visit/elephanta-caves.jpg',
+      hotels: [
+        { name: 'Island Resort Elephanta', description: 'On the island near the caves.', price: '₹8,500/night', image: 'images/mumbai/elephanta-caves/hotel/island-resort.jpg' },
+        { name: 'Seaport Hotel', description: 'Near the ferry dock, convenient access.', price: '₹6,200/night', image: 'images/mumbai/elephanta-caves/hotel/seaport.jpg' },
+        { name: 'Gateway Stay', description: 'In Fort area, near ferry terminal.', price: '₹5,500/night', image: 'images/mumbai/elephanta-caves/hotel/gateway-stay.jpg' }
+      ],
+      restaurants: [
+        { name: 'Island Café', description: 'Local seafood and light meals on island.', cuisine: 'Seafood', image: 'images/mumbai/elephanta-caves/restaurant/island-cafe.jpg' },
+        { name: 'Fishermen\'s Catch', description: 'Fresh catch near the dock.', cuisine: 'Seafood', image: 'images/mumbai/elephanta-caves/restaurant/fishermens.jpg' },
+        { name: 'Coastal Kitchen', description: 'North Indian and coastal specialties.', cuisine: 'North Indian', image: 'images/mumbai/elephanta-caves/restaurant/coastal-kitchen.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Main Shiva Sculpture', description: 'Largest and most famous cave carving.', image: 'images/mumbai/elephanta-caves/to-visit/shiva-sculpture.jpg' },
+        { name: 'Elephanta Harbour View', description: 'Scenic island views and UNESCO site.', image: 'images/mumbai/elephanta-caves/to-visit/harbour-view.jpg' },
+        { name: 'Cave Temples', description: 'Ancient Hindu and Buddhist cave art.', image: 'images/mumbai/elephanta-caves/to-visit/cave-temples.jpg' }
+      ],
+      tours: [
+        { name: 'Mumbai City Tour', description: 'Monuments, markets and chowpatty.', price: '₹3,500/person', image: 'images/mumbai.jpg' },
+        { name: 'Elephanta & Dharavi', description: 'Caves and local experience.', price: '₹5,000/person', image: 'images/mumbai.jpg' }
+      ]
+    },
+    'bollywood studios': {
+      aboutParagraph: 'Bollywood film studios offer a behind-the-scenes look at India\'s largest film industry. Tour the sets, learn about movie production, and meet crew members. Experience the glamour and technical side of Indian cinema.',
+      heroImage: 'images/mumbai/bollywood-studios/to-visit/bollywood-studios.jpg',
+      hotels: [
+        { name: 'Studio City Hotel', description: 'Near film city with Bollywood theme.', price: '₹7,500/night', image: 'images/mumbai/bollywood-studios/hotel/studio-city.jpg' },
+        { name: 'Star Inn', description: 'Budget hotel near studios.', price: '₹5,000/night', image: 'images/mumbai/bollywood-studios/hotel/star-inn.jpg' },
+        { name: 'Entertainment Plaza', description: 'Central stay for studio access.', price: '₹6,500/night', image: 'images/mumbai/bollywood-studios/hotel/entertainment-plaza.jpg' }
+      ],
+      restaurants: [
+        { name: 'Café Lights', description: 'Themed café with movie memorabilia.', cuisine: 'Multi-cuisine', image: 'images/mumbai/bollywood-studios/restaurant/cafe-lights.jpg' },
+        { name: 'Star Bites', description: 'North Indian and snacks for studio crews.', cuisine: 'North Indian', image: 'images/mumbai/bollywood-studios/restaurant/star-bites.jpg' },
+        { name: 'Director\'s Table', description: 'Fine dining with film industry vibe.', cuisine: 'Multi-cuisine', image: 'images/mumbai/bollywood-studios/restaurant/directors-table.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Film Studio Tour', description: 'Behind-the-scenes look at working sets.', image: 'images/mumbai/bollywood-studios/to-visit/studio-tour.jpg' },
+        { name: 'Sound Stage Walk', description: 'See big productions in progress.', image: 'images/mumbai/bollywood-studios/to-visit/sound-stage.jpg' },
+        { name: 'Movie Museum', description: 'Costumes, props and cinema history.', image: 'images/mumbai/bollywood-studios/to-visit/movie-museum.jpg' }
+      ],
+      tours: []
+    },
+    'colaba causeway': {
+      aboutParagraph: 'Colaba Causeway is Mumbai\'s famous shopping street known for boutiques, street food, and eclectic mix of old and new. A lively promenade connecting the mainland to Colaba, full of cafés, restaurants, and local character.',
+      heroImage: 'images/mumbai/colaba-causeway/to-visit/colaba-causeway.jpg',
+      hotels: [
+        { name: 'Colaba Heritage Hotel', description: 'Right on the causeway for shopping.', price: '₹6,800/night', image: 'images/mumbai/colaba-causeway/hotel/heritage-hotel.jpg' },
+        { name: 'Causeway View Inn', description: 'Budget stay with street access.', price: '₹4,500/night', image: 'images/mumbai/colaba-causeway/hotel/causeway-view.jpg' },
+        { name: 'Taj Boutique', description: 'Upscale stay near Leopold and shops.', price: '₹8,500/night', image: 'images/mumbai/colaba-causeway/hotel/taj-boutique.jpg' }
+      ],
+      restaurants: [
+        { name: 'Leopold Café', description: 'Famous street café and meeting spot.', cuisine: 'Multi-cuisine', image: 'images/mumbai/colaba-causeway/restaurant/leopold.jpg' },
+        { name: 'Theobroma', description: 'Artisanal chocolate café and bakery.', cuisine: 'Café', image: 'images/mumbai/colaba-causeway/restaurant/theobroma.jpg' },
+        { name: 'Street Food Stalls', description: 'Authentic Mumbai street food experience.', cuisine: 'Street Food', image: 'images/mumbai/colaba-causeway/restaurant/street-food.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Shopping Street', description: 'Boutiques, markets and souvenirs.', image: 'images/mumbai/colaba-causeway/to-visit/shopping.jpg' },
+        { name: 'Colaba Fortress', description: 'Historic fortification and landmark.', image: 'images/mumbai/colaba-causeway/to-visit/fortress.jpg' },
+        { name: 'Street Art & Cafés', description: 'Artistic vibe with bohemian atmosphere.', image: 'images/mumbai/colaba-causeway/to-visit/street-art.jpg' }
       ],
       tours: [
         { name: 'Mumbai City Tour', description: 'Monuments, markets and chowpatty.', price: '₹3,500/person', image: 'images/mumbai.jpg' }
@@ -580,18 +771,110 @@ window.PLACE_DETAILS = {
       aboutParagraph: 'Calangute is Goa\'s most popular beach, with golden sand, water sports, and a busy strip of shacks and shops. You can swim, try parasailing or jet ski, and enjoy seafood and drinks by the sea. It is lively and family-friendly.',
       heroImage: 'images/goa.jpg',
       hotels: [
-        { name: 'Beach Resort Calangute', description: 'On the beach.', price: '₹5,200/night' }
+        { name: 'Beach Resort Calangute', description: 'On the beach with water sports access.', price: '₹5,200/night', image: 'images/goa/calangute-beach/hotel/beach-resort-calangute.jpg' },
+        { name: 'Beachfront Paradise', description: 'Premium beachfront location.', price: '₹7,500/night', image: 'images/goa/calangute-beach/hotel/beachfront-paradise.jpg' },
+        { name: 'Budget Beach Huts', description: 'Affordable beachside stay.', price: '₹3,800/night', image: 'images/goa/calangute-beach/hotel/budget-huts.jpg' }
       ],
       restaurants: [
-        { name: 'Martin\'s Corner', description: 'Goan seafood and music.', cuisine: 'Goan' },
-        { name: 'Thalassa', description: 'Greek food with beach view.', cuisine: 'Greek' }
+        { name: 'Martin\'s Corner', description: 'Goan seafood and music.', cuisine: 'Goan', image: 'images/goa/calangute-beach/restaurant/martins-corner.jpg' },
+        { name: 'Thalassa', description: 'Greek food with beach view.', cuisine: 'Greek', image: 'images/goa/calangute-beach/restaurant/thalassa.jpg' },
+        { name: 'Beachfront Shack', description: 'Local seafood and drinks.', cuisine: 'Seafood', image: 'images/goa/calangute-beach/restaurant/beachfront-shack.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Water sports', description: 'Parasailing, jet ski, banana boat.', image: 'images/goa.jpg' },
-        { name: 'Baga Beach', description: 'Next beach, nightlife.', image: 'images/goa.jpg' }
+        { name: 'Water sports', description: 'Parasailing, jet ski, banana boat.', image: 'images/goa/calangute-beach/to-visit/water-sports.jpg' },
+        { name: 'Baga Beach', description: 'Adjacent beach with nightlife and parties.', image: 'images/goa/calangute-beach/to-visit/baga-beach.jpg' },
+        { name: 'Night Market', description: 'Evening flea market and shopping.', image: 'images/goa/calangute-beach/to-visit/night-market.jpg' }
       ],
       tours: [
         { name: 'Goa Beach 4D', description: 'Beaches and nightlife.', price: '₹11,500/person', image: 'images/goa-tour.jpg' },
+        { name: 'Goa Heritage & Nature 5D', description: 'Churches, falls and beaches.', price: '₹16,000/person', image: 'images/goa-tour.jpg' }
+      ]
+    },
+    'old goa': {
+      aboutParagraph: 'Old Goa is the historical heart of Goa with stunning Portuguese churches and convents dating back centuries. A UNESCO World Heritage site, it showcases the architectural blend of Hindu and Portuguese influences. A place to experience Goa\'s rich history.',
+      heroImage: 'images/goa/old-goa/to-visit/old-goa.jpg',
+      hotels: [
+        { name: 'Goa Heritage Inn', description: 'In old Goa area near churches.', price: '₹4,500/night', image: 'images/goa/old-goa/hotel/heritage-inn.jpg' },
+        { name: 'Portuguese Mansion', description: 'Heritage property with colonial décor.', price: '₹5,500/night', image: 'images/goa/old-goa/hotel/portuguese-mansion.jpg' },
+        { name: 'Church View Hotel', description: 'Budget stay opposite famous church.', price: '₹3,800/night', image: 'images/goa/old-goa/hotel/church-view.jpg' }
+      ],
+      restaurants: [
+        { name: 'Heritage Restaurant', description: 'Goan and Portuguese cuisine.', cuisine: 'Goan', image: 'images/goa/old-goa/restaurant/heritage.jpg' },
+        { name: 'Mission Church Café', description: 'Traditional sweets and snacks.', cuisine: 'Goan', image: 'images/goa/old-goa/restaurant/mission-cafe.jpg' },
+        { name: 'Bishop\'s House Menu', description: 'Local recipes and authentic flavours.', cuisine: 'Portuguese', image: 'images/goa/old-goa/restaurant/bishops-menu.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Basilica of Bom Jesus', description: 'UNESCO church with St Francis Xavier.', image: 'images/goa/old-goa/to-visit/basilica.jpg' },
+        { name: 'Se Cathedral', description: 'Largest church in Asia and historic landmark.', image: 'images/goa/old-goa/to-visit/se-cathedral.jpg' },
+        { name: 'Archaeological Museum', description: 'Sculptures and historical artifacts.', image: 'images/goa/old-goa/to-visit/museum.jpg' }
+      ],
+      tours: [
+        { name: 'Goa Heritage & Nature 5D', description: 'Churches, falls and beaches.', price: '₹16,000/person', image: 'images/goa-tour.jpg' }
+      ]
+    },
+    'dudhsagar falls': {
+      aboutParagraph: 'Dudhsagar Falls is India\'s second-highest waterfall, meaning Milky Ocean in Marathi. The spectacular 600-meter cascade flows through the Western Ghats and is a monsoon wonder. Trekking and jeep rides are popular ways to experience this natural marvel.',
+      heroImage: 'images/goa/dudhsagar-falls/to-visit/dudhsagar-falls.jpg',
+      hotels: [
+        { name: 'Waterfall View Lodge', description: 'Near the falls entrance.', price: '₹5,200/night', image: 'images/goa/dudhsagar-falls/hotel/waterfall-view.jpg' },
+        { name: 'Forest Stay Resort', description: 'Jungle setting near the falls.', price: '₹5,500/night', image: 'images/goa/dudhsagar-falls/hotel/forest-stay.jpg' },
+        { name: 'Adventure Camp', description: 'Budget camping near trekking routes.', price: '₹3,500/night', image: 'images/goa/dudhsagar-falls/hotel/adventure-camp.jpg' }
+      ],
+      restaurants: [
+        { name: 'Falls Café', description: 'Local food and refreshments.', cuisine: 'Multi-cuisine', image: 'images/goa/dudhsagar-falls/restaurant/falls-cafe.jpg' },
+        { name: 'Jungle Dhaba', description: 'North Indian and snacks for trekkers.', cuisine: 'North Indian', image: 'images/goa/dudhsagar-falls/restaurant/jungle-dhaba.jpg' },
+        { name: 'Stream Side Restaurant', description: 'Water view with simple meals.', cuisine: 'Multi-cuisine', image: 'images/goa/dudhsagar-falls/restaurant/streamside.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Waterfall Trek', description: 'Trekking to the base of the falls.', image: 'images/goa/dudhsagar-falls/to-visit/falls-trek.jpg' },
+        { name: 'Jeep Safari', description: 'Off-road adventure to the falls.', image: 'images/goa/dudhsagar-falls/to-visit/jeep-safari.jpg' },
+        { name: 'Monsoon Photography', description: 'Peak flow and misty views in monsoon.', image: 'images/goa/dudhsagar-falls/to-visit/monsoon-view.jpg' }
+      ],
+      tours: [
+        { name: 'Goa Heritage & Nature 5D', description: 'Churches, falls and beaches.', price: '₹16,000/person', image: 'images/goa-tour.jpg' }
+      ]
+    },
+    'anjuna beach': {
+      aboutParagraph: 'Anjuna Beach is famous for its flea market, hippie culture, and vibrant nightlife. The beach attracts backpackers and party-goers with beach shacks, electronic music, and a bohemian atmosphere. Rocky coves and cliffs add to its charm.',
+      heroImage: 'images/goa/anjuna-beach/to-visit/anjuna-beach.jpg',
+      hotels: [
+        { name: 'Anjuna Beach House', description: 'Chill vibe near the beach.', price: '₹4,800/night', image: 'images/goa/anjuna-beach/hotel/beach-house.jpg' },
+        { name: 'Hippie Resort', description: 'Bohemian-style accommodation.', price: '₹5,500/night', image: 'images/goa/anjuna-beach/hotel/hippie-resort.jpg' },
+        { name: 'Backpacker\'s Bliss', description: 'Budget hostel with social vibe.', price: '₹3,200/night', image: 'images/goa/anjuna-beach/hotel/backpackers-bliss.jpg' }
+      ],
+      restaurants: [
+        { name: 'Anjuna Shack', description: 'Beach shack with electronic vibe.', cuisine: 'Multi-cuisine', image: 'images/goa/anjuna-beach/restaurant/anjuna-shack.jpg' },
+        { name: 'Goa Groove', description: 'International and Indian fusion.', cuisine: 'Fusion', image: 'images/goa/anjuna-beach/restaurant/goa-groove.jpg' },
+        { name: 'Flea Market Café', description: 'Casual dining during market days.', cuisine: 'Café', image: 'images/goa/anjuna-beach/restaurant/flea-market-cafe.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Wednesday Flea Market', description: 'Hippie market with handicrafts and souvenirs.', image: 'images/goa/anjuna-beach/to-visit/flea-market.jpg' },
+        { name: 'Rocky Outcroops', description: 'Scenic rocks and coves for exploration.', image: 'images/goa/anjuna-beach/to-visit/rocks.jpg' },
+        { name: 'Full Moon Party', description: 'Famous beach party with electronic music.', image: 'images/goa/anjuna-beach/to-visit/full-moon.jpg' }
+      ],
+      tours: [
+        { name: 'Goa Beach 4D', description: 'Beaches and nightlife.', price: '₹11,500/person', image: 'images/goa-tour.jpg' }
+      ]
+    },
+    'fontainhas': {
+      aboutParagraph: 'Fontainhas is the oldest residential area of Panjim, with charming colorful Portuguese houses and winding lanes. A UNESCO-listed heritage zone, it preserves Goa\'s colonial architecture and cultural essence. Perfect for heritage walks and photography.',
+      heroImage: 'images/goa/fontainhas/to-visit/fontainhas.jpg',
+      hotels: [
+        { name: 'Colonial Manor', description: 'Heritage stay in traditional house.', price: '₹6,200/night', image: 'images/goa/fontainhas/hotel/colonial-manor.jpg' },
+        { name: 'Portuguese Homestay', description: 'Authentic local experience.', price: '₹5,000/night', image: 'images/goa/fontainhas/hotel/portuguese-homestay.jpg' },
+        { name: 'Heritage Rooms', description: 'Traditional rooms with modern comfort.', price: '₹5,500/night', image: 'images/goa/fontainhas/hotel/heritage-rooms.jpg' }
+      ],
+      restaurants: [
+        { name: 'Viva Panjim', description: 'Goan and Portuguese in Fontainhas.', cuisine: 'Goan', image: 'images/goa/fontainhas/restaurant/viva-panjim.jpg' },
+        { name: 'Heritage Bistro', description: 'Colonial cuisine and local flavours.', cuisine: 'Portuguese', image: 'images/goa/fontainhas/restaurant/heritage-bistro.jpg' },
+        { name: 'Café Amigos', description: 'Casual café in the heart of old lanes.', cuisine: 'Café', image: 'images/goa/fontainhas/restaurant/cafe-amigos.jpg' }
+      ],
+      spotsToVisit: [
+        { name: 'Colorful Architecture', description: 'Portuguese colonial buildings in bright colors.', image: 'images/goa/fontainhas/to-visit/architecture.jpg' },
+        { name: 'Heritage Walking Tour', description: 'Guided walk through historic lanes.', image: 'images/goa/fontainhas/to-visit/walking-tour.jpg' },
+        { name: 'Chapel of St Cajetan', description: 'Historic church with heritage charm.', image: 'images/goa/fontainhas/to-visit/chapel.jpg' }
+      ],
+      tours: [
         { name: 'Goa Heritage & Nature 5D', description: 'Churches, falls and beaches.', price: '₹16,000/person', image: 'images/goa-tour.jpg' }
       ]
     }
