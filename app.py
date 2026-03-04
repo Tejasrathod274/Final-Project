@@ -603,12 +603,11 @@ def confirm_payment():
                     destination,
                     tour_name,
                     tour_price,
-                    tour_description,
                     travel_date,
                     num_persons,
                     total_amount,
                     status
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """, (
                 session['user_id'],
                 data['guide_id'],
@@ -617,7 +616,6 @@ def confirm_payment():
                 data['destination'],
                 data['tour_name'],
                 data['tour_price'],
-                data['tour_description'],
                 data['travel_date'],
                 data['num_persons'],
                 data['total_amount'],
