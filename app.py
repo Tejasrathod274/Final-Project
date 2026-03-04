@@ -579,7 +579,6 @@ def payment_page():
         return redirect(url_for('destinations'))
 
     return render_template("payment.html", booking=session['temp_booking'])
-
 @app.route('/confirm-payment', methods=['POST'])
 def confirm_payment():
 
@@ -587,8 +586,7 @@ def confirm_payment():
         return redirect(url_for('login'))
 
     if not session.get('temp_booking'):
-        flash("Session expired. Please book again.", "error")
-        return redirect(url_for('destinations'))
+        return "Session expired"
 
     data = session['temp_booking']
     conn = get_db()
@@ -616,17 +614,15 @@ def confirm_payment():
     except Exception as e:
         conn.rollback()
         print("CONFIRM PAYMENT ERROR:", e)
-        flash("Payment failed. Try again.", "error")
-        return redirect(url_for('payment_page'))
+        return f"Database error: {e}"
 
     finally:
         conn.close()
 
     session.pop('temp_booking', None)
 
-    flash("Payment successful! Booking request sent.", "success")
     return redirect(url_for('profile'))
-
+    
 @app.route("/guide/dashboard")
 def guide_dashboard():
 
