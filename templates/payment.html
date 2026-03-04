@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment | Travel & Tour</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='payment.css') }}">
+</head>
+<body>
+
+<div class="payment-container">
+
+    <div class="payment-card">
+
+        <h2>💳 Complete Your Payment</h2>
+
+        <div class="booking-summary">
+            <p><strong>Destination:</strong> {{ booking.destination }}</p>
+            <p><strong>Tour:</strong> {{ booking.tour_name }}</p>
+            <p><strong>Total Amount:</strong> ₹{{ booking.total_amount }}</p>
+        </div>
+
+        <form method="POST" action="{{ url_for('confirm_payment') }}" class="payment-form">
+
+            <div class="input-group">
+                <label>Card Holder Name</label>
+                <input type="text" placeholder="John Doe" required>
+            </div>
+
+            <div class="input-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+            </div>
+
+            <div class="row">
+                <div class="input-group small">
+                    <label>Expiry Date</label>
+                    <input type="text" placeholder="MM/YY" required>
+                </div>
+
+                <div class="input-group small">
+                    <label>CVV</label>
+                    <input type="password" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+
+            <button type="submit" class="pay-btn">
+                💰 Pay Now
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
