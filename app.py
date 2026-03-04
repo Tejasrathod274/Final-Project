@@ -5,6 +5,7 @@ from psycopg.rows import dict_row
 import json
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime, timedelta
 
 from config import Config
 
@@ -477,6 +478,29 @@ def book_tour():
         phone = request.form.get('phone', '').strip()
         persons = request.form.get('persons', '1')
         preferred_date = request.form.get('preferred_date')
+
+        try:
+            selected_date = datetime.strptime(preferred_date, "%Y-%m-%d").date()
+        except:
+            flash("Invalid date format.", "error")
+            return redirect(request.url)
+
+        today = datetime.today().date()
+
+        # Must be future date
+        if selected_date <= today:
+            flash("Please select a future date.", "error")
+            return redirect(request.url)
+
+        # Allow booking only within 90 days
+        if selected_date > today + timedelta(days=90):
+            flash("Booking allowed only within 3 months.", "error")
+            return redirect(request.url)
+
+        # No Sunday bookings
+        if selected_date.weekday() == 6:
+            flash("Tours are not available on Sundays.", "error")
+            return redirect(request.url)
 
         destination_name = request.form.get('destination', '').strip()
         tour_name = request.form.get('tour_name', '').strip()

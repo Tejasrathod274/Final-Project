@@ -84,7 +84,7 @@
       <label>Email *</label>
       <input type="email" name="email" required placeholder="your@email.com">
       <label>Select Preferred Date</label>
-      <input type="date" name="preferred_date" required>
+      <input type="date" name="preferred_date" id="dateInput" required>
       <label>Phone *</label>
       <input type="tel" id="phoneInput" name="phone" required placeholder="10-digit mobile" maxlength="10"
         inputmode="numeric">
@@ -115,6 +115,30 @@
       if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', reveal);
       else reveal();
     })();
+document.addEventListener("DOMContentLoaded", function () {
+    const dateInput = document.getElementById("dateInput");
+
+    const today = new Date();
+
+    // Minimum date = tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split("T")[0];
+
+    // Maximum date = 3 months from today
+    const maxDate = new Date();
+    maxDate.setMonth(today.getMonth() + 3);
+    dateInput.max = maxDate.toISOString().split("T")[0];
+
+    // Block Sundays
+    dateInput.addEventListener("change", function () {
+        const selectedDate = new Date(this.value);
+        if (selectedDate.getDay() === 0) {
+            alert("Tours are not available on Sundays.");
+            this.value = "";
+        }
+    });
+});
   </script>
   <script src="{{ url_for('static', filename='js/phone-validation.js') }}" defer></script>
   <script src="{{ url_for('static', filename='js/success-bar.js') }}" defer></script>
