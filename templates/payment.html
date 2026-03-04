@@ -2,49 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Payment | Travel & Tour</title>
+    <title>Secure Payment | Travel & Tour</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
 </head>
+
 <style>
-    body {
+body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-/* Main Container */
-.payment-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Card Container */
+.payment-card {
+    background: #ffffff;
+    padding: 35px;
+    width: 420px;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    animation: fadeIn 0.4s ease-in-out;
 }
 
-/* Card */
-.payment-card {
-    background: white;
-    padding: 40px;
-    width: 420px;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
 .payment-card h2 {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #1e3c72;
 }
 
-/* Booking Summary */
+/* Summary */
 .booking-summary {
-    background: #f4f6f9;
+    background: #f2f5f9;
     padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
     font-size: 14px;
 }
 
@@ -52,7 +51,31 @@
     margin: 6px 0;
 }
 
-/* Input Groups */
+/* Payment Method Tabs */
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.method-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.method-btn.active {
+    background: #2a5298;
+    color: white;
+    border-color: #2a5298;
+}
+
+/* Inputs */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -62,12 +85,12 @@
 .input-group label {
     font-size: 13px;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .input-group input {
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 14px;
     transition: 0.3s;
@@ -78,7 +101,6 @@
     outline: none;
 }
 
-/* Row for expiry & CVV */
 .row {
     display: flex;
     gap: 10px;
@@ -88,71 +110,125 @@
     flex: 1;
 }
 
-/* Button */
+/* Hide sections */
+.hidden {
+    display: none;
+}
+
+/* Pay Button */
 .pay-btn {
     width: 100%;
     padding: 12px;
     border: none;
-    background: #2a5298;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
     transition: 0.3s;
 }
 
 .pay-btn:hover {
-    background: #1e3c72;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 </style>
+
 <body>
 
-<div class="payment-container">
+<div class="payment-card">
 
-    <div class="payment-card">
+    <h2>💳 Secure Payment</h2>
 
-        <h2>💳 Complete Your Payment</h2>
+    <div class="booking-summary">
+        <p><strong>Destination:</strong> {{ booking.destination }}</p>
+        <p><strong>Tour:</strong> {{ booking.tour_name }}</p>
+        <p><strong>Total:</strong> ₹{{ booking.total_amount }}</p>
+    </div>
 
-        <div class="booking-summary">
-            <p><strong>Destination:</strong> {{ booking.destination }}</p>
-            <p><strong>Tour:</strong> {{ booking.tour_name }}</p>
-            <p><strong>Total Amount:</strong> ₹{{ booking.total_amount }}</p>
+    <!-- Payment Method Switch -->
+    <div class="payment-methods">
+        <div class="method-btn active" onclick="selectMethod('card')" id="cardBtn">
+            💳 Card
         </div>
+        <div class="method-btn" onclick="selectMethod('upi')" id="upiBtn">
+            📲 UPI
+        </div>
+    </div>
 
-        <form method="POST" action="{{ url_for('confirm_payment') }}" class="payment-form">
+    <form method="POST" action="{{ url_for('confirm_payment') }}">
+
+        <!-- CARD SECTION -->
+        <div id="cardSection">
 
             <div class="input-group">
                 <label>Card Holder Name</label>
-                <input type="text" placeholder="John Doe" required>
+                <input type="text" placeholder="John Doe">
             </div>
 
             <div class="input-group">
                 <label>Card Number</label>
-                <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                <input type="text" placeholder="1234 5678 9012 3456" maxlength="19">
             </div>
 
             <div class="row">
                 <div class="input-group small">
                     <label>Expiry Date</label>
-                    <input type="text" placeholder="MM/YY" required>
+                    <input type="text" placeholder="MM/YY">
                 </div>
 
                 <div class="input-group small">
                     <label>CVV</label>
-                    <input type="password" placeholder="123" maxlength="3" required>
+                    <input type="password" placeholder="123" maxlength="3">
                 </div>
             </div>
 
-            <button type="submit" class="pay-btn">
-                💰 Pay Now
-            </button>
+        </div>
 
-        </form>
+        <!-- UPI SECTION -->
+        <div id="upiSection" class="hidden">
 
-    </div>
+            <div class="input-group">
+                <label>UPI ID</label>
+                <input type="text" placeholder="example@upi">
+            </div>
+
+            <div style="text-align:center; font-size:13px; color:gray;">
+                You will receive a payment request on your UPI app.
+            </div>
+
+        </div>
+
+        <button type="submit" class="pay-btn">
+            🔒 Pay Securely
+        </button>
+
+    </form>
 
 </div>
+
+<script>
+function selectMethod(method) {
+
+    const cardSection = document.getElementById("cardSection");
+    const upiSection = document.getElementById("upiSection");
+    const cardBtn = document.getElementById("cardBtn");
+    const upiBtn = document.getElementById("upiBtn");
+
+    if (method === "card") {
+        cardSection.classList.remove("hidden");
+        upiSection.classList.add("hidden");
+        cardBtn.classList.add("active");
+        upiBtn.classList.remove("active");
+    } else {
+        cardSection.classList.add("hidden");
+        upiSection.classList.remove("hidden");
+        cardBtn.classList.remove("active");
+        upiBtn.classList.add("active");
+    }
+}
+</script>
 
 </body>
 </html>
