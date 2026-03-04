@@ -587,50 +587,45 @@ def confirm_payment():
         return redirect(url_for('login'))
 
     if not session.get('temp_booking'):
+        flash("Session expired. Please book again.", "error")
         return redirect(url_for('destinations'))
 
     data = session['temp_booking']
-
     conn = get_db()
+
     try:
         with conn.cursor() as cur:
             cur.execute("""
                 INSERT INTO bookings (
                     user_id,
-                    guide_id,
-                    name,
-                    email,
                     destination,
                     tour_name,
-                    tour_price,
-                    travel_date,
-                    num_persons,
                     total_amount,
                     status
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                ) VALUES (%s, %s, %s, %s, %s)
             """, (
                 session['user_id'],
-                data['guide_id'],
-                data['name'],
-                data['email'],
                 data['destination'],
                 data['tour_name'],
-                data['tour_price'],
-                data['travel_date'],
-                data['num_persons'],
                 data['total_amount'],
                 'Pending'
             ))
+
         conn.commit()
+
+    except Exception as e:
+        conn.rollback()
+        print("CONFIRM PAYMENT ERROR:", e)
+        flash("Payment failed. Try again.", "error")
+        return redirect(url_for('payment_page'))
+
     finally:
         conn.close()
 
-    # Clear temporary session data
     session.pop('temp_booking', None)
 
-    flash("Payment successful! Booking request sent to guide.", "success")
+    flash("Payment successful! Booking request sent.", "success")
     return redirect(url_for('profile'))
-
 
 @app.route("/guide/dashboard")
 def guide_dashboard():
