@@ -608,7 +608,7 @@ def confirm_payment():
                     num_persons,
                     total_amount,
                     status
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """, (
                 session['user_id'],
                 data['guide_id'],
