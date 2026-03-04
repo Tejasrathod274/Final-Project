@@ -75,19 +75,6 @@
     {% endfor %}
     {% endif %}
     {% endwith %}
-
-    {% if booking_success %}
-    <div class="booking-success"
-      style="text-align: center; padding: 50px 40px; margin: 40px auto; background: linear-gradient(135deg, #f0fdf4, #dbeafe); border: 2px solid #22c55e; border-radius: 12px; max-width: 600px;">
-      <i class="fas fa-check-circle" style="font-size: 70px; color: #22c55e; margin-bottom: 20px; display: block;"></i>
-      <h2 style="color: #166534; margin-bottom: 20px; font-size: 28px;">Tour Successfully Booked!</h2>
-      <p style="color: #15803d; font-size: 16px; margin: 15px 0;">Your tour has been Successfully booked and is
-        currently awaiting confirmation. Please check your <a href="{{ url_for('profile') }}"
-          style="color: #0ea5e9; text-decoration: underline; font-weight: 600;">Profile</a> for the latest status
-        updates.</p>
-      <p style="color: #16a34a; margin-top: 25px; font-size: 13px;">Thank you for booking with us!</p>
-    </div>
-    {% else %}
     <form class="book-tour-form form-reveal" method="post" action="{{ url_for('book_tour') }}">
       <input type="hidden" name="destination" value="{{ destination }}">
       <input type="hidden" name="tour_name" value="{{ tour_name }}">
