@@ -558,17 +558,6 @@ def book_tour():
         # ✅ Redirect to payment page
         return redirect(url_for('payment_page'))
 
-        return render_template(
-            'book-tour.html',
-            destination=destination_name,
-            tour_name=tour_name,
-            tour_price=tour_price,
-            tour_description=tour_description,
-            booking_success=True,
-            booking_name=name,
-            booking_email=email
-        )
-
     # GET request
     return render_template(
         'book-tour.html',
