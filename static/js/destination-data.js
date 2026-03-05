@@ -42,8 +42,7 @@ window.DESTINATION_DATA = {
     places: [
       { name: 'Amber Fort', description: 'Majestic fort and palace.', image: 'images/jaipur/amber-fort/amber-fort.jpg' },
       { name: 'City Palace', description: 'Royal residence and museums.', image: 'images/jaipur/city-palace/City-Palace.jpg' },
-      { name: 'Hawa Mahal', description: 'Palace of Winds.', image: 'images/jaipur/hawa-mahal/hawa-mahal.jpg' },
-      { name: 'Jantar Mantar', description: 'Ancient observatory.', image: 'images/jaipur/jantar-mantar/jantar-mantar.jpg' }
+      { name: 'Hawa Mahal', description: 'Palace of Winds.', image: 'images/jaipur/hawa-mahal/hawa-mahal.jpg' }
     ],
     hotels: [
       { name: 'Raj Palace Heritage', description: 'Palace hotel with royal suites.', price: '₹9,000/night', image: 'images/jaipur/city-palace/hotel/raj-palace.jpg' },
@@ -98,11 +97,11 @@ window.DESTINATION_DATA = {
     aboutParagraph: 'Kashmir is known for Dal Lake, houseboats, Gulmarg meadows, and Pahalgam valleys. Shikara rides, snow in winter, and local hospitality make it a favourite. The region offers both peace and adventure in the Himalayas.',
     heroImage: 'images/kashmir.jpg',
     places: [
-      { name: 'Dal Lake', description: 'Houseboats and shikara rides.', image: 'images/kashmir/dal-lake/to-visit/dal-lake.jpg' },
-      { name: 'Gulmarg', description: 'Meadows and skiing.', image: 'images/kashmir/gulmarg/to-visit/gulmarg.jpg' },
-      { name: 'Pahalgam', description: 'Valleys and trekking.', image: 'images/kashmir/to-visit/pahalgam.jpg' },
-      { name: 'Sonamarg', description: 'Meadow of gold.', image: 'images/kashmir/to-visit/sonamarg.jpg' },
-      { name: 'Betaab Valley', description: 'Green meadows and streams.', image: 'images/kashmir/to-visit/betaab-valley.jpg' }
+      { name: 'Dal Lake', description: 'Houseboats and shikara rides.', image: 'images/kashmir/dal-lake/dal-lake.jpg' },
+      { name: 'Gulmarg', description: 'Meadows and skiing.', image: 'images/kashmir/gulmarg/gulmarg.jpg' },
+      { name: 'Pahalgam', description: 'Valleys and trekking.', image: 'images/kashmir/pahalgam/pahalgam.jpg' },
+      { name: 'Sonamarg', description: 'Meadow of gold.', image: 'images/kashmir/sonamarg/sonamarg.jpg' },
+      { name: 'Betaab Valley', description: 'Green meadows and streams.', image: 'images/kashmir/betaab-valley/betaab-valley.jpg' }
     ],
     hotels: [
       { name: 'Dal Lake Houseboat', description: 'Traditional houseboat stay.', price: '₹8,500/night', image: 'images/kashmir/dal-lake/hotel/dal-lake-houseboat.jpg' },
@@ -125,11 +124,10 @@ window.DESTINATION_DATA = {
     aboutParagraph: 'Mumbai is India\'s financial and entertainment capital. Gateway of India, Marine Drive, Elephanta Caves, and Bollywood are major draws. The city mixes colonial heritage with street food, markets, and a fast-paced urban life.',
     heroImage: 'images/mumbai.jpg',
     places: [
-      { name: 'Gateway of India', description: 'Iconic monument by the sea.', image: 'images/mumbai/gateway-of-india/to-visit/gateway-of-india.jpg' },
-      { name: 'Marine Drive', description: "Queen's Necklace promenade.", image: 'images/mumbai/marine-drive/to-visit/marine-drive.jpg' },
-      { name: 'Elephanta Caves', description: 'Ancient rock-cut caves.', image: 'images/mumbai/to-visit/elephanta-caves.jpg' },
-      { name: 'Bollywood Studios', description: 'Film city tours.', image: 'images/mumbai/to-visit/bollywood-studios.jpg' },
-      { name: 'Colaba Causeway', description: 'Shopping and street food.', image: 'images/mumbai/to-visit/colaba-causeway.jpg' }
+      { name: 'Gateway of India', description: 'Iconic monument by the sea.', image: 'images/mumbai/gateway/gateway-of-india.jpg' },
+      { name: 'Marine Drive', description: "Queen's Necklace promenade.", image: 'images/mumbai/marine-drive/marine-drive.jpg' },
+      { name: 'Elephanta Caves', description: 'Ancient rock-cut caves.', image: 'images/mumbai/elephanta-caves/elephanta-caves.jpg' },
+      { name: 'Bollywood Studios', description: 'Film city tours.', image: 'images/mumbai/bollywood-studios/bollywood-studios.jpg' },
     ],
     hotels: [
       { name: 'Marine Drive Hotel', description: 'Sea-facing rooms.', price: '₹6,500/night', image: 'images/mumbai/marine-drive/hotel/marine-drive-hotel.jpg' },
@@ -409,11 +407,6 @@ window.PLACE_DETAILS = {
           image: 'images/Himachal/shimla/to-visit/jakhu-temple.jpg'
         },
         {
-          name: 'Kufri',
-          description: 'Snow point 16km from Shimla with skiing and horse riding.',
-          image: 'images/Himachal/shimla/to-visit/kufri.jpg'
-        },
-        {
           name: 'Kalka-Shimla Toy Train',
           description: 'UNESCO World Heritage railway through 103 tunnels and pine forests.',
           image: 'images/Himachal/shimla/to-visit/shimla.jpg'
@@ -433,12 +426,6 @@ window.PLACE_DETAILS = {
           description: 'Eco-friendly 3-star resort in the Log Hut Area, 2km from Manali Bus Stand. Surrounded by apple orchards and pine forests, with a rooftop café and multi-cuisine restaurant.',
           price: '₹6,800/night',
           image: 'images/Himachal/manali/hotel/manali-snow.jpg'
-        },
-        {
-          name: 'Johnson Lodge',
-          description: 'Historic wood and stone lodge established in early 1900s with famous trout restaurant.',
-          price: '₹5,200/night',
-          image: 'images/Himachal/manali/hotel/johnson-lodge.jpg'
         },
         {
           name: 'Baragarh Resort & Spa',
@@ -511,12 +498,6 @@ window.PLACE_DETAILS = {
           price: '₹12,000/night',
           image: 'images/Himachal/dharamshala/hotel/tibetan-guest.jpg'
         },
-        {
-          name: 'WelcomHeritage Natraj',
-          description: 'Highly rated heritage hotel in McLeod Ganj near Dalai Lama Temple.',
-          price: '₹6,500/night',
-          image: 'images/Himachal/dharamshala/hotel/mcleod-view.jpg'
-        }
       ],
       restaurants: [
         {
@@ -545,11 +526,6 @@ window.PLACE_DETAILS = {
           image: 'images/Himachal/dharamshala/to-visit/tsuglagkhang.jpg'
         },
         {
-          name: 'Triund Trek',
-          description: 'Popular one-day trek to 2,828m with panoramic Dhauladhar views.',
-          image: 'images/Himachal/dharamshala/to-visit/triund-trek.jpg'
-        },
-        {
           name: 'Norbulingka Institute',
           description: 'Tibetan art, culture and traditional craft center with beautiful gardens.',
           image: 'images/Himachal/dharamshala/to-visit/norbulingka.jpg'
@@ -557,7 +533,7 @@ window.PLACE_DETAILS = {
         {
           name: 'Bhagsu Waterfall',
           description: 'Scenic waterfall near McLeod Ganj, popular for short hikes.',
-          image: 'images/Himachal/dharamshala/to-visit/dharamshala.jpg'
+          image: 'images/Himachal/dharamshala/to-visit/bhagsu.jpg'
         }
       ],
       tours: [
@@ -677,7 +653,7 @@ window.PLACE_DETAILS = {
         {
           name: 'Panchpula',
           description: 'Scenic stream and waterfall picnic spot with deodar forests.',
-          image: 'images/Himachal/dalhousie/to-visit/panchpula.jpg'
+          image: 'images/Himachal/dalhousie/to-visit/waterfall.jpg'
         },
         {
           name: 'Kalatop Wildlife Sanctuary',
@@ -688,11 +664,6 @@ window.PLACE_DETAILS = {
           name: 'Dainkund Peak',
           description: 'Highest peak near Dalhousie at 2,755m with trekking and panoramic views.',
           image: 'images/Himachal/dalhousie/to-visit/dainkund-peak.jpg'
-        },
-        {
-          name: 'Khajjiar',
-          description: 'The "Mini Switzerland of India" — green meadow and lake 24km from Dalhousie.',
-          image: 'images/Himachal/dalhousie/to-visit/dalhousie.jpg'
         }
       ],
       tours: []
@@ -714,12 +685,6 @@ window.PLACE_DETAILS = {
           price: '₹4,500/night',
           image: 'images/Himachal/kasol/hotel/riverside-retreat.jpg'
         },
-        {
-          name: 'Royal Castle Kasol',
-          description: '4-star hotel near the market with garden, terrace, restaurant and fitness center.',
-          price: '₹3,200/night',
-          image: 'images/Himachal/kasol/hotel/adventure-club.jpg'
-        }
       ],
       restaurants: [
         {
@@ -750,7 +715,7 @@ window.PLACE_DETAILS = {
         {
           name: 'Malana',
           description: 'Ancient isolated village with unique culture and customs, a popular trek from Kasol.',
-          image: 'images/Himachal/kasol/to-visit/malana.jpg'
+          image: 'images/Himachal/kasol/to-visit/malana-village.jpg'
         },
         {
           name: 'Manikaran Sahib',
@@ -946,36 +911,13 @@ kashmir: {
       restaurants: [
         { name: 'Juhu Beach Stalls', description: 'Mumbai\'s most famous street food strip on Juhu Beach — bhel puri, pav bhaji, sugarcane juice and local snacks.', cuisine: 'Street Food', image: 'images/mumbai/bollywood-studios/restaurant/cafe-lights.jpg' },
         { name: 'Aurus', description: 'Upscale beachfront restaurant in Juhu with panoramic sea views. Famous for Continental and Indian cuisine.', cuisine: 'Continental / Indian', image: 'images/mumbai/bollywood-studios/restaurant/star-bites.jpg' },
-        { name: 'Prithvi Café', description: 'Beloved heritage café inside Prithvi Theatre in Juhu — a cultural icon frequented by Bollywood artists.', cuisine: 'Café / Snacks', image: 'images/mumbai/bollywood-studios/restaurant/directors-table.jpg' }
       ],
       spotsToVisit: [
         { name: 'Film City Studio Tour', description: 'Guided tour of Dadasaheb Phalke Film City in Goregaon — India\'s largest studio complex with outdoor sets, lakes and jungles built for films.', image: 'images/mumbai/bollywood-studios/to-visit/studio-tour.jpg' },
-        { name: 'Juhu Beach', description: 'Mumbai\'s most famous beach in a celebrity neighbourhood — sunset walks, street food, and Bollywood star homes nearby.', image: 'images/mumbai/bollywood-studios/to-visit/sound-stage.jpg' },
+        { name: 'Bollywood studios', description: 'India\'s most famous studio.', image: 'images/mumbai/bollywood-studios/to-visit/bollywood-studios.jpg' },
         { name: 'Prithvi Theatre', description: 'Iconic heritage theatre in Juhu founded by the Kapoor family — hosts plays, festivals and has a beloved courtyard café.', image: 'images/mumbai/bollywood-studios/to-visit/movie-museum.jpg' }
       ],
       tours: []
-    },
-    'colaba causeway': {
-      aboutParagraph: 'Colaba Causeway is Mumbai\'s famous shopping street running through the historic Colaba neighbourhood. Full of street vendors, boutiques, antique shops, cafés, and some of Mumbai\'s most iconic restaurants. A lively mix of history, culture, and commerce.',
-      heroImage: 'images/mumbai/colaba-causeway/to-visit/colaba-causeway.jpg',
-      hotels: [
-        { name: 'Taj Mahal Palace', description: 'India\'s most iconic heritage hotel directly off Colaba Causeway, established 1903.', price: '₹18,000/night', image: 'images/mumbai/colaba-causeway/hotel/heritage-hotel.jpg' },
-        { name: 'Hotel Suba Palace', description: 'Well-positioned hotel in Apollo Bunder, steps from the Causeway shopping strip.', price: '₹5,500/night', image: 'images/mumbai/colaba-causeway/hotel/causeway-view.jpg' },
-        { name: 'Abode Bombay', description: 'Boutique heritage hotel on Arthur Bunder Road in Colaba with art deco character.', price: '₹8,500/night', image: 'images/mumbai/colaba-causeway/hotel/taj-boutique.jpg' }
-      ],
-      restaurants: [
-        { name: 'Leopold Café', description: 'Historic Irani café on Colaba Causeway, founded 1871. Featured in the novel Shantaram. Famous for its lively multicultural atmosphere, beer towers, and diverse menu. One of the sites of the 2008 Mumbai attacks — it stands as an icon of resilience.', cuisine: 'Multi-cuisine', image: 'images/mumbai/colaba-causeway/restaurant/leopold.jpg' },
-        { name: 'Theobroma', description: 'Artisanal patisserie and café in Colaba, famous for chocolate brownies, pastries, and sandwiches. A Mumbai cult favourite.', cuisine: 'Bakery / Café', image: 'images/mumbai/colaba-causeway/restaurant/theobroma.jpg' },
-        { name: 'Bademiya', description: 'Legendary Mughlai street food stall behind the Taj, famous since 1946 for seekh kebabs. Open late.', cuisine: 'Mughlai / Street Food', image: 'images/mumbai/colaba-causeway/restaurant/street-food.jpg' }
-      ],
-      spotsToVisit: [
-        { name: 'Colaba Causeway Market', description: 'Bustling street market with clothes, jewellery, antiques, handicrafts, and Mumbai souvenirs.', image: 'images/mumbai/colaba-causeway/to-visit/shopping.jpg' },
-        { name: 'Afghan Memorial Church', description: 'Gothic-style church built in 1858 to commemorate British soldiers — a peaceful heritage landmark in Colaba.', image: 'images/mumbai/colaba-causeway/to-visit/fortress.jpg' },
-        { name: 'Sassoon Docks', description: 'Mumbai\'s oldest wet docks — a colourful early morning fish market in Colaba, alive at dawn with fishing boats and fresh catch.', image: 'images/mumbai/colaba-causeway/to-visit/street-art.jpg' }
-      ],
-      tours: [
-        { name: 'Mumbai City Tour', description: 'Monuments, markets and chowpatty.', price: '₹3,500/person', image: 'images/mumbai.jpg' }
-      ]
     }
   },
   goa: {
@@ -1024,28 +966,6 @@ kashmir: {
         { name: 'Goa Heritage & Nature 5D', description: 'Churches, falls and beaches.', price: '₹16,000/person', image: 'images/goa-tour.jpg' }
       ]
     },
-    'dudhsagar falls': {
-      aboutParagraph: 'Dudhsagar Falls is one of India\'s tallest waterfalls at 310 metres, meaning Sea of Milk. The spectacular white cascade flows through the Western Ghats forest on the Goa–Karnataka border. Best visited June–December when water flow is strongest. Trekking and jeep rides are popular ways to reach it.',
-      heroImage: 'images/goa/dudhsagar-falls/to-visit/dudhsagar-falls.jpg',
-      hotels: [
-        { name: 'Waterfall View Lodge', description: 'Near the falls entrance at Kulem village.', price: '₹5,200/night', image: 'images/goa/dudhsagar-falls/hotel/waterfall-view.jpg' },
-        { name: 'Forest Stay Resort', description: 'Jungle setting near the falls in Bhagwan Mahavir Wildlife Sanctuary.', price: '₹5,500/night', image: 'images/goa/dudhsagar-falls/hotel/forest-stay.jpg' },
-        { name: 'Adventure Camp', description: 'Budget camping near trekking routes at Kulem.', price: '₹3,500/night', image: 'images/goa/dudhsagar-falls/hotel/adventure-camp.jpg' }
-      ],
-      restaurants: [
-        { name: 'Falls Café', description: 'Local food and refreshments near the Kulem jeep stand.', cuisine: 'Multi-cuisine', image: 'images/goa/dudhsagar-falls/restaurant/falls-cafe.jpg' },
-        { name: 'Jungle Dhaba', description: 'North Indian and snacks for trekkers near the forest entry point.', cuisine: 'North Indian', image: 'images/goa/dudhsagar-falls/restaurant/jungle-dhaba.jpg' },
-        { name: 'Stream Side Restaurant', description: 'Simple meals with forest and stream views near Dudhsagar.', cuisine: 'Multi-cuisine', image: 'images/goa/dudhsagar-falls/restaurant/streamside.jpg' }
-      ],
-      spotsToVisit: [
-        { name: 'Dudhsagar Waterfall', description: 'Four-tiered 310-metre waterfall cascading down rocky cliffs — one of India\'s most dramatic waterfalls. Best in monsoon.', image: 'images/goa/dudhsagar-falls/to-visit/falls-trek.jpg' },
-        { name: 'Jeep Safari to Falls', description: 'Off-road jeep ride through the jungle from Kulem to the base of the falls — the main way to reach Dudhsagar.', image: 'images/goa/dudhsagar-falls/to-visit/jeep-safari.jpg' },
-        { name: 'Bhagwan Mahavir Wildlife Sanctuary', description: 'Goa\'s largest wildlife sanctuary surrounding Dudhsagar — home to leopards, deer, and rich birdlife.', image: 'images/goa/dudhsagar-falls/to-visit/monsoon-view.jpg' }
-      ],
-      tours: [
-        { name: 'Goa Heritage & Nature 5D', description: 'Churches, falls and beaches.', price: '₹16,000/person', image: 'images/goa-tour.jpg' }
-      ]
-    },
     'anjuna beach': {
       aboutParagraph: 'Anjuna Beach is famous for its flea market, hippie culture, and vibrant nightlife. The beach attracts backpackers and party-goers with beach shacks, electronic music, and a bohemian atmosphere. Rocky coves and cliffs add to its charm.',
       heroImage: 'images/goa/anjuna-beach/to-visit/anjuna-beach.jpg',
@@ -1057,12 +977,11 @@ kashmir: {
       restaurants: [
         { name: 'Curlies Beach Shack', description: 'Famous Anjuna beach shack and party spot right on the rocky southern end of the beach. Loved for its chilled atmosphere, seafood, and electronic music nights.', cuisine: 'Goan / Multi-cuisine', image: 'images/goa/anjuna-beach/restaurant/anjuna-shack.jpg' },
         { name: 'German Bakery', description: 'Legendary Anjuna café serving freshly baked breads, cakes, muesli bowls, and Israeli breakfasts — a backpacker favourite since the 1990s.', cuisine: 'Bakery / Continental', image: 'images/goa/anjuna-beach/restaurant/goa-groove.jpg' },
-        { name: 'Café Diogo', description: 'Local Goan café near the Wednesday flea market serving fish curry rice, sol kadi, and Goan sausage dishes.', cuisine: 'Goan', image: 'images/goa/anjuna-beach/restaurant/flea-market-cafe.jpg' }
       ],
       spotsToVisit: [
         { name: 'Wednesday Flea Market', description: 'Anjuna\'s famous weekly flea market every Wednesday — handicrafts, clothes, spices, and souvenirs in a festive atmosphere.', image: 'images/goa/anjuna-beach/to-visit/flea-market.jpg' },
         { name: 'Rocky Outcrops', description: 'Dramatic volcanic rocks at the southern end of Anjuna Beach — scenic for photography and cliff-watching at sunset.', image: 'images/goa/anjuna-beach/to-visit/rocks.jpg' },
-        { name: 'Chapora Fort', description: 'Ruins of the 17th-century Portuguese fort 3km from Anjuna — famous for the Dil Chahta Hai cliff scene, with panoramic views over Vagator and the Arabian Sea.', image: 'images/goa/anjuna-beach/to-visit/full-moon.jpg' }
+        { name: 'Chapora Fort', description: 'Ruins of the 17th-century Portuguese fort 3km from Anjuna — famous for the Dil Chahta Hai cliff scene, with panoramic views over Vagator and the Arabian Sea.', image: 'images/goa/anjuna-beach/to-visit/chapora.jpg' }
       ],
       tours: [
         { name: 'Goa Beach 4D', description: 'Beaches and nightlife.', price: '₹11,500/person', image: 'images/goa-tour.jpg' }
