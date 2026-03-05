@@ -48,59 +48,68 @@
       <span>Book Tour</span>
     </div>
 
-    <h1 class="book-tour-title reveal">Book Your Tour</h1>
+  <div class="tour-info-box tour-info-reveal">
+  <h2><i class="fas fa-route"></i> {{ tour_name }}</h2>
+  <p class="tour-dest">Destination: <strong>{{ destination }}</strong></p>
+  <p class="tour-price"><i class="fas fa-tag"></i> {{ tour_price }}</p>
 
-    <div class="tour-info-box tour-info-reveal">
-      <h2><i class="fas fa-route"></i> {{ tour_name }}</h2>
-      <p class="tour-dest">Destination: <strong>{{ destination }}</strong></p>
-      <p class="tour-price"><i class="fas fa-tag"></i> {{ tour_price }}</p>
-      {% if tour_description %}
-      <div class="tour-description">
+  {% if tour_description %}
+  <div class="tour-description">
+    {% for line in tour_description.split('\n') %}
+      <p>{{ line }}</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
 
-        {% for line in tour_description.split('\n') %}
-        <p>{{ line }}</p>
-        {% endfor %}
-
-      </div>
-      {% endif %}
-    </div>
-
-    {% if tour_full %}
+{% if tour_full %}
 <div class="flash error">
-This tour is fully booked. Please wait for the next tour slot.
+  This tour is fully booked. Please wait for the next tour slot.
 </div>
 {% endif %}
 
 <p class="book-form-intro reveal">
-   Fill in your details below to book this tour. After booking, please check your
-      profile for confirmation and status updates..</p>
+  Fill in your details below to book this tour. After booking, please check your
+  profile for confirmation and status updates.
+</p>
 
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
     {% for category, msg in messages %}
-    <div class="flash {{ category }}">{{ msg }}</div>
+      <div class="flash {{ category }}">{{ msg }}</div>
     {% endfor %}
-    {% endif %}
-    {% endwith %}
-    <form class="book-tour-form form-reveal" method="post" action="{{ url_for('book_tour') }}" {% if tour_full %}style="opacity:0.5; pointer-events:none;"{% endif %}>
-      <input type="hidden" name="destination" value="{{ destination }}">
-      <input type="hidden" name="tour_name" value="{{ tour_name }}">
-      <input type="hidden" name="tour_price" value="{{ tour_price }}">
-      <label>Your Name *</label>
-      <input type="text" name="name" required placeholder="Full name">
-      <label>Email *</label>
-      <input type="email" name="email" required placeholder="your@email.com">
-      <label>Select Preferred Date</label>
-      <input type="date" name="preferred_date" id="dateInput" required>
-      <label>Phone *</label>
-      <input type="tel" id="phoneInput" name="phone" required placeholder="10-digit mobile" maxlength="10"
-        inputmode="numeric">
-      <span class="phone-error" id="phoneError"></span>
-      <label>Number of Persons *</label>
-      <input type="number" name="persons" min="1" max="10" value="1" required>
-      <button type="submit" class="book-tour-submit">Submit Booking</button>
-    </form>
-    {% endif %}
+  {% endif %}
+{% endwith %}
+
+<form class="book-tour-form form-reveal"
+      method="post"
+      action="{{ url_for('book_tour') }}"
+      {% if tour_full %}style="opacity:0.5; pointer-events:none;"{% endif %}>
+
+  <input type="hidden" name="destination" value="{{ destination }}">
+  <input type="hidden" name="tour_name" value="{{ tour_name }}">
+  <input type="hidden" name="tour_price" value="{{ tour_price }}">
+
+  <label>Your Name *</label>
+  <input type="text" name="name" required placeholder="Full name">
+
+  <label>Email *</label>
+  <input type="email" name="email" required placeholder="your@email.com">
+
+  <label>Select Preferred Date</label>
+  <input type="date" name="preferred_date" id="dateInput" required>
+
+  <label>Phone *</label>
+  <input type="tel" id="phoneInput" name="phone" required placeholder="10-digit mobile" maxlength="10" inputmode="numeric">
+
+  <span class="phone-error" id="phoneError"></span>
+
+  <label>Number of Persons *</label>
+  <input type="number" name="persons" min="1" max="10" value="1" required>
+
+  <button type="submit" class="book-tour-submit">Submit Booking</button>
+
+</form>
   </main>
 
   <footer class="footer">
