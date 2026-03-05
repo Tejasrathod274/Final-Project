@@ -420,133 +420,410 @@ window.PLACE_DETAILS = {
       ]
     }
   },
-  himachal: {
+ himachal: {
     shimla: {
-      aboutParagraph: 'Shimla, the Queen of Hills, was the summer capital of British India. It has colonial buildings, the Mall Road, and scenic views. You can visit Jakhu Temple, take the toy train, and enjoy the cool weather and pine forests.',
+      aboutParagraph: 'Shimla, the Queen of Hills, is the capital of Himachal Pradesh and was the summer capital of British India. It has colonial buildings including the Viceregal Lodge, the neo-Gothic Christ Church, and the famous Mall Road. You can visit Jakhu Temple at 2,445m altitude, ride the UNESCO-listed Kalka-Shimla toy train through 103 tunnels, and enjoy cool weather and pine forests. Kufri nearby offers snow activities in winter.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Mountain View Shimla', description: 'Valley views and comfortable rooms.', price: '₹5,500/night', image: 'images/Himachal/shimla/hotel/mountain-view.jpg' },
-        { name: 'Oberoi Cecil', description: 'Heritage hotel on the Mall.', price: '₹12,000/night', image: 'images/Himachal/shimla/hotel/oberoi-cecil.jpg' },
-        { name: 'The Willows', description: 'Luxury stay in colonial ambiance.', price: '₹8,500/night', image: 'images/Himachal/shimla/hotel/willows.jpg' }
+        {
+          name: 'The Oberoi Cecil',
+          description: 'Iconic 5-star heritage hotel at the quieter end of Mall Road, established 1884. Features rich wooden floors, glowing fireplaces, a grand atrium lobby, and panoramic mountain views.',
+          price: '₹18,000/night',
+          image: 'images/Himachal/shimla/hotel/oberoi-cecil.jpg'
+        },
+        {
+          name: 'Woodville Palace',
+          description: 'Heritage palace hotel — former summer residence of the Raja Rana of Jubbal — set in 4 acres of deodar gardens. Features the iconic Hollywood Bar 1930s and a garden restaurant.',
+          price: '₹8,000/night',
+          image: 'images/Himachal/shimla/hotel/woodville-palace.jpg'
+        },
+        {
+          name: 'Hotel Willow Banks',
+          description: 'Well-regarded hotel with on-site Eighteen71 Cookhouse & Bar.',
+          price: '₹5,500/night',
+          image: 'images/Himachal/shimla/hotel/willow-banks.jpg'
+        }
       ],
       restaurants: [
-        { name: 'Wake and Bake', description: 'Café and bakery on Mall Road.', cuisine: 'Café', image: 'images/Himachal/shimla/restaurant/wake-bake.jpg' },
-        { name: 'Himachal Pradesh Tourism Restaurant', description: 'Local and North Indian.', cuisine: 'North Indian', image: 'images/Himachal/shimla/restaurant/hp-tourism.jpg' },
-        { name: 'Asha Restaurant', description: 'Authentic Himachali cuisine.', cuisine: 'Himachali', image: 'images/Himachal/shimla/restaurant/asha.jpg' }
+        {
+          name: 'Wake and Bake',
+          description: 'Popular multi-level café on Mall Road opposite Town Hall, with rooftop seating and sweeping valley views. Serves Continental, Italian, and Middle Eastern food.',
+          cuisine: 'Continental / Italian',
+          image: 'images/Himachal/shimla/restaurant/wake-bake.jpg'
+        },
+        {
+          name: 'Himachal Pradesh Tourism Restaurant',
+          description: 'Government-run restaurant serving local and North Indian food.',
+          cuisine: 'North Indian',
+          image: 'images/Himachal/shimla/restaurant/hp-tourism.jpg'
+        },
+        {
+          name: 'Asha Restaurant',
+          description: 'Authentic Himachali cuisine in central Shimla.',
+          cuisine: 'Himachali',
+          image: 'images/Himachal/shimla/restaurant/asha.jpg'
+        }
       ],
       spotsToVisit: [
-        { name: 'Mall Road', description: 'Shopping, cafés and walks through heritage lane.', image: 'images/Himachal/shimla/to-visit/mall-road.jpg' },
-        { name: 'Jakhu Temple', description: 'Hanuman temple with panoramic city views.', image: 'images/Himachal/shimla/to-visit/jakhu-temple.jpg' },
-        { name: 'Kufri', description: 'Snow point and activities in Shimla hills.', image: 'images/Himachal/shimla/to-visit/kufri.jpg' }
+        {
+          name: 'Mall Road',
+          description: 'Main street with colonial buildings, shops, cafés and heritage walks.',
+          image: 'images/Himachal/shimla/to-visit/mall-road.jpg'
+        },
+        {
+          name: 'Jakhu Temple',
+          description: 'Hanuman temple at 2,455m with panoramic Himalayan views.',
+          image: 'images/Himachal/shimla/to-visit/jakhu-temple.jpg'
+        },
+        {
+          name: 'Kufri',
+          description: 'Snow point 16km from Shimla with skiing and horse riding.',
+          image: 'images/Himachal/shimla/to-visit/kufri.jpg'
+        },
+        {
+          name: 'Kalka-Shimla Toy Train',
+          description: 'UNESCO World Heritage railway through 103 tunnels and pine forests.',
+          image: 'images/Himachal/shimla/to-visit/shimla.jpg'
+        }
       ],
       tours: [
         { name: 'Shimla-Manali 5D', description: 'Classic hill circuit.', price: '₹18,000/person', image: 'images/Himachal.jpg' }
       ]
     },
+
     manali: {
-      aboutParagraph: 'Manali is a popular hill station with snow views, adventure sports, and apple orchards. You can visit Rohtang Pass (when open), Solang Valley, Hadimba Temple, and the old Manali village. It is a hub for trekking and paragliding.',
+      aboutParagraph: 'Manali is a popular hill station at 2,050m altitude in the Kullu district, nestled in the Beas River Valley surrounded by snow-capped peaks and pine forests. You can visit Rohtang Pass (open May to October), Solang Valley for adventure sports, the ancient Hadimba Temple, and the relaxed cafés of Old Manali village. It is a hub for trekking, paragliding, skiing and river rafting.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Manali Snow Resort', description: 'Near Rohtang and Solang.', price: '₹6,800/night', image: 'images/Himachal/manali/hotel/manali-snow.jpg' },
-        { name: 'Johnson Lodge', description: 'Wood and stone lodge with mountain view.', price: '₹5,200/night', image: 'images/Himachal/manali/hotel/johnson-lodge.jpg' },
-        { name: 'Pinewood Hotel', description: 'Luxury stay amidst pine forests.', price: '₹7,500/night', image: 'images/Himachal/manali/hotel/pinewood.jpg' }
+        {
+          name: 'Snow Valley Resorts & Spa',
+          description: 'Eco-friendly 3-star resort in the Log Hut Area, 2km from Manali Bus Stand. Surrounded by apple orchards and pine forests, with a rooftop café and multi-cuisine restaurant.',
+          price: '₹6,800/night',
+          image: 'images/Himachal/manali/hotel/manali-snow.jpg'
+        },
+        {
+          name: 'Johnson Lodge',
+          description: 'Historic wood and stone lodge established in early 1900s with famous trout restaurant.',
+          price: '₹5,200/night',
+          image: 'images/Himachal/manali/hotel/johnson-lodge.jpg'
+        },
+        {
+          name: 'Baragarh Resort & Spa',
+          description: 'Luxury resort on 70 acres of apple orchards with Beas River views.',
+          price: '₹9,500/night',
+          image: 'images/Himachal/manali/hotel/pinewood.jpg'
+        }
       ],
       restaurants: [
-        { name: 'Johnson Lodge Restaurant', description: 'Wood-fired pizzas and continental.', cuisine: 'Continental', image: 'images/Himachal/manali/restaurant/johnson-lodge.jpg' },
-        { name: 'Casa Bella Vista', description: 'Italian and Indian with mountain view.', cuisine: 'Italian', image: 'images/Himachal/manali/restaurant/casa-bella.jpg' },
-        { name: 'Local Dhaba', description: 'Himachali momos and North Indian food.', cuisine: 'North Indian', image: 'images/Himachal/manali/restaurant/local-dhaba.jpg' }
+        {
+          name: "The Johnson's Restaurant",
+          description: 'First trout specialty restaurant in India, famous for fresh fish and continental.',
+          cuisine: 'Continental',
+          image: 'images/Himachal/manali/restaurant/johnson-lodge.jpg'
+        },
+        {
+          name: 'Casa Bella Vista',
+          description: 'Italian and Indian cuisine with mountain views.',
+          cuisine: 'Italian',
+          image: 'images/Himachal/manali/restaurant/casa-bella.jpg'
+        },
+        {
+          name: "Drifter's Inn",
+          description: 'Popular Old Manali café with Himachali food and backpacker vibe.',
+          cuisine: 'Multi-cuisine',
+          image: 'images/Himachal/manali/restaurant/local-dhaba.jpg'
+        }
       ],
       spotsToVisit: [
-        { name: 'Solang Valley', description: 'Adventure sports, paragliding and snow in winter.', image: 'images/Himachal/manali/to-visit/solang-valley.jpg' },
-        { name: 'Hadimba Temple', description: 'Wooden temple in the forest with spiritual significance.', image: 'images/Himachal/manali/to-visit/hadimba-temple.jpg' },
-        { name: 'Old Manali', description: 'Traditional cafés and hippie village atmosphere.', image: 'images/Himachal/manali/to-visit/old-manali.jpg' }
+        {
+          name: 'Solang Valley',
+          description: 'Adventure sports hub — paragliding, skiing, zorbing and snow activities 14km from Manali.',
+          image: 'images/Himachal/manali/to-visit/solang-valley.jpg'
+        },
+        {
+          name: 'Hadimba Temple',
+          description: 'Ancient 4-tiered pagoda wooden temple in the deodar forest, dating to 1553.',
+          image: 'images/Himachal/manali/to-visit/hadimba-temple.jpg'
+        },
+        {
+          name: 'Old Manali',
+          description: 'Traditional village with cafés, apple orchards and relaxed backpacker vibe.',
+          image: 'images/Himachal/manali/to-visit/old-manali.jpg'
+        },
+        {
+          name: 'Rohtang Pass',
+          description: 'High mountain pass at 3,978m offering panoramic views. Open May to October.',
+          image: 'images/Himachal/manali/to-visit/manali.jpg'
+        }
       ],
       tours: [
         { name: 'Shimla-Manali 5D', description: 'Classic hill circuit.', price: '₹18,000/person', image: 'images/Himachal.jpg' },
         { name: 'Dharamshala & Bir 4D', description: 'Culture and paragliding.', price: '₹14,000/person', image: 'images/Himachal.jpg' }
       ]
     },
+
     dharamshala: {
-      aboutParagraph: 'Dharamshala is home to the Dalai Lama and the Tibetan government-in-exile. McLeod Ganj is the main traveller area with monasteries, cafés, and trekking. You can visit Tsuglagkhang Temple, Norbulingka, and enjoy Tibetan food and culture.',
+      aboutParagraph: 'Dharamshala is home to the Dalai Lama and the Tibetan government-in-exile. It sits at 1,457m in the Kangra Valley with the Dhauladhar range as its backdrop. McLeod Ganj is the upper town with monasteries, Tibetan restaurants, and trekking. You can visit the Tsuglagkhang Temple complex, Bhagsu Waterfall, Norbulingka Institute, and enjoy Tibetan food and culture. The HPCA Cricket Stadium here is one of the most scenic in the world.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Dharamshala Peace Inn', description: 'Near McLeod Ganj and main square.', price: '₹3,900/night', image: 'images/Himachal/dharamshala/hotel/peace-inn.jpg' },
-        { name: 'Tibetan Guesthouse', description: 'Traditional Tibetan-style stay.', price: '₹3,500/night', image: 'images/Himachal/dharamshala/hotel/tibetan-guest.jpg' },
-        { name: 'McLeod View Hotel', description: 'Hill view with modern comfort.', price: '₹5,000/night', image: 'images/Himachal/dharamshala/hotel/mcleod-view.jpg' }
+        {
+          name: 'Hyatt Regency Dharamshala',
+          description: 'Luxury 5-star resort spread across 6.5 acres in Village Dharamkot, above McLeod Ganj. Features Dhauladhar views, indoor pool, spa, and is 4km from the Dalai Lama Temple complex.',
+          price: '₹14,000/night',
+          image: 'images/Himachal/dharamshala/hotel/peace-inn.jpg'
+        },
+        {
+          name: 'Brij Anayra',
+          description: '161-year-old heritage property on 10 acres of tea gardens with valley views.',
+          price: '₹12,000/night',
+          image: 'images/Himachal/dharamshala/hotel/tibetan-guest.jpg'
+        },
+        {
+          name: 'WelcomHeritage Natraj',
+          description: 'Highly rated heritage hotel in McLeod Ganj near Dalai Lama Temple.',
+          price: '₹6,500/night',
+          image: 'images/Himachal/dharamshala/hotel/mcleod-view.jpg'
+        }
       ],
       restaurants: [
-        { name: 'Illiterati', description: 'Books, coffee and Tibetan food.', cuisine: 'Tibetan', image: 'images/Himachal/dharamshala/restaurant/illiterati.jpg' },
-        { name: 'Nick\'s Kitchen', description: 'Tibetan and Indian fusion.', cuisine: 'Tibetan', image: 'images/Himachal/dharamshala/restaurant/nicks-kitchen.jpg' },
-        { name: 'Moon Peak Café', description: 'Café with spiritual vibe and momos.', cuisine: 'Tibetan', image: 'images/Himachal/dharamshala/restaurant/moon-peak.jpg' }
+        {
+          name: "Jimmy's Italian Kitchen",
+          description: 'Long-running favourite in McLeod Ganj with Italian and Tibetan food.',
+          cuisine: 'Italian',
+          image: 'images/Himachal/dharamshala/restaurant/illiterati.jpg'
+        },
+        {
+          name: "Nick's Kitchen",
+          description: 'Well-known Tibetan and Indian fusion restaurant in McLeod Ganj.',
+          cuisine: 'Tibetan',
+          image: 'images/Himachal/dharamshala/restaurant/nicks-kitchen.jpg'
+        },
+        {
+          name: 'Moon Peak Café',
+          description: 'Café with spiritual vibe and momos in McLeod Ganj.',
+          cuisine: 'Tibetan',
+          image: 'images/Himachal/dharamshala/restaurant/moon-peak.jpg'
+        }
       ],
       spotsToVisit: [
-        { name: 'Tsuglagkhang Temple', description: 'Main temple and Dalai Lama\'s residence.', image: 'images/Himachal/dharamshala/to-visit/tsuglagkhang.jpg' },
-        { name: 'Triund Trek', description: 'Popular one-day trek with panoramic views.', image: 'images/Himachal/dharamshala/to-visit/triund-trek.jpg' },
-        { name: 'Norbulingka Institute', description: 'Tibetan art, culture and craft center.', image: 'images/Himachal/dharamshala/to-visit/norbulingka.jpg' }
+        {
+          name: 'Tsuglagkhang Temple',
+          description: "Main Tibetan Buddhist temple complex and Dalai Lama's residence in McLeod Ganj.",
+          image: 'images/Himachal/dharamshala/to-visit/tsuglagkhang.jpg'
+        },
+        {
+          name: 'Triund Trek',
+          description: 'Popular one-day trek to 2,828m with panoramic Dhauladhar views.',
+          image: 'images/Himachal/dharamshala/to-visit/triund-trek.jpg'
+        },
+        {
+          name: 'Norbulingka Institute',
+          description: 'Tibetan art, culture and traditional craft center with beautiful gardens.',
+          image: 'images/Himachal/dharamshala/to-visit/norbulingka.jpg'
+        },
+        {
+          name: 'Bhagsu Waterfall',
+          description: 'Scenic waterfall near McLeod Ganj, popular for short hikes.',
+          image: 'images/Himachal/dharamshala/to-visit/dharamshala.jpg'
+        }
       ],
       tours: [
         { name: 'Dharamshala & Bir 4D', description: 'Culture and paragliding.', price: '₹14,000/person', image: 'images/Himachal.jpg' }
       ]
     },
+
     'spiti valley': {
-      aboutParagraph: 'Spiti Valley is a high-altitude desert with monasteries, stark landscapes, and clear skies. Key places include Key Monastery, Tabo, and Kaza. It is ideal for adventure and culture lovers. Best visited in summer.',
+      aboutParagraph: 'Spiti Valley is a cold high-altitude desert in the Trans-Himalayan region at an average elevation of 3,800m. It has dramatic landscapes, ancient Buddhist monasteries, and clear skies ideal for stargazing. Key places include Key Monastery, Tabo (one of the oldest monasteries in the Himalayas, over 1,000 years old), and Kaza the main town. Chandratal Lake is a stunning high-altitude lake nearby. Best visited between June and October.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Spiti Valley Lodge', description: 'Simple and cosy in Kaza.', price: '₹2,500/night', image: 'images/Himachal/spiti-valley/hotel/spiti-lodge.jpg' },
-        { name: 'Tabo Monastery Guest House', description: 'Stay near the ancient monastery.', price: '₹2,200/night', image: 'images/Himachal/spiti-valley/hotel/tabo-guest.jpg' },
-        { name: 'Key Monastery Inn', description: 'Budget stay with mountain views.', price: '₹2,800/night', image: 'images/Himachal/spiti-valley/hotel/key-inn.jpg' }
+        {
+          name: 'Zostel Spiti',
+          description: "Asia's highest backpacker hostel in Kaza, with 360° mountain views. Offers dorms, private rooms, and outdoor tents. Budget-friendly with a strong traveller community vibe.",
+          price: '₹2,500/night',
+          image: 'images/Himachal/spiti-valley/hotel/spiti-lodge.jpg'
+        },
+        {
+          name: 'Spiti Valley Hotel',
+          description: 'Comfortable hotel in central Kaza near the Sakya Buddhist Monastery.',
+          price: '₹2,200/night',
+          image: 'images/Himachal/spiti-valley/hotel/tabo-guest.jpg'
+        },
+        {
+          name: 'Parasol Camps & Retreat',
+          description: 'Highly rated camp near Chandratal Lake with stunning Himalayan setting.',
+          price: '₹3,500/night',
+          image: 'images/Himachal/spiti-valley/hotel/key-inn.jpg'
+        }
       ],
       restaurants: [
-        { name: 'Sol Café (Kaza)', description: 'Simple food and warmth in high altitude.', cuisine: 'Multi-cuisine', image: 'images/Himachal/spiti-valley/restaurant/sol-cafe.jpg' },
-        { name: 'Monastery Tea House', description: 'Traditional Tibetan chai and food.', cuisine: 'Tibetan', image: 'images/Himachal/spiti-valley/restaurant/monastery-tea.jpg' },
-        { name: 'Trekker\'s Rest', description: 'North Indian and local cuisine.', cuisine: 'North Indian', image: 'images/Himachal/spiti-valley/restaurant/trekkers-rest.jpg' }
+        {
+          name: 'Sol Café (Kaza)',
+          description: 'Well-known café in Kaza serving simple, warm food at high altitude.',
+          cuisine: 'Multi-cuisine',
+          image: 'images/Himachal/spiti-valley/restaurant/sol-cafe.jpg'
+        },
+        {
+          name: 'The Himalayan Café',
+          description: 'Popular café in Kaza with local Spitian and Indian food.',
+          cuisine: 'North Indian',
+          image: 'images/Himachal/spiti-valley/restaurant/monastery-tea.jpg'
+        },
+        {
+          name: 'Kunga Restaurant',
+          description: 'Local restaurant near Kaza market serving Tibetan and North Indian meals.',
+          cuisine: 'Tibetan',
+          image: 'images/Himachal/spiti-valley/restaurant/trekkers-rest.jpg'
+        }
       ],
       spotsToVisit: [
-        { name: 'Key Monastery', description: 'Famous Buddhist monastery on hilltop.', image: 'images/Himachal/spiti-valley/to-visit/key-monastery.jpg' },
-        { name: 'Tabo Monastery', description: 'One of the oldest in the Himalayas.', image: 'images/Himachal/spiti-valley/to-visit/tabo-monastery.jpg' },
-        { name: 'Chandratal Lake', description: 'High altitude lake and trekking destination.', image: 'images/Himachal/spiti-valley/to-visit/chandratal.jpg' }
+        {
+          name: 'Key Monastery',
+          description: 'Famous Tibetan Buddhist monastery perched on a hilltop at 4,166m near Kaza.',
+          image: 'images/Himachal/spiti-valley/to-visit/key-monastery.jpg'
+        },
+        {
+          name: 'Tabo Monastery',
+          description: 'Over 1,000 years old — one of the oldest active monasteries in the Himalayas.',
+          image: 'images/Himachal/spiti-valley/to-visit/tabo-monastery.jpg'
+        },
+        {
+          name: 'Chandratal Lake',
+          description: 'Crescent-shaped high altitude lake at 4,300m — a stunning trekking destination.',
+          image: 'images/Himachal/spiti-valley/to-visit/chandratal.jpg'
+        }
       ],
       tours: [
         { name: 'Spiti Valley 7D', description: 'Adventure and monasteries.', price: '₹25,000/person', image: 'images/Himachal.jpg' }
       ]
     },
+
     dalhousie: {
-      aboutParagraph: 'Dalhousie is a quiet hill station with colonial charm, pine and oak forests. You can visit Panchpula, Kalatop, and enjoy peaceful walks. It is less crowded than Shimla and Manali.',
+      aboutParagraph: 'Dalhousie is a quiet colonial hill station established in 1854 and named after British Governor-General Lord Dalhousie. Set amidst pine, deodar, oak and rhododendron forests at around 2,036m, it was a favourite British summer retreat. You can visit Panchpula waterfall, the Kalatop Wildlife Sanctuary, and take a day trip to Khajjiar — the "Mini Switzerland of India" — just 24km away. Less crowded than Shimla and Manali, it is perfect for peaceful walks.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Grand View Hotel', description: 'Heritage stay with valley view.', price: '₹4,500/night', image: 'images/Himachal/dalhousie/hotel/grand-view.jpg' },
-        { name: 'Mount View Hotel', description: 'Panoramic mountain views and comfort.', price: '₹3,800/night', image: 'images/Himachal/dalhousie/hotel/mount-view.jpg' },
-        { name: 'Dalhousie Resort', description: 'Pine forest setting with garden.', price: '₹5,200/night', image: 'images/Himachal/dalhousie/hotel/dalhousie-resort.jpg' }
+        {
+          name: 'Grand View Hotel',
+          description: 'Verified heritage stay with sweeping valley views in Dalhousie.',
+          price: '₹4,500/night',
+          image: 'images/Himachal/dalhousie/hotel/grand-view.jpg'
+        },
+        {
+          name: 'Hotel Mount View Dalhousie',
+          description: 'Well-reviewed hotel with panoramic mountain views, listed on Tripadvisor.',
+          price: '₹3,800/night',
+          image: 'images/Himachal/dalhousie/hotel/mount-view.jpg'
+        },
+        {
+          name: 'Regenta Place Dalhousie',
+          description: 'Branded hotel by Royal Orchid group with modern amenities in Dalhousie.',
+          price: '₹5,500/night',
+          image: 'images/Himachal/dalhousie/hotel/dalhousie-resort.jpg'
+        }
       ],
       restaurants: [
-        { name: 'Kwality Restaurant', description: 'North Indian and local Himachali food.', cuisine: 'North Indian', image: 'images/Himachal/dalhousie/restaurant/kwality.jpg' },
-        { name: 'Café Dalhousie', description: 'Continental and veg options with view.', cuisine: 'Continental', image: 'images/Himachal/dalhousie/restaurant/cafe-dalhousie.jpg' },
-        { name: 'Local Dhaba', description: 'Authentic Himachali meals and tea.', cuisine: 'Himachali', image: 'images/Himachal/dalhousie/restaurant/local-dhaba.jpg' }
+        {
+          name: 'Kwality Restaurant',
+          description: 'Well-known restaurant in Dalhousie serving North Indian and local Himachali food.',
+          cuisine: 'North Indian',
+          image: 'images/Himachal/dalhousie/restaurant/kwality.jpg'
+        },
+        {
+          name: 'Café Dalhousie',
+          description: 'Continental and vegetarian options with a view.',
+          cuisine: 'Continental',
+          image: 'images/Himachal/dalhousie/restaurant/cafe-dalhousie.jpg'
+        },
+        {
+          name: 'Local Dhaba',
+          description: 'Authentic Himachali meals and tea.',
+          cuisine: 'Himachali',
+          image: 'images/Himachal/dalhousie/restaurant/local-dhaba.jpg'
+        }
       ],
       spotsToVisit: [
-        { name: 'Panchpula', description: 'Stream and picnic spot with waterfalls.', image: 'images/Himachal/dalhousie/to-visit/panchpula.jpg' },
-        { name: 'Kalatop Wildlife Sanctuary', description: 'Forest walk and wildlife viewing.', image: 'images/Himachal/dalhousie/to-visit/kalatop.jpg' },
-        { name: 'Dainkund Peak', description: 'Highest peak in Dalhousie with trekking.', image: 'images/Himachal/dalhousie/to-visit/dainkund-peak.jpg' }
+        {
+          name: 'Panchpula',
+          description: 'Scenic stream and waterfall picnic spot with deodar forests.',
+          image: 'images/Himachal/dalhousie/to-visit/panchpula.jpg'
+        },
+        {
+          name: 'Kalatop Wildlife Sanctuary',
+          description: 'Dense forest reserve with wildlife including barking deer and leopards.',
+          image: 'images/Himachal/dalhousie/to-visit/kalatop.jpg'
+        },
+        {
+          name: 'Dainkund Peak',
+          description: 'Highest peak near Dalhousie at 2,755m with trekking and panoramic views.',
+          image: 'images/Himachal/dalhousie/to-visit/dainkund-peak.jpg'
+        },
+        {
+          name: 'Khajjiar',
+          description: 'The "Mini Switzerland of India" — green meadow and lake 24km from Dalhousie.',
+          image: 'images/Himachal/dalhousie/to-visit/dalhousie.jpg'
+        }
       ],
       tours: []
     },
+
     kasol: {
-      aboutParagraph: 'Kasol is a small village on the Parvati River, popular with backpackers. It is a base for treks to Kheerganga and Malana. You can enjoy Israeli food, cafés, and the relaxed vibe.',
+      aboutParagraph: 'Kasol is a small village at 1,640m on the right bank of the Parvati River in Kullu district, popular with backpackers and trekkers. Known as "Mini Israel" for its large Israeli tourist presence, it is a base for treks to Kheerganga hot springs and Malana village. The nearby Manikaran Sahib Gurudwara is a major pilgrimage site for Sikhs and Hindus. You can enjoy Israeli and continental food, riverside cafés, and the relaxed mountain vibe.',
       heroImage: 'images/Himachal.jpg',
       hotels: [
-        { name: 'Parvati Kuteer', description: 'Cottages by the river with nature view.', price: '₹2,800/night', image: 'images/Himachal/kasol/hotel/parvati-kuteer.jpg' },
-        { name: 'riverside Retreat', description: 'Budget-friendly cabins by the river.', price: '₹2,200/night', image: 'images/Himachal/kasol/hotel/riverside-retreat.jpg' },
-        { name: 'Kasol Adventure Club', description: 'Backpacker lodge with trek facilities.', price: '₹2,600/night', image: 'images/Himachal/kasol/hotel/adventure-club.jpg' }
+        {
+          name: 'Parvati Kuteer',
+          description: 'Wooden cottages nestled in deodar forest on the banks of Parvati River.',
+          price: '₹2,800/night',
+          image: 'images/Himachal/kasol/hotel/parvati-kuteer.jpg'
+        },
+        {
+          name: 'Echor Palm Bliss Resort',
+          description: 'Riverside resort with infinity pool, stunning river and mountain views.',
+          price: '₹4,500/night',
+          image: 'images/Himachal/kasol/hotel/riverside-retreat.jpg'
+        },
+        {
+          name: 'Royal Castle Kasol',
+          description: '4-star hotel near the market with garden, terrace, restaurant and fitness center.',
+          price: '₹3,200/night',
+          image: 'images/Himachal/kasol/hotel/adventure-club.jpg'
+        }
       ],
       restaurants: [
-        { name: 'Wake and Bake', description: 'Israeli and continental by the river.', cuisine: 'Continental', image: 'images/Himachal/kasol/restaurant/wake-bake.jpg' },
-        { name: 'Evergreen Café', description: 'Italian pasta and Israeli food.', cuisine: 'Italian', image: 'images/Himachal/kasol/restaurant/evergreen.jpg' },
-        { name: 'Parvati Restaurant', description: 'Local North Indian and momos.', cuisine: 'North Indian', image: 'images/Himachal/kasol/restaurant/parvati.jpg' }
+        {
+          name: 'Wake N Bake',
+          description: 'Real Israeli and continental café, 0.1km from Kasol centre by the Parvati River.',
+          cuisine: 'Continental',
+          image: 'images/Himachal/kasol/restaurant/wake-bake.jpg'
+        },
+        {
+          name: 'The Evergreen Café',
+          description: 'Verified café at the end of Manikaran road serving Italian pasta and Israeli food.',
+          cuisine: 'Italian',
+          image: 'images/Himachal/kasol/restaurant/evergreen.jpg'
+        },
+        {
+          name: 'Parvati Restaurant',
+          description: 'Local North Indian food and momos by the riverside.',
+          cuisine: 'North Indian',
+          image: 'images/Himachal/kasol/restaurant/parvati.jpg'
+        }
       ],
       spotsToVisit: [
-        { name: 'Kheerganga Trek', description: 'Hot springs and mountain views.', image: 'images/Himachal/kasol/to-visit/kheerganga.jpg' },
-        { name: 'Malana', description: 'Village known for culture and trek.', image: 'images/Himachal/kasol/to-visit/malana.jpg' },
-        { name: 'Parvati River', description: 'River walks and nature trails.', image: 'images/Himachal/kasol/to-visit/parvati-river.jpg' }
+        {
+          name: 'Kheerganga Trek',
+          description: '12km trek to natural hot springs at 2,950m with campsite and mountain views.',
+          image: 'images/Himachal/kasol/to-visit/kheerganga.jpg'
+        },
+        {
+          name: 'Malana',
+          description: 'Ancient isolated village with unique culture and customs, a popular trek from Kasol.',
+          image: 'images/Himachal/kasol/to-visit/malana.jpg'
+        },
+        {
+          name: 'Manikaran Sahib',
+          description: 'Sacred Sikh and Hindu pilgrimage site with natural hot springs, 5km from Kasol.',
+          image: 'images/Himachal/kasol/to-visit/parvati-river.jpg'
+        }
       ],
       tours: []
     }
