@@ -63,7 +63,7 @@ window.DESTINATION_DATA = {
   },
   himachal: {
     name: 'Himachal',
-    description: 'Snowy mountains and peaceful hill stations.',
+    description: 'Snowy mountains with the peaceful hill stations.',
     aboutParagraph: 'Himachal Pradesh is a mountain state with hill stations like Shimla, Manali, and Dharamshala. You can enjoy snow, trekking, Tibetan culture in McLeod Ganj, and quiet valleys like Spiti. The state is ideal for nature lovers and adventure seekers.',
     heroImage: 'images/Himachal.jpg',
     places: [
@@ -146,7 +146,7 @@ window.DESTINATION_DATA = {
   },
   goa: {
     name: 'Goa',
-    description: 'Beaches, nightlife and Portuguese heritage.',
+    description: 'Beaches, nightlife and heritage.',
     aboutParagraph: 'Goa is known for beaches, Portuguese churches, and relaxed vibes. Calangute, Anjuna, and Old Goa offer sun, sea, heritage, and nightlife. The food mixes Konkan, Portuguese, and seafood.',
     heroImage: 'images/goa.jpg',
     places: [

@@ -53,6 +53,12 @@
   <p class="tour-dest">Destination: <strong>{{ destination }}</strong></p>
   <p class="tour-price"><i class="fas fa-tag"></i> {{ tour_price }}</p>
 
+  <div class="tour-includes">
+  <p><i class="fas fa-hotel"></i> Hotel Accommodation Included</p>
+  <p><i class="fas fa-car"></i> Pickup & Drop Included</p>
+  <p><i class="fas fa-utensils"></i> Breakfast Included</p>
+</div>
+
   {% if tour_description %}
   <div class="tour-description">
     {% for line in tour_description.split('\n') %}

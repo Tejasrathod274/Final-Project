@@ -357,3 +357,20 @@ font-weight:600;
 .explore-btn:hover{
 background:#ffb300;
 }
+.tour-includes{
+margin-top:10px;
+padding:10px;
+background:#1f2a3a;
+border-radius:8px;
+}
+
+.tour-includes p{
+margin:4px 0;
+font-size:14px;
+color:#c7f9cc;
+}
+
+.tour-includes i{
+margin-right:6px;
+color:#4ade80;
+}
