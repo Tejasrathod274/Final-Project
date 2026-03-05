@@ -43,9 +43,7 @@ window.DESTINATION_DATA = {
       { name: 'Amber Fort', description: 'Majestic fort and palace.', image: 'images/jaipur/amber-fort/amber-fort.jpg' },
       { name: 'City Palace', description: 'Royal residence and museums.', image: 'images/jaipur/city-palace/City-Palace.jpg' },
       { name: 'Hawa Mahal', description: 'Palace of Winds.', image: 'images/jaipur/hawa-mahal/hawa-mahal.jpg' },
-      { name: 'Jantar Mantar', description: 'Ancient observatory.', image: 'images/jaipur/jantar-mantar/jantar-mantar.jpg' },
-      { name: 'Nahargarh Fort', description: 'Views over the city.', image: 'images/jaipur/nahargarh-fort/nahargah-fort.jpg' },
-      { name: 'Johari Bazaar', description: 'Markets and handicrafts.', image: 'images/jaipur/johari-bazaar/johari-bazaar.jpg' }
+      { name: 'Jantar Mantar', description: 'Ancient observatory.', image: 'images/jaipur/jantar-mantar/jantar-mantar.jpg' }
     ],
     hotels: [
       { name: 'Raj Palace Heritage', description: 'Palace hotel with royal suites.', price: '₹9,000/night', image: 'images/jaipur/city-palace/hotel/raj-palace.jpg' },
@@ -156,9 +154,7 @@ window.DESTINATION_DATA = {
     places: [
       { name: 'Calangute Beach', description: 'Popular beach and water sports.', image: 'images/goa/calangute-beach/to-visit/calangute-beach.jpg' },
       { name: 'Old Goa', description: 'Churches and heritage.', image: 'images/goa/to-visit/old-goa.jpg' },
-      { name: 'Dudhsagar Falls', description: 'Milky waterfall.', image: 'images/goa/to-visit/dudhsagar-falls.jpg' },
-      { name: 'Anjuna Beach', description: 'Flea market and parties.', image: 'images/goa/to-visit/anjuna-beach.jpg' },
-      { name: 'Fontainhas', description: 'Colonial quarter in Panjim.', image: 'images/goa/to-visit/fontainhas.jpg' }
+      { name: 'Anjuna Beach', description: 'Flea market and parties.', image: 'images/goa/to-visit/anjuna-beach.jpg' }
     ],
     hotels: [
       { name: 'Beach Resort Calangute', description: 'On the beach.', price: '₹5,200/night', image: 'images/goa/calangute-beach/hotel/beach-resort-calangute.jpg' },
