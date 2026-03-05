@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Payment Successful</title>
+    <title>Payment Successful</title>
 
-<style>
-body{
-font-family:Segoe UI;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
-}
+    <style>
+        body {
+            font-family: Segoe UI;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-.success-box{
-background:white;
-padding:40px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 20px 50px rgba(0,0,0,0.3);
-}
+        .success-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
 
-.success-box h2{
-color:#28a745;
-margin-bottom:15px;
-}
+        .success-box h2 {
+            color: #28a745;
+            margin-bottom: 15px;
+        }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 20px;
-background:#1e3c72;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-}
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #1e3c72;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
 
-.btn:hover{
-background:#2a5298;
-}
-</style>
+        .btn:hover {
+            background: #2a5298;
+        }
+    </style>
 
 </head>
 
 <body>
 
-<div class="success-box">
-
-<h2>✅ Payment Successful</h2>
-
-<p>Your booking has been confirmed.</p>
-
-<a href="{{ url_for('profile_dashboard') }}" class="btn">
-Go to Dashboard
-</a>
-
-</div>
+      <div class="booking-success"
+      style="text-align: center; padding: 50px 40px; margin: 40px auto; background: linear-gradient(135deg, #f0fdf4, #dbeafe); border: 2px solid #22c55e; border-radius: 12px; max-width: 600px;">
+      <i class="fas fa-check-circle" style="font-size: 70px; color: #22c55e; margin-bottom: 20px; display: block;"></i>
+        <h2>✅ Payment Successful</h2>
+      <h2 style="color: #166534; margin-bottom: 20px; font-size: 28px;">Tour Successfully Booked!</h2>
+      <p style="color: #15803d; font-size: 16px; margin: 15px 0;">Your tour has been Successfully booked and is
+        currently awaiting confirmation. Please check your <a href="{{ url_for('profile') }}"
+          style="color: #0ea5e9; text-decoration: underline; font-weight: 600;">Profile</a> for the latest status
+        updates.</p>
+      <p style="color: #16a34a; margin-top: 25px; font-size: 13px;">Thank you for booking with us!</p>
+    </div>
 
 </body>
+
 </html>
