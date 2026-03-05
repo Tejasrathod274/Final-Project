@@ -361,13 +361,13 @@ window.PLACE_DETAILS = {
       heroImage: 'images/jaipur/jantar-mantar/jantar-mantar.jpg',
       hotels: [
         { name: 'Heritage Haveli Jaipur', description: 'Traditional stay near the old city.', price: '₹4,800/night', image:'images/jaipur/jantar-mantar/hotel/heritage-haveli.jpg' },
-        { name: 'Observatory View Inn', description: 'Near Jantar Mantar main entrance.', price: '₹4,200/night', image:'images/jaipur/jantar-mantar/hotel/observatory-view.jpg' },
-        { name: 'Historic City Hotel', description: 'Budget hotel in heritage area.', price: '₹3,500/night', image:'images/jaipur/jantar-mantar/hotel/historic-city.jpg' }
+        { name: 'Park hotel', description: 'Near Jantar Mantar main entrance.', price: '₹5,500/night', image:'images/jaipur/jantar-mantar/hotel/park.jpg' },
+        { name: 'Ymca Tourist Hotel', description: 'Expenisve hotel in heritage area.', price: '₹4,500/night', image:'images/jaipur/jantar-mantar/hotel/ymca.jpg' }
       ],
       restaurants: [
         { name: 'Handi Restaurant', description: 'North Indian and Mughlai.', cuisine: 'North Indian', image:'images/jaipur/jantar-mantar/restaurant/handi.jpg' },
-        { name: 'Ancient Spice', description: 'Authentic Indian and Mughlai cuisine.', cuisine: 'North Indian', image:'images/jaipur/jantar-mantar/restaurant/ancient-spice.jpg' },
-        { name: 'Heritage Dining', description: 'Royal Rajasthani meals.', cuisine: 'Rajasthani', image:'images/jaipur/jantar-mantar/restaurant/heritage-dining.jpg' }
+        { name: 'Kabul Chicken Sajji', description: 'Authentic Indian and Mughlai cuisine.', cuisine: 'North Indian', image:'images/jaipur/jantar-mantar/restaurant/ancient-spice.jpg' },
+        { name: 'Heritage Buffet Dining', description: 'Royal Rajasthani meals.', cuisine: 'Rajasthani', image:'images/jaipur/jantar-mantar/restaurant/heritage-dining.jpg' }
       ],
       spotsToVisit: [
         { name: 'Samrat Yantra', description: 'Largest sundial in the complex.', image: 'images/jaipur/jantar-mantar/to-visit/samrat.jpg' },
