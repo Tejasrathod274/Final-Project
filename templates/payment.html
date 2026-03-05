@@ -1,291 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secure Payment | Travel & Tour</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment | Travel & Tour</title>
 
-<style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-* {
-box-sizing: border-box;
-}
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
 
-body {
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:15px;
-}
+        .payment-card {
+            background: #ffffff;
+            padding: 30px;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
 
-.payment-card{
-background:#ffffff;
-padding:30px;
-width:100%;
-max-width:420px;
-border-radius:18px;
-box-shadow:0 20px 50px rgba(0,0,0,0.25);
-}
+        .payment-card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
 
-.payment-card h2{
-text-align:center;
-margin-bottom:20px;
-color:#1e3c72;
-}
+        .booking-summary {
+            background: #f3f6fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
 
-.booking-summary{
-background:#f3f6fa;
-padding:15px;
-border-radius:10px;
-margin-bottom:20px;
-font-size:14px;
-}
+        .booking-summary p {
+            margin: 6px 0;
+        }
 
-.booking-summary p{
-margin:6px 0;
-}
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-.payment-methods{
-display:flex;
-gap:10px;
-margin-bottom:20px;
-}
+        .method-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 600;
+            background: #fafafa;
+        }
 
-.method-btn{
-flex:1;
-padding:10px;
-border-radius:8px;
-border:1px solid #ccc;
-cursor:pointer;
-text-align:center;
-font-weight:600;
-background:#fafafa;
-}
+        .method-btn.active {
+            background: #2a5298;
+            color: white;
+            border-color: #2a5298;
+        }
 
-.method-btn.active{
-background:#2a5298;
-color:white;
-border-color:#2a5298;
-}
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
 
-.input-group{
-display:flex;
-flex-direction:column;
-margin-bottom:15px;
-}
+        .input-group label {
+            font-size: 13px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
 
-.input-group label{
-font-size:13px;
-margin-bottom:5px;
-font-weight:600;
-}
+        .input-group input {
+            padding: 11px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
 
-.input-group input{
-padding:11px;
-border-radius:8px;
-border:1px solid #ccc;
-font-size:14px;
-}
+        .row {
+            display: flex;
+            gap: 10px;
+        }
 
-.row{
-display:flex;
-gap:10px;
-}
+        .small {
+            flex: 1;
+        }
 
-.small{
-flex:1;
-}
+        .hidden {
+            display: none;
+        }
 
-.hidden{
-display:none;
-}
-
-.pay-btn{
-width:100%;
-padding:13px;
-border:none;
-background:linear-gradient(135deg,#1e3c72,#2a5298);
-color:white;
-font-size:16px;
-border-radius:10px;
-cursor:pointer;
-margin-top:10px;
-font-weight:600;
-}
-
-</style>
+        .pay-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="payment-card">
+    <div class="payment-card">
 
-<h2>💳 Secure Payment</h2>
+        <h2>💳 Secure Payment</h2>
 
-<div class="booking-summary">
-<p><strong>Destination:</strong> {{ booking.destination }}</p>
-<p><strong>Tour:</strong> {{ booking.tour_name }}</p>
-<p><strong>Total:</strong> ₹{{ booking.total_amount }}</p>
-</div>
+        <div class="booking-summary">
+            <p><strong>Destination:</strong> {{ booking.destination }}</p>
+            <p><strong>Tour:</strong> {{ booking.tour_name }}</p>
+            <p><strong>Total:</strong> ₹{{ "{:,}".format(b.total_amount|int) }}</p>
+        </div>
 
-<div class="payment-methods">
-<div class="method-btn active" onclick="selectMethod('card')" id="cardBtn">
-💳 Card
-</div>
+        <div class="payment-methods">
+            <div class="method-btn active" onclick="selectMethod('card')" id="cardBtn">
+                💳 Card
+            </div>
 
-<div class="method-btn" onclick="selectMethod('upi')" id="upiBtn">
-📲 UPI
-</div>
-</div>
+            <div class="method-btn" onclick="selectMethod('upi')" id="upiBtn">
+                📲 UPI
+            </div>
+        </div>
 
-<form method="POST" action="{{ url_for('confirm_payment') }}" onsubmit="return validateForm()">
+        <form method="POST" action="{{ url_for('confirm_payment') }}" onsubmit="return validateForm()">
 
-<!-- CARD SECTION -->
-<div id="cardSection">
+            <!-- CARD SECTION -->
+            <div id="cardSection">
 
-<div class="input-group">
-<label>Card Holder Name</label>
-<input type="text" id="cardName" required>
-</div>
+                <div class="input-group">
+                    <label>Card Holder Name</label>
+                    <input type="text" id="cardName" required>
+                </div>
 
-<div class="input-group">
-<label>Card Number</label>
-<input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
-</div>
+                <div class="input-group">
+                    <label>Card Number</label>
+                    <input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
+                </div>
 
-<div class="row">
+                <div class="row">
 
-<div class="input-group small">
-<label>Expiry Date</label>
-<input type="text" id="expiry" maxlength="5" placeholder="MM/YY" required>
-</div>
+                    <div class="input-group small">
+                        <label>Expiry Date</label>
+                        <input type="text" id="expiry" maxlength="5" placeholder="MM/YY" required>
+                    </div>
 
-<div class="input-group small">
-<label>CVV</label>
-<input type="password" id="cvv" maxlength="3" placeholder="123" required>
-</div>
+                    <div class="input-group small">
+                        <label>CVV</label>
+                        <input type="password" id="cvv" maxlength="3" placeholder="123" required>
+                    </div>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-<!-- UPI SECTION -->
-<div id="upiSection" class="hidden">
+            <!-- UPI SECTION -->
+            <div id="upiSection" class="hidden">
 
-<div class="input-group">
-<label>UPI ID</label>
-<input type="text" id="upi" placeholder="example@upi">
-</div>
+                <div class="input-group">
+                    <label>UPI ID</label>
+                    <input type="text" id="upi" placeholder="example@upi">
+                </div>
 
-<div style="text-align:center;font-size:13px;color:gray;">
-You will receive a payment request in your UPI app.
-</div>
+                <div style="text-align:center;font-size:13px;color:gray;">
+                    You will receive a payment request in your UPI app.
+                </div>
 
-</div>
+            </div>
 
-<button type="submit" class="pay-btn">
-🔒 Pay Securely
-</button>
+            <button type="submit" class="pay-btn">
+                🔒 Pay Securely
+            </button>
 
-</form>
+        </form>
 
-</div>
+    </div>
 
-<script>
+    <script>
 
-function selectMethod(method){
+        function selectMethod(method) {
 
-const cardSection=document.getElementById("cardSection");
-const upiSection=document.getElementById("upiSection");
+            const cardSection = document.getElementById("cardSection");
+            const upiSection = document.getElementById("upiSection");
 
-const cardBtn=document.getElementById("cardBtn");
-const upiBtn=document.getElementById("upiBtn");
+            const cardBtn = document.getElementById("cardBtn");
+            const upiBtn = document.getElementById("upiBtn");
 
-const cardName=document.getElementById("cardName");
-const cardNumber=document.getElementById("cardNumber");
-const expiry=document.getElementById("expiry");
-const cvv=document.getElementById("cvv");
+            const cardName = document.getElementById("cardName");
+            const cardNumber = document.getElementById("cardNumber");
+            const expiry = document.getElementById("expiry");
+            const cvv = document.getElementById("cvv");
 
-const upi=document.getElementById("upi");
+            const upi = document.getElementById("upi");
 
-if(method==="card"){
+            if (method === "card") {
 
-cardSection.classList.remove("hidden");
-upiSection.classList.add("hidden");
+                cardSection.classList.remove("hidden");
+                upiSection.classList.add("hidden");
 
-cardBtn.classList.add("active");
-upiBtn.classList.remove("active");
+                cardBtn.classList.add("active");
+                upiBtn.classList.remove("active");
 
-cardName.required=true;
-cardNumber.required=true;
-expiry.required=true;
-cvv.required=true;
+                cardName.required = true;
+                cardNumber.required = true;
+                expiry.required = true;
+                cvv.required = true;
 
-upi.required=false;
+                upi.required = false;
 
-}
-else{
+            }
+            else {
 
-cardSection.classList.add("hidden");
-upiSection.classList.remove("hidden");
+                cardSection.classList.add("hidden");
+                upiSection.classList.remove("hidden");
 
-cardBtn.classList.remove("active");
-upiBtn.classList.add("active");
+                cardBtn.classList.remove("active");
+                upiBtn.classList.add("active");
 
-cardName.required=false;
-cardNumber.required=false;
-expiry.required=false;
-cvv.required=false;
+                cardName.required = false;
+                cardNumber.required = false;
+                expiry.required = false;
+                cvv.required = false;
 
-upi.required=true;
+                upi.required = true;
 
-}
+            }
 
-}
+        }
 
-/* Expiry format */
-document.getElementById("expiry").addEventListener("input",function(e){
-let value=e.target.value.replace(/\D/g,'');
-if(value.length>=3){
-value=value.slice(0,2)+"/"+value.slice(2,4);
-}
-e.target.value=value;
-});
+        /* Expiry format */
+        document.getElementById("expiry").addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 3) {
+                value = value.slice(0, 2) + "/" + value.slice(2, 4);
+            }
+            e.target.value = value;
+        });
 
-/* CVV numbers only */
-document.getElementById("cvv").addEventListener("input",function(e){
-e.target.value=e.target.value.replace(/\D/g,'');
-});
+        /* CVV numbers only */
+        document.getElementById("cvv").addEventListener("input", function (e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
 
-/* Card spacing */
-document.getElementById("cardNumber").addEventListener("input",function(e){
-let value=e.target.value.replace(/\D/g,'');
-value=value.match(/.{1,4}/g)?.join(" ")||value;
-e.target.value=value;
-});
+        /* Card spacing */
+        document.getElementById("cardNumber").addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.match(/.{1,4}/g)?.join(" ") || value;
+            e.target.value = value;
+        });
 
-/* UPI validation */
-function validateForm(){
+        /* UPI validation */
+        function validateForm() {
 
-const upiSection=document.getElementById("upiSection");
-const upiInput=document.getElementById("upi");
+            const upiSection = document.getElementById("upiSection");
+            const upiInput = document.getElementById("upi");
 
-if(!upiSection.classList.contains("hidden")){
-if(!upiInput.value.includes("@")){
-alert("Enter valid UPI ID");
-return false;
-}
-}
+            if (!upiSection.classList.contains("hidden")) {
+                if (!upiInput.value.includes("@")) {
+                    alert("Enter valid UPI ID");
+                    return false;
+                }
+            }
 
-return true;
+            return true;
 
-}
+        }
 
-</script>
+    </script>
 
 </body>
+
 </html>

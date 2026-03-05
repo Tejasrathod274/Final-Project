@@ -462,7 +462,7 @@
 
 
                 <div class="price-section">
-                    <div class="price">{{ b.tour_price }}</div>
+                   <div class="price">₹{{ "{:,}".format(b.total_amount|int) }}</div>
 
                     {% if b.status == 'Confirmed' %}
                     <span class="status-badge confirmed">
