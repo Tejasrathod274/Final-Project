@@ -128,7 +128,7 @@
         <div class="booking-summary">
             <p><strong>Destination:</strong> {{ booking.destination }}</p>
             <p><strong>Tour:</strong> {{ booking.tour_name }}</p>
-            <p><strong>Total:</strong> ₹{{ "{:,}".format(b.total_amount|int) }}</p>
+            <p><strong>Total:</strong> ₹{{ "{:,}".format(booking.total_amount|int) }}</p>
         </div>
 
         <div class="payment-methods">
