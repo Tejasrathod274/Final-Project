@@ -314,9 +314,7 @@ def guide_register():
                 AND assigned_destination IS NOT NULL
             """)
             rows = cur.fetchall()
-
             taken_destinations = [r['assigned_destination'] for r in rows]
-
             available_destinations = [
                 d for d in all_destinations if d not in taken_destinations
             ]
@@ -328,19 +326,35 @@ def guide_register():
                 password = request.form.get('password')
                 destination = request.form.get('assigned_destination')
 
-                # Safety check again
+                # 1️⃣ Check if email already exists
+                cur.execute("""
+                    SELECT id FROM users WHERE email=%s
+                """, (email,))
+                email_exists = cur.fetchone()
+                if email_exists:
+                    return render_template(
+                        'guide-register.html',
+                        destinations=available_destinations,
+                        error="This email is already registered. Please log in or use a different email.",
+                        form_data=request.form
+                    )
+
+                # 2️⃣ Check if destination is taken
                 cur.execute("""
                     SELECT id FROM users
                     WHERE role='guide'
                     AND assigned_destination=%s
                 """, (destination,))
                 existing = cur.fetchone()
-
                 if existing:
-                    flash("This destination already has a guide!", "error")
-                    return redirect(url_for('guide_register'))
+                    return render_template(
+                        'guide-register.html',
+                        destinations=available_destinations,
+                        error="This destination already has a guide!",
+                        form_data=request.form
+                    )
 
-                # Insert new guide
+                # 3️⃣ Insert new guide
                 cur.execute("""
                     INSERT INTO users
                     (email, password_hash, full_name, role, assigned_destination)
@@ -352,15 +366,18 @@ def guide_register():
                     'guide',
                     destination
                 ))
-
                 conn.commit()
 
-                flash("Guide registered successfully!", "success")
-                return redirect(url_for('guide_login'))
+                return render_template(
+                    'guide-register.html',
+                    destinations=available_destinations,
+                    success="Guide registered successfully! You can now log in."
+                )
 
     finally:
         conn.close()
 
+    # GET request
     return render_template(
         'guide-register.html',
         destinations=available_destinations
