@@ -283,6 +283,29 @@
             font-weight: 500;
         }
 
+        .tour-includes {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            font-weight: 500;
+            color: #166534;
+        }
+
+        .tour-includes span {
+            background: #ecfdf5;
+            padding: 6px 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tour-includes i {
+            color: #16a34a;
+        }
+
         /* Price Section */
         .price-section {
             text-align: right;
@@ -458,11 +481,17 @@
                         {{ b.tour_description }}
                     </p>
                     {% endif %}
+
+                    <div class="tour-includes">
+                        <span><i class="fas fa-hotel"></i> Hotel</span>
+                        <span><i class="fas fa-car"></i> Pickup</span>
+                        <span><i class="fas fa-utensils"></i> Breakfast</span>
+                    </div>
                 </div>
 
 
                 <div class="price-section">
-                   <div class="price">₹{{ "{:,}".format(b.total_amount|int) }}</div>
+                    <div class="price">₹{{ "{:,}".format(b.total_amount|int) }}</div>
 
                     {% if b.status == 'Confirmed' %}
                     <span class="status-badge confirmed">
