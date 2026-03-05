@@ -99,7 +99,7 @@ window.DESTINATION_DATA = {
     places: [
       { name: 'Dal Lake', description: 'Houseboats and shikara rides.', image: 'images/kashmir/dal-lake/dal-lake.jpg' },
       { name: 'Gulmarg', description: 'Meadows and skiing.', image: 'images/kashmir/gulmarg/gulmarg.jpg' },
-      { name: 'Pahalgam', description: 'Valleys and trekking.', image: 'images/kashmir/pahalgam/pahalgam.jpg' },
+      { name: 'Pahalgam', description: 'Valleys and trekking.', image: 'images/kashmir/pahalgam/Pahalgam.jpg' },
       { name: 'Sonamarg', description: 'Meadow of gold.', image: 'images/kashmir/sonamarg/sonamarg.jpg' },
       { name: 'Betaab Valley', description: 'Green meadows and streams.', image: 'images/kashmir/betaab-valley/betaab-valley.jpg' }
     ],
@@ -150,9 +150,9 @@ window.DESTINATION_DATA = {
     aboutParagraph: 'Goa is known for beaches, Portuguese churches, and relaxed vibes. Calangute, Anjuna, and Old Goa offer sun, sea, heritage, and nightlife. The food mixes Konkan, Portuguese, and seafood.',
     heroImage: 'images/goa.jpg',
     places: [
-      { name: 'Calangute Beach', description: 'Popular beach and water sports.', image: 'images/goa/calangute-beach/to-visit/calangute-beach.jpg' },
-      { name: 'Old Goa', description: 'Churches and heritage.', image: 'images/goa/to-visit/old-goa.jpg' },
-      { name: 'Anjuna Beach', description: 'Flea market and parties.', image: 'images/goa/to-visit/anjuna-beach.jpg' }
+      { name: 'Calangute Beach', description: 'Popular beach and water sports.', image: 'images/goa/calangute-beach/calangute-beach.jpg' },
+      { name: 'Old Goa', description: 'Churches and heritage.', image: 'images/goa/old-goa/old-goa.jpg' },
+      { name: 'Anjuna Beach', description: 'Flea market and parties.', image: 'images/goa/anjuna-beach/anjuna-beach.jpg' }
     ],
     hotels: [
       { name: 'Beach Resort Calangute', description: 'On the beach.', price: '₹5,200/night', image: 'images/goa/calangute-beach/hotel/beach-resort-calangute.jpg' },
@@ -846,7 +846,7 @@ kashmir: {
         { name: 'Trishna', description: 'Mumbai\'s most celebrated seafood restaurant in Kala Ghoda, Fort — just 1km from the Gateway. Famous for butter garlic crab, jumbo prawns, and Bombay duck.', cuisine: 'Seafood', image: 'images/mumbai/gateway/restaurant/trishna.jpg' }
       ],
       spotsToVisit: [
-        { name: 'Gateway of India', description: 'Iconic 26-metre basalt arch built in 1924, overlooking the Arabian Sea at Apollo Bunder.', image: 'images/mumbai/gateway/to-visit/gateway.jpg' },
+        { name: 'Gateway of India', description: 'Iconic 26-metre basalt arch built in 1924, overlooking the Arabian Sea at Apollo Bunder.', image: 'images/mumbai/gateway/gateway-of-india.jpg' },
         { name: 'Elephanta Caves Ferry', description: 'One-hour ferry from Gateway of India to Elephanta Island — UNESCO World Heritage Site.', image: 'images/mumbai/gateway/to-visit/elephanta-ferry.jpg' },
         { name: 'Colaba Causeway', description: 'Shopping street and street food strip 10 minutes walk from the Gateway.', image: 'images/mumbai/gateway/to-visit/colaba.jpg' }
       ],
@@ -866,7 +866,7 @@ kashmir: {
       restaurants: [
         { name: 'Britannia & Co.', description: 'Iconic Parsi restaurant in Ballard Estate, Fort, established 1923. Famous for Berry Pulao (with Iranian barberries), Dhansak, Sali Boti, and caramel custard. Open Mon–Sat, lunch only.', cuisine: 'Parsi', image: 'images/mumbai/marine-drive/restaurant/britannia.jpg' },
         { name: 'Cream Centre', description: 'Popular vegetarian restaurant near Marine Drive famous for Sizzlers, Mexican and Indian food. A Mumbai institution since 1958.', cuisine: 'Vegetarian / Multi-cuisine', image: 'images/mumbai/marine-drive/restaurant/sea-breeze.jpg' },
-        { name: 'Café Marine', description: 'Coffee, snacks and casual dining near the promenade.', cuisine: 'Café', image: 'images/mumbai/marine-drive/restaurant/cafe-marine.jpg' }
+        { name: 'Café Marine', description: 'Coffee, snacks and casual dining near the promenade.', cuisine: 'Café', image: 'images/mumbai/marine-drive/restaurant/marine.jpg' }
       ],
       spotsToVisit: [
         { name: 'Chowpatty Beach', description: 'Famous Mumbai beach at the northern end of Marine Drive — known for bhel puri, pav bhaji, and the Ganesh Chaturthi festival.', image: 'images/mumbai/marine-drive/to-visit/chowpatty.jpg' },
@@ -881,14 +881,13 @@ kashmir: {
       aboutParagraph: 'Elephanta Caves are UNESCO-listed ancient rock-cut caves found on Elephanta Island in Mumbai Harbour. Famous for the Shiva sculpture and carvings dating to 5-6th century. A ferry ride from Gateway of India offers both history and sea views.',
       heroImage: 'images/mumbai/elephanta-caves/to-visit/elephanta-caves.jpg',
       hotels: [
-        { name: 'Taj Mahal Palace', description: 'Iconic 5-star hotel near the ferry terminal, 5 minutes from the Gateway of India.', price: '₹18,000/night', image: 'images/mumbai/elephanta-caves/hotel/island-resort.jpg' },
         { name: 'Gordon House Hotel', description: 'Boutique Colaba hotel near the ferry dock — best base for Elephanta day trips.', price: '₹7,500/night', image: 'images/mumbai/elephanta-caves/hotel/seaport.jpg' },
         { name: 'Hotel Suba Palace', description: 'Well-located hotel in Apollo Bunder area, close to the Elephanta ferry point.', price: '₹5,500/night', image: 'images/mumbai/elephanta-caves/hotel/gateway-stay.jpg' }
       ],
       restaurants: [
-        { name: 'Island Café', description: 'Simple local food stalls and cafés on Elephanta Island near the caves entrance.', cuisine: 'Seafood / Snacks', image: 'images/mumbai/elephanta-caves/restaurant/island-cafe.jpg' },
+        { name: 'Island Café', description: 'Simple local food stalls and cafés on Elephanta Island near the caves entrance.', cuisine: 'Seafood / Snacks', image: 'images/mumbai/elephanta-caves/restaurant/island.jpg' },
         { name: 'Trishna', description: 'Mumbai\'s finest seafood restaurant in Kala Ghoda — ideal for a meal before or after the Elephanta ferry.', cuisine: 'Seafood', image: 'images/mumbai/elephanta-caves/restaurant/fishermens.jpg' },
-        { name: 'Indigo Delicatessen', description: 'Popular Colaba café near the ferry terminal with all-day breakfast, sandwiches, and fresh juices.', cuisine: 'Continental / Café', image: 'images/mumbai/elephanta-caves/restaurant/coastal-kitchen.jpg' }
+        { name: 'Indigo Delicatessen', description: 'Popular Colaba café near the ferry terminal with all-day breakfast, sandwiches, and fresh juices.', cuisine: 'Continental / Café', image: 'images/mumbai/elephanta-caves/restaurant/indigo.jpg' }
       ],
       spotsToVisit: [
         { name: 'Trimurti Shiva Sculpture', description: 'The crown jewel of Elephanta — a 6-metre triple-headed Shiva sculpture in Cave 1, dating to the 6th century.', image: 'images/mumbai/elephanta-caves/to-visit/shiva-sculpture.jpg' },
@@ -959,7 +958,7 @@ kashmir: {
       ],
       spotsToVisit: [
         { name: 'Basilica of Bom Jesus', description: 'UNESCO World Heritage church housing the remains of St Francis Xavier. Built in 1605 — the oldest church in Goa and one of the finest examples of Baroque architecture in India.', image: 'images/goa/old-goa/to-visit/basilica.jpg' },
-        { name: 'Se Cathedral', description: 'The largest church in Asia, built in 1619. Dedicated to St Catherine of Alexandria, with the famous Golden Bell in its tower.', image: 'images/goa/old-goa/to-visit/se-cathedral.jpg' },
+        { name: 'Se Cathedral', description: 'The largest church in Asia, built in 1619. Dedicated to St Catherine of Alexandria, with the famous Golden Bell in its tower.', image: 'images/goa/old-goa/to-visit/old-goa.jpg' },
         { name: 'Archaeological Museum', description: 'Museum in the Convent of St Francis of Assisi displaying Hindu sculptures, portraits of Portuguese governors, and colonial artifacts.', image: 'images/goa/old-goa/to-visit/museum.jpg' }
       ],
       tours: [
