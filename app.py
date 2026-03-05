@@ -524,7 +524,7 @@ def book_tour():
 
         with conn.cursor() as cur:
             cur.execute("""
-                SELECT COALESCE(SUM(num_persons),0) AS total
+                SELECT COALESCE(SUM(persons),0) AS total
                 FROM bookings
                 WHERE tour_name = %s
             """, (tour_name,))
@@ -593,7 +593,7 @@ def book_tour():
 
     with conn.cursor() as cur:
         cur.execute("""
-            SELECT COALESCE(SUM(num_persons),0) AS total
+            SELECT COALESCE(SUM(persons),0) AS total
             FROM bookings
             WHERE tour_name = %s
         """, (tour_name,))
