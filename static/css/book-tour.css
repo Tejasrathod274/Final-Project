@@ -317,3 +317,43 @@ padding:18px;
 font-size:13px;
 }
 }
+
+.tour-full-card{
+background:#1f2f44;
+padding:35px;
+border-radius:12px;
+text-align:center;
+margin-top:30px;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.tour-full-card i{
+font-size:40px;
+color:#ff4d4d;
+margin-bottom:10px;
+}
+
+.tour-full-card h3{
+font-size:24px;
+color:#ff4d4d;
+margin-bottom:10px;
+}
+
+.tour-full-card p{
+color:#ccc;
+}
+
+.explore-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#ffc107;
+color:#000;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.explore-btn:hover{
+background:#ffb300;
+}

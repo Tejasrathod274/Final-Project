@@ -63,10 +63,19 @@
 </div>
 
 {% if tour_full %}
-<div class="flash error">
-  This tour is fully booked. Please wait for the next tour slot.
+
+<div class="tour-full-card">
+<i class="fas fa-calendar-times"></i>
+<h3>Tour Fully Booked</h3>
+<p>This tour has reached maximum capacity.</p>
+<p>Please check back later or explore other tours.</p>
+
+<a href="{{ url_for('index') }}#destinations" class="explore-btn">
+Explore Other Tours
+</a>
 </div>
-{% endif %}
+
+{% else %}
 
 <p class="book-form-intro reveal">
   Fill in your details below to book this tour. After booking, please check your
@@ -83,8 +92,7 @@
 
 <form class="book-tour-form form-reveal"
       method="post"
-      action="{{ url_for('book_tour') }}"
-      {% if tour_full %}style="opacity:0.5; pointer-events:none;"{% endif %}>
+      action="{{ url_for('book_tour') }}">
 
   <input type="hidden" name="destination" value="{{ destination }}">
   <input type="hidden" name="tour_name" value="{{ tour_name }}">
@@ -110,6 +118,7 @@
   <button type="submit" class="book-tour-submit">Submit Booking</button>
 
 </form>
+{% endif %}
   </main>
 
   <footer class="footer">
