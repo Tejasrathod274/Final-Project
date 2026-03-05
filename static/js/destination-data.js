@@ -41,7 +41,7 @@ window.DESTINATION_DATA = {
     heroImage: 'images/jaipur/jaipur.jpg',
     places: [
       { name: 'Amber Fort', description: 'Majestic fort and palace.', image: 'images/jaipur/amber-fort/amber-fort.jpg' },
-      { name: 'City Palace', description: 'Royal residence and museums.', image: 'images/jaipur/city-palace/city-Palace.jpg' },
+      { name: 'City Palace', description: 'Royal residence and museums.', image: 'images/jaipur/city-palace/City-Palace.jpg' },
       { name: 'Hawa Mahal', description: 'Palace of Winds.', image: 'images/jaipur/hawa-mahal/hawa-mahal.jpg' },
       { name: 'Jantar Mantar', description: 'Ancient observatory.', image: 'images/jaipur/jantar-mantar/jantar-mantar.jpg' },
       { name: 'Nahargarh Fort', description: 'Views over the city.', image: 'images/jaipur/nahargarh-fort/nahargah-fort.jpg' },
@@ -342,8 +342,8 @@ window.PLACE_DETAILS = {
       heroImage: 'images/jaipur/hawa-mahal/hawa-mahal.jpg',
       hotels: [
         { name: 'Pink City Inn', description: 'Walking distance to Hawa Mahal.', price: '₹3,200/night' ,image:'images/jaipur/hawa-mahal/hotel/pin-city.jpg' },
-        { name: 'Mahal Budget Hotel', description: 'Budget stay right below the palace.', price: '₹2,800/night', image:'images/jaipur/hawa-mahal/hotel/mahal-budget.jpg' },
-        { name: 'Window Palace Inn', description: 'Heritage hotel near main streets.', price: '₹4,200/night', image:'images/jaipur/hawa-mahal/hotel/window-palace.jpg' }
+        { name: 'Raj Mahal Hotel', description: 'Expensive palace.', price: '₹ 10,800/night', image:'images/jaipur/hawa-mahal/hotel/mahal-budget.jpg' },
+        { name: 'Heritage Hotel', description: 'Heritage hotel near main streets.', price: '₹4,200/night', image:'images/jaipur/hawa-mahal/hotel/window-palace.jpg' }
       ],
       restaurants: [
         { name: 'LMB', description: 'Famous sweets and thali near Johari Bazaar.', cuisine: 'Rajasthani', image:'images/jaipur/johari-bazaar/restaurant/lxmb.jpg' },
@@ -356,69 +356,6 @@ window.PLACE_DETAILS = {
         { name: 'Museum Interior', description: 'Walk through small chambers and rooms.', image: 'images/jaipur/hawa-mahal/to-visit/interior.jpg' }
       ],
     },
-    'jantar mantar': {
-      aboutParagraph: 'Jantar Mantar in Jaipur is an ancient astronomical observatory with large stone instruments to measure time and position of stars. It is a UNESCO site and shows the scientific side of Rajasthan.',
-      heroImage: 'images/jaipur/jantar-mantar/jantar-mantar.jpg',
-      hotels: [
-        { name: 'Heritage Haveli Jaipur', description: 'Traditional stay near the old city.', price: '₹4,800/night', image:'images/jaipur/jantar-mantar/hotel/heritage-haveli.jpg' },
-        { name: 'Park hotel', description: 'Near Jantar Mantar main entrance.', price: '₹5,500/night', image:'images/jaipur/jantar-mantar/hotel/park.jpg' },
-        { name: 'Ymca Tourist Hotel', description: 'Expenisve hotel in heritage area.', price: '₹4,500/night', image:'images/jaipur/jantar-mantar/hotel/ymca.jpg' }
-      ],
-      restaurants: [
-        { name: 'Handi Restaurant', description: 'North Indian and Mughlai.', cuisine: 'North Indian', image:'images/jaipur/jantar-mantar/restaurant/handi.jpg' },
-        { name: 'Kabul Chicken Sajji', description: 'Authentic Indian and Mughlai cuisine.', cuisine: 'North Indian', image:'images/jaipur/jantar-mantar/restaurant/ancient-spice.jpg' },
-        { name: 'Heritage Buffet Dining', description: 'Royal Rajasthani meals.', cuisine: 'Rajasthani', image:'images/jaipur/jantar-mantar/restaurant/heritage-dining.jpg' }
-      ],
-      spotsToVisit: [
-        { name: 'Samrat Yantra', description: 'Largest sundial in the complex.', image: 'images/jaipur/jantar-mantar/to-visit/samrat.jpg' },
-        { name: 'Astronomical Instruments', description: 'Learn about ancient astronomy and calculations.', image: 'images/jaipur/jantar-mantar/to-visit/instruments.jpg' },
-        { name: 'UNESCO Heritage Tour', description: 'Guided tour of the entire observatory.', image: 'images/jaipur/jantar-mantar/to-visit/heritage-tour.jpg' }
-      ],
-    },
-    'nahargarh fort': {
-      aboutParagraph: 'Nahargarh Fort sits on the Aravalli hills overlooking Jaipur. It was built for defence and has great views of the city, especially at sunset. You can drive up and enjoy the view from the fort walls.',
-      heroImage: 'images/jaipur/nahargarh-fort/nahargah-fort.jpg',
-      hotels: [
-        { name: 'Fort View Resort', description: 'Near the fort area with valley views.', price: '₹5,500/night', image:'images/jaipur/nahargarh-fort/hotel/fort-view.jpg' },
-        { name: 'Hill Station Inn', description: 'Budget stay on the way to fort.', price: '₹4,000/night', image:'images/jaipur/nahargarh-fort/hotel/hill-station.jpg' },
-        { name: 'Summit Retreat', description: 'Near fort summit with sunset views.', price: '₹6,500/night', image:'images/jaipur/nahargarh-fort/hotel/summit-retreat.jpg' }
-      ],
-      restaurants: [
-        { name: 'Once Upon a Time', description: 'Rooftop restaurant at Nahargarh with city view.', cuisine: 'Rajasthani', image:'images/jaipur/nahargarh-fort/restaurant/once.jpg' },
-        { name: 'Hilltop Café', description: 'Evening snacks and tea with views.', cuisine: 'Café', image:'images/jaipur/nahargarh-fort/restaurant/hilltop-cafe.jpg' },
-        { name: 'Fort Restaurant', description: 'North Indian food and drinks.', cuisine: 'North Indian', image:'images/jaipur/nahargarh-fort/restaurant/fort-restaurant.jpg' }
-      ],
-      spotsToVisit: [
-        { name: 'Sunset Point', description: 'Best views of Jaipur city at dusk.', image: 'images/jaipur/nahargarh-fort/to-visit/sunset.jpg' },
-        { name: 'Fort Walls', description: 'Walk along the ancient fort structure.', image: 'images/jaipur/nahargarh-fort/to-visit/walls.jpg' },
-        { name: 'Jaipur City Lights', description: 'Night view of pink city lights from fort.', image: 'images/jaipur/nahargarh-fort/to-visit/night-lights.jpg' }
-      ],
-      tours: [
-        { name: 'Jaipur Royal Tour', description: 'Forts, palaces and markets.', price: '₹9,000/person', image: 'images/jaipur-tour.jpg' }
-      ]
-    },
-    'johari bazaar': {
-      aboutParagraph: 'Johari Bazaar is Jaipur\'s famous jewellery and handicraft market. You can buy traditional jewellery, gems, textiles, and souvenirs. The bazaar is colourful and full of local life.',
-      heroImage: 'images/jaipur/johari-bazaar/johari-bazaar.jpg',
-      hotels: [
-        { name: 'Pink City Inn', description: 'Central near the bazaars.', price: '₹3,200/night', image:'images/jaipur/johari-bazaar/hotel/pin-city.jpg' },
-        { name: 'Bazaar View Hotel', description: 'Right in the heart of the market.', price: '₹3,800/night', image:'images/jaipur/johari-bazaar/hotel/bazaar-view.jpg' },
-        { name: 'Merchant\'s Inn', description: 'Budget hotel for shopping tourists.', price: '₹3,500/night', image:'images/jaipur/johari-bazaar/hotel/merchants-inn.jpg' }
-      ],
-      restaurants: [
-        { name: 'Laxmi Mishthan Bhandar (LMB)', description: 'Sweets and traditional meals.', cuisine: 'Rajasthani', image:'images/jaipur/johari-bazaar/restaurant/lxmb.jpg' },
-        { name: 'Bazaar Dhaba', description: 'Local North Indian and snacks.', cuisine: 'North Indian', image:'images/jaipur/johari-bazaar/restaurant/bazaar-dhaba.jpg' },
-        { name: 'Sweet Shop Café', description: 'Traditional sweets and chai.', cuisine: 'Café', image:'images/jaipur/johari-bazaar/restaurant/sweet-shop-cafe.jpg' }
-      ],
-      spotsToVisit: [
-        { name: 'Bapu Bazaar', description: 'Textiles and handicrafts.', image: 'images/jaipur/johari-bazaar/to-visit/bapu.jpg' },
-        { name: 'Jewellery Stores', description: 'Traditional and modern jewellery shops.', image: 'images/jaipur/johari-bazaar/to-visit/jewellery.jpg' },
-        { name: 'Market Walk', description: 'Experience the vibrant bazaar culture.', image: 'images/jaipur/johari-bazaar/to-visit/market-walk.jpg' }
-      ],
-      tours: [
-        { name: 'Jaipur Royal Tour', description: 'Forts, palaces and markets.', price: '₹9,000/person', image: 'images/jaipur-tour.jpg' }
-      ]
-    }
   },
  himachal: {
     shimla: {
@@ -1135,28 +1072,6 @@ kashmir: {
         { name: 'Goa Beach 4D', description: 'Beaches and nightlife.', price: '₹11,500/person', image: 'images/goa-tour.jpg' }
       ]
     },
-    'fontainhas': {
-      aboutParagraph: 'Fontainhas is the oldest residential neighbourhood of Panjim, Goa\'s capital. It is a UNESCO-recognised heritage precinct of narrow lanes, colourful Portuguese houses, and old chapels. Perfect for heritage walks and photography.',
-      heroImage: 'images/goa/fontainhas/to-visit/fontainhas.jpg',
-      hotels: [
-        { name: 'Panjim Inn', description: 'Heritage boutique hotel inside a 200-year-old colonial mansion in the heart of Fontainhas — one of Goa\'s most celebrated heritage stays.', price: '₹6,200/night', image: 'images/goa/fontainhas/hotel/colonial-manor.jpg' },
-        { name: 'Panjim Pousada', description: 'Sister property to Panjim Inn — a restored 19th-century Portuguese townhouse with antique furnishings in Fontainhas.', price: '₹5,000/night', image: 'images/goa/fontainhas/hotel/portuguese-homestay.jpg' },
-        { name: 'Heritage Rooms', description: 'Traditional rooms with modern comfort in Fontainhas.', price: '₹5,500/night', image: 'images/goa/fontainhas/hotel/heritage-rooms.jpg' }
-      ],
-      restaurants: [
-        { name: 'Viva Panjim', description: 'Beloved family-run restaurant inside a 150-year-old Portuguese heritage home in Fontainhas. Serves authentic Goan-Portuguese specialties including prawn curry, pork vindaloo, cafreal, and serradura dessert.', cuisine: 'Goan / Portuguese', image: 'images/goa/fontainhas/restaurant/viva-panjim.jpg' },
-        { name: 'Soro The Village Pub', description: 'Cosy bar and kitchen in Fontainhas inside a heritage house. Serves Goan feni cocktails, pork ribs, and local Goan tapas in a courtyard setting.', cuisine: 'Goan / Bar', image: 'images/goa/fontainhas/restaurant/heritage-bistro.jpg' },
-        { name: 'Black Sheep Bistro', description: 'Modern farm-to-table restaurant in Panjim near Fontainhas, helmed by award-winning chef Praful Kerkar. Creative Goan cuisine using local ingredients.', cuisine: 'Modern Goan', image: 'images/goa/fontainhas/restaurant/cafe-amigos.jpg' }
-      ],
-      spotsToVisit: [
-        { name: 'Fontainhas Heritage Walk', description: 'Stroll through narrow lanes of brightly painted Portuguese houses — ochre, indigo, green — with window grilles and laterite walls.', image: 'images/goa/fontainhas/to-visit/architecture.jpg' },
-        { name: 'Chapel of St Sebastian', description: 'Small 19th-century chapel in the heart of Fontainhas with an unusual crucifix — a focal point of the neighbourhood\'s Carnival celebrations.', image: 'images/goa/fontainhas/to-visit/walking-tour.jpg' },
-        { name: 'Altinho Hill', description: 'Elevated neighbourhood above Fontainhas with panoramic views over the Mandovi River and Panjim — home to the Bishop\'s Palace.', image: 'images/goa/fontainhas/to-visit/chapel.jpg' }
-      ],
-      tours: [
-        { name: 'Goa Heritage & Nature 5D', description: 'Churches, falls and beaches.', price: '₹16,000/person', image: 'images/goa-tour.jpg' }
-      ]
-    }
   },
 };
 // Helper: get place key from place name (e.g. "Amber Fort" -> "amber fort")
