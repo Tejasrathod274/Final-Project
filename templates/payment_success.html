@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment Successful</title>
+
+<style>
+body{
+font-family:Segoe UI;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.success-box{
+background:white;
+padding:40px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 20px 50px rgba(0,0,0,0.3);
+}
+
+.success-box h2{
+color:#28a745;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:#1e3c72;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+}
+
+.btn:hover{
+background:#2a5298;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="success-box">
+
+<h2>✅ Payment Successful</h2>
+
+<p>Your booking has been confirmed.</p>
+
+<a href="{{ url_for('profile_dashboard') }}" class="btn">
+Go to Dashboard
+</a>
+
+</div>
+
+</body>
+</html>

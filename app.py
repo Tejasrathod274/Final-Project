@@ -646,7 +646,11 @@ def confirm_payment():
     session.pop('temp_booking', None)
 
     flash("Payment successful! Booking request sent to guide.", "success")
-    return redirect(url_for('profile'))
+    return redirect(url_for('payment_success'))
+
+@app.route('/payment_success')
+def payment_success():
+    return render_template('payment_success.html')
 
 @app.route("/guide/dashboard")
 def guide_dashboard():
