@@ -919,6 +919,7 @@ def profile():
 
             # Add tour descriptions
             for booking in bookings:
+                booking['total_amount'] = int(booking['tour_price']) * int(booking['persons'])
                 booking['tour_description'] = get_tour_description(
                     booking['destination'], booking['tour_name']
                 )
