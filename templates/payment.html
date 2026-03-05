@@ -8,149 +8,113 @@
 <style>
 
 * {
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 15px;
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:15px;
 }
 
-/* Card */
-.payment-card {
-    background: #ffffff;
-    padding: 30px;
-    width: 100%;
-    max-width: 420px;
-    border-radius: 18px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-    animation: fadeIn 0.4s ease-in-out;
+.payment-card{
+background:#ffffff;
+padding:30px;
+width:100%;
+max-width:420px;
+border-radius:18px;
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
 }
 
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(15px);}
-    to {opacity: 1; transform: translateY(0);}
+.payment-card h2{
+text-align:center;
+margin-bottom:20px;
+color:#1e3c72;
 }
 
-.payment-card h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #1e3c72;
+.booking-summary{
+background:#f3f6fa;
+padding:15px;
+border-radius:10px;
+margin-bottom:20px;
+font-size:14px;
 }
 
-/* Summary */
-.booking-summary {
-    background: #f3f6fa;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    font-size: 14px;
+.booking-summary p{
+margin:6px 0;
 }
 
-.booking-summary p {
-    margin: 6px 0;
+.payment-methods{
+display:flex;
+gap:10px;
+margin-bottom:20px;
 }
 
-/* Payment Methods */
-.payment-methods {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+.method-btn{
+flex:1;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+cursor:pointer;
+text-align:center;
+font-weight:600;
+background:#fafafa;
 }
 
-.method-btn {
-    flex: 1;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    text-align: center;
-    font-weight: 600;
-    transition: 0.3s;
-    background: #fafafa;
+.method-btn.active{
+background:#2a5298;
+color:white;
+border-color:#2a5298;
 }
 
-.method-btn.active {
-    background: #2a5298;
-    color: white;
-    border-color: #2a5298;
+.input-group{
+display:flex;
+flex-direction:column;
+margin-bottom:15px;
 }
 
-/* Inputs */
-.input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+.input-group label{
+font-size:13px;
+margin-bottom:5px;
+font-weight:600;
 }
 
-.input-group label {
-    font-size: 13px;
-    margin-bottom: 5px;
-    font-weight: 600;
+.input-group input{
+padding:11px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
 }
 
-.input-group input {
-    padding: 11px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    transition: 0.3s;
+.row{
+display:flex;
+gap:10px;
 }
 
-.input-group input:focus {
-    border-color: #2a5298;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(42,82,152,0.1);
+.small{
+flex:1;
 }
 
-.row {
-    display: flex;
-    gap: 10px;
+.hidden{
+display:none;
 }
 
-.small {
-    flex: 1;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Button */
-.pay-btn {
-    width: 100%;
-    padding: 13px;
-    border: none;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: white;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s;
-    font-weight: 600;
-}
-
-.pay-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .payment-card {
-        padding: 20px;
-    }
-
-    .row {
-        flex-direction: column;
-    }
+.pay-btn{
+width:100%;
+padding:13px;
+border:none;
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+color:white;
+font-size:16px;
+border-radius:10px;
+cursor:pointer;
+margin-top:10px;
+font-weight:600;
 }
 
 </style>
@@ -163,18 +127,19 @@ body {
 <h2>💳 Secure Payment</h2>
 
 <div class="booking-summary">
-    <p><strong>Destination:</strong> {{ booking.destination }}</p>
-    <p><strong>Tour:</strong> {{ booking.tour_name }}</p>
-    <p><strong>Total:</strong> ₹{{ booking.total_amount }}</p>
+<p><strong>Destination:</strong> {{ booking.destination }}</p>
+<p><strong>Tour:</strong> {{ booking.tour_name }}</p>
+<p><strong>Total:</strong> ₹{{ booking.total_amount }}</p>
 </div>
 
 <div class="payment-methods">
-    <div class="method-btn active" onclick="selectMethod('card')" id="cardBtn">
-        💳 Card
-    </div>
-    <div class="method-btn" onclick="selectMethod('upi')" id="upiBtn">
-        📲 UPI
-    </div>
+<div class="method-btn active" onclick="selectMethod('card')" id="cardBtn">
+💳 Card
+</div>
+
+<div class="method-btn" onclick="selectMethod('upi')" id="upiBtn">
+📲 UPI
+</div>
 </div>
 
 <form method="POST" action="{{ url_for('confirm_payment') }}" onsubmit="return validateForm()">
@@ -182,46 +147,48 @@ body {
 <!-- CARD SECTION -->
 <div id="cardSection">
 
-    <div class="input-group">
-        <label>Card Holder Name</label>
-        <input type="text" required>
-    </div>
+<div class="input-group">
+<label>Card Holder Name</label>
+<input type="text" id="cardName" required>
+</div>
 
-    <div class="input-group">
-        <label>Card Number</label>
-        <input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
-    </div>
+<div class="input-group">
+<label>Card Number</label>
+<input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
+</div>
 
-    <div class="row">
-        <div class="input-group small">
-            <label>Expiry Date</label>
-            <input type="text" id="expiry" maxlength="5" placeholder="MM/YY" required>
-        </div>
+<div class="row">
 
-        <div class="input-group small">
-            <label>CVV</label>
-            <input type="password" id="cvv" maxlength="3" placeholder="123" required>
-        </div>
-    </div>
+<div class="input-group small">
+<label>Expiry Date</label>
+<input type="text" id="expiry" maxlength="5" placeholder="MM/YY" required>
+</div>
+
+<div class="input-group small">
+<label>CVV</label>
+<input type="password" id="cvv" maxlength="3" placeholder="123" required>
+</div>
+
+</div>
 
 </div>
 
 <!-- UPI SECTION -->
 <div id="upiSection" class="hidden">
 
-    <div class="input-group">
-        <label>UPI ID</label>
-        <input type="text" id="upi" placeholder="example@upi">
-    </div>
+<div class="input-group">
+<label>UPI ID</label>
+<input type="text" id="upi" placeholder="example@upi">
+</div>
 
-    <div style="text-align:center; font-size:13px; color:gray;">
-        You will receive a payment request in your UPI app.
-    </div>
+<div style="text-align:center;font-size:13px;color:gray;">
+You will receive a payment request in your UPI app.
+</div>
 
 </div>
 
 <button type="submit" class="pay-btn">
-    🔒 Pay Securely
+🔒 Pay Securely
 </button>
 
 </form>
@@ -230,58 +197,92 @@ body {
 
 <script>
 
-function selectMethod(method) {
-    const cardSection = document.getElementById("cardSection");
-    const upiSection = document.getElementById("upiSection");
-    const cardBtn = document.getElementById("cardBtn");
-    const upiBtn = document.getElementById("upiBtn");
+function selectMethod(method){
 
-    if (method === "card") {
-        cardSection.classList.remove("hidden");
-        upiSection.classList.add("hidden");
-        cardBtn.classList.add("active");
-        upiBtn.classList.remove("active");
-    } else {
-        cardSection.classList.add("hidden");
-        upiSection.classList.remove("hidden");
-        cardBtn.classList.remove("active");
-        upiBtn.classList.add("active");
-    }
+const cardSection=document.getElementById("cardSection");
+const upiSection=document.getElementById("upiSection");
+
+const cardBtn=document.getElementById("cardBtn");
+const upiBtn=document.getElementById("upiBtn");
+
+const cardName=document.getElementById("cardName");
+const cardNumber=document.getElementById("cardNumber");
+const expiry=document.getElementById("expiry");
+const cvv=document.getElementById("cvv");
+
+const upi=document.getElementById("upi");
+
+if(method==="card"){
+
+cardSection.classList.remove("hidden");
+upiSection.classList.add("hidden");
+
+cardBtn.classList.add("active");
+upiBtn.classList.remove("active");
+
+cardName.required=true;
+cardNumber.required=true;
+expiry.required=true;
+cvv.required=true;
+
+upi.required=false;
+
+}
+else{
+
+cardSection.classList.add("hidden");
+upiSection.classList.remove("hidden");
+
+cardBtn.classList.remove("active");
+upiBtn.classList.add("active");
+
+cardName.required=false;
+cardNumber.required=false;
+expiry.required=false;
+cvv.required=false;
+
+upi.required=true;
+
 }
 
-/* Auto add slash in expiry */
-document.getElementById("expiry").addEventListener("input", function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length >= 3) {
-        value = value.slice(0,2) + "/" + value.slice(2,4);
-    }
-    e.target.value = value;
+}
+
+/* Expiry format */
+document.getElementById("expiry").addEventListener("input",function(e){
+let value=e.target.value.replace(/\D/g,'');
+if(value.length>=3){
+value=value.slice(0,2)+"/"+value.slice(2,4);
+}
+e.target.value=value;
 });
 
-/* Only numbers in CVV */
-document.getElementById("cvv").addEventListener("input", function(e) {
-    e.target.value = e.target.value.replace(/\D/g, '');
+/* CVV numbers only */
+document.getElementById("cvv").addEventListener("input",function(e){
+e.target.value=e.target.value.replace(/\D/g,'');
 });
 
-/* Card number spacing */
-document.getElementById("cardNumber").addEventListener("input", function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    value = value.match(/.{1,4}/g)?.join(" ") || value;
-    e.target.value = value;
+/* Card spacing */
+document.getElementById("cardNumber").addEventListener("input",function(e){
+let value=e.target.value.replace(/\D/g,'');
+value=value.match(/.{1,4}/g)?.join(" ")||value;
+e.target.value=value;
 });
 
 /* UPI validation */
-function validateForm() {
-    const upiSection = document.getElementById("upiSection");
-    const upiInput = document.getElementById("upi");
+function validateForm(){
 
-    if (!upiSection.classList.contains("hidden")) {
-        if (!upiInput.value.includes("@")) {
-            alert("UPI ID must contain '@'");
-            return false;
-        }
-    }
-    return true;
+const upiSection=document.getElementById("upiSection");
+const upiInput=document.getElementById("upi");
+
+if(!upiSection.classList.contains("hidden")){
+if(!upiInput.value.includes("@")){
+alert("Enter valid UPI ID");
+return false;
+}
+}
+
+return true;
+
 }
 
 </script>
