@@ -65,7 +65,14 @@
       {% endif %}
     </div>
 
-    <p class="book-form-intro reveal">Fill in your details below to book this tour. After booking, please check your
+    {% if tour_full %}
+<div class="flash error">
+This tour is fully booked. Please wait for the next tour slot.
+</div>
+{% endif %}
+
+<p class="book-form-intro reveal">
+   Fill in your details below to book this tour. After booking, please check your
       profile for confirmation and status updates..</p>
 
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -75,7 +82,7 @@
     {% endfor %}
     {% endif %}
     {% endwith %}
-    <form class="book-tour-form form-reveal" method="post" action="{{ url_for('book_tour') }}">
+    <form class="book-tour-form form-reveal" method="post" action="{{ url_for('book_tour') }}" {% if tour_full %}style="opacity:0.5; pointer-events:none;"{% endif %}>
       <input type="hidden" name="destination" value="{{ destination }}">
       <input type="hidden" name="tour_name" value="{{ tour_name }}">
       <input type="hidden" name="tour_price" value="{{ tour_price }}">
@@ -90,9 +97,10 @@
         inputmode="numeric">
       <span class="phone-error" id="phoneError"></span>
       <label>Number of Persons *</label>
-      <input type="number" name="persons" min="1" max="20" value="1" required>
+      <input type="number" name="persons" min="1" max="10" value="1" required>
       <button type="submit" class="book-tour-submit">Submit Booking</button>
     </form>
+    {% endif %}
   </main>
 
   <footer class="footer">
@@ -124,19 +132,10 @@ document.addEventListener("DOMContentLoaded", function () {
     tomorrow.setDate(today.getDate() + 1);
     dateInput.min = tomorrow.toISOString().split("T")[0];
 
-    // Maximum date = 3 months from today
+    // Maximum date = 1 month from today
     const maxDate = new Date();
-    maxDate.setMonth(today.getMonth() + 3);
+    maxDate.setMonth(today.getMonth() + 1);
     dateInput.max = maxDate.toISOString().split("T")[0];
-
-    // Block Sundays
-    dateInput.addEventListener("change", function () {
-        const selectedDate = new Date(this.value);
-        if (selectedDate.getDay() === 0) {
-            alert("Tours are not available on Sundays.");
-            this.value = "";
-        }
-    });
 });
   </script>
   <script src="{{ url_for('static', filename='js/phone-validation.js') }}" defer></script>

@@ -492,14 +492,9 @@ def book_tour():
             flash("Please select a future date.", "error")
             return redirect(request.url)
 
-        # Allow booking only within 90 days
-        if selected_date > today + timedelta(days=90):
-            flash("Booking allowed only within 3 months.", "error")
-            return redirect(request.url)
-
-        # No Sunday bookings
-        if selected_date.weekday() == 6:
-            flash("Tours are not available on Sundays.", "error")
+        # Allow booking only within 30 days
+        if selected_date > today + timedelta(days=30):
+            flash("Booking allowed only within 1 month.", "error")
             return redirect(request.url)
 
         destination_name = request.form.get('destination', '').strip()
@@ -521,6 +516,29 @@ def book_tour():
             persons_int = max(1, int(persons))
         except ValueError:
             persons_int = 1
+
+        # ---- CHECK TOUR CAPACITY ----
+        capacity = 10
+
+        conn = get_db()
+
+        with conn.cursor() as cur:
+            cur.execute("""
+                SELECT COALESCE(SUM(num_persons),0) AS total
+                FROM bookings
+                WHERE tour_name = %s
+            """, (tour_name,))
+
+            result = cur.fetchone()
+            booked = result['total']
+
+        # Stop booking if capacity exceeded
+        if booked + persons_int > capacity:
+            flash("This tour is fully booked or not enough seats left.", "error")
+            conn.close()
+            return redirect(request.url)
+
+        conn.close()
 
         import re
         price_number = re.sub(r"[^\d.]", "", tour_price)
@@ -544,7 +562,7 @@ def book_tour():
                 guide = cur.fetchone()
                 guide_id = guide['id'] if guide else None
 
-            # ✅ Store everything in session
+            # Store booking temporarily
             session['temp_booking'] = {
                 'name': name,
                 'email': email,
@@ -568,12 +586,32 @@ def book_tour():
 
         return redirect(url_for('payment_page'))
 
+    # -------- CHECK TOUR FULL FOR PAGE LOAD --------
+    capacity = 10
+
+    conn = get_db()
+
+    with conn.cursor() as cur:
+        cur.execute("""
+            SELECT COALESCE(SUM(num_persons),0) AS total
+            FROM bookings
+            WHERE tour_name = %s
+        """, (tour_name,))
+
+        result = cur.fetchone()
+        booked = result['total']
+
+    tour_full = booked >= capacity
+
+    conn.close()
+
     return render_template(
         'book-tour.html',
         destination=destination_name,
         tour_name=tour_name,
         tour_price=tour_price,
         tour_description=tour_description,
+        tour_full=tour_full,
         booking_success=False
     )
 
